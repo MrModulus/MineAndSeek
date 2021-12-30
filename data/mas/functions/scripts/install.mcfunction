@@ -1,22 +1,39 @@
-#Install the necessary scoreboards
-#scoreboard objectives add deathswap.deaths deathCount
-#scoreboard objectives add deathswap.health health
-#scoreboard objectives setdisplay list deathswap.health
+# INSTALL
+#  This function executes all of the one-time setup needed for the datapack.
+#  An example of this is scoreboards that need to be persistent between games.
 
-#Create the constants for the timer score comparisons
-#scoreboard players set ZERO deathswap.vars 0
-#scoreboard players set ONE deathswap.vars 1200
-#scoreboard players set TWO deathswap.vars 2400
-#scoreboard players set THREE deathswap.vars 3600
-#scoreboard players set FOUR deathswap.vars 4800
+#SCOREBOARD SETUP
+#mas.ids - used to track player/tether pairs and the selected map
+scoreboard objectives add mas.ids
+#mas.counters - used for timers and counters
+scoreboard objectives add mas.counters
+scoreboard players set #<<TIMERS>> mas.counters -1
+scoreboard players set #round_timer mas.counters 0
+scoreboard players set #music_timer mas.counters 0
+scoreboard players set #light_timer mas.counters 0
+scoreboard players set #<<COUNTERS>> mas.counters -1
+scoreboard players set #players mas.counters 0
+scoreboard players set #survivors mas.counters 0
+scoreboard players set #<<IDLES>> mas.counters -1
+#mas.enums - used for storing constant integers
+scoreboard objectives add mas.enums
+scoreboard players set #INIT mas.enums 1
+scoreboard players set #<<SETTINGS>> mas.enums -1
+scoreboard players set #ONE_HUNTER_LIMIT mas.enums 5
+scoreboard players set #<<MAP>> mas.enums -1
+scoreboard players set #MANSION mas.enums 0
+scoreboard players set #FARM mas.enums 1
+scoreboard players set #LODGE mas.enums 2
+scoreboard players set #MUSIC_RESET mas.enums 4600
+scoreboard players set #<<ROUND>> mas.enums -1
+scoreboard players set #INACTIVE mas.enums -1
+scoreboard players set #START mas.enums 0
+scoreboard players set #SURVIVOR_TP mas.enums 600
+scoreboard players set #HUNTER_TP mas.enums 900
+scoreboard players set #FIVE_MIN_LEFT mas.enums 6900
+scoreboard players set #ONE_MIN_LEFt mas.enums 11700
+scoreboard players set #END mas.enums 12900
 
-#Set 'init' and timer initial values
-scoreboard players set init mas.vars 1
-#scoreboard players set timer mas.vars -2
-
-#Summon the spawnpoint armorstand
-#summon armor_stand ~ ~ ~ {Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["global.ignore","deathswap.spawn"]}
-
-#Display the installation message
+#INSTALL MESSAGE
 tellraw @a ["",{"text":"[","bold":true,"color":"gray"},{"text":"Mine and Seek","bold":true,"color":"blue"},{"text":"]","bold":true,"color":"gray"},{"text":" Installation Successful!","color":"green"}]
 

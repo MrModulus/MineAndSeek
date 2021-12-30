@@ -1,0 +1,1 @@
+# RESET TAGS#  This function simply clears all tags from a given player.#  There's no way to remove all tags at once unfortunately.tag @s remove mas.player

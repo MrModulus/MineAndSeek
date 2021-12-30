@@ -1,1 +1,0 @@
-#Clear inventory, effects, and XP then heal/restore hunger and reset gamemodecleareffect clearxp set @s 0 levelsxp set @s 0 pointseffect give @s minecraft:instant_health 1 100 trueeffect give @s minecraft:saturation 1 100 truegamemode survival

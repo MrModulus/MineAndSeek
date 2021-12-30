@@ -1,5 +1,5 @@
 {
   "values":[
-	"mas:init"
+	"mas:scripts/init"
   ]
 }

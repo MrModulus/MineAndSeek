@@ -131,10 +131,16 @@ Any bugs or issues that are version-dependent or faults with Minecraft itself ca
 
 There are some very important coding conventions that need to be adhered to, such as the naming of certain variables or tags. These will be updated as time goes on and are currently as follows:
 - All tag, scoreboard, and variable names should be prefixed with `mas.` to reduce chance of conflict with other datapacks
+- Dummy variables in scoreboards should be prefixed with # to avoid accidentally setting values for players with the same name - even if players won't be added to that list
+- Use `_` to join multiple words in a variable name, e.g. `#round_timer` NOT `#round.timer`
+- Constant values should be set up as enums rather than being hardcoded, using the correct section of `mas.enums`, and must be CAPS_CASE to indicate that they are constants
+- Every file should have a comment describing it at the top, and comments dividing the functionality into sections. Otherwise, comments are only needed when the code is not self-explanatory.
 - Respect `global.ignore` flags when selecting entities without MaS-specific tags - more info [here](https://mc-datapacks.github.io/en/conventions/global_ignoring_tag.html)
-- Don't use arbitrary int values to control things, set up an [enum scoreboard](https://mc-datapacks.github.io/en/tips/enum_scoreboard.html)
 
 # Final Notes
 
 The following bits of information are not super useful at the moment, but may prove to be interesting or useful in the future.
-- [Held Right-Click Detection](https://mc-datapacks.github.io/en/tips/holding_right_click_detection.html)
+- [Right-Click Detection](https://www.youtube.com/watch?v=xcOw4conrVM)
+- [Raycasting](https://www.youtube.com/watch?v=RTRYfrli8GU)
+- [Structures via Datapack](https://www.youtube.com/watch?v=kzme5WV0plM)
+- [Other Tools](https://misode.github.io/)

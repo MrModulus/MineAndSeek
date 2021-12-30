@@ -1,5 +1,5 @@
-#Create the mas.vars objective if it doesnt exist already
-scoreboard objectives add mas.vars dummy
+# INIT
+#  This function is required to prevent the install function from running everytime the pack or world is reloaded.
 
-#Install the datapack if it hasnt already been
-execute unless score init mas.vars matches 1 run function #mas:setup
+#EXECUTE SETUP
+execute unless score #INIT mas.enums matches 1 run function #mas:setup

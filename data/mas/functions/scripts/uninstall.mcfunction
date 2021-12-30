@@ -1,16 +1,13 @@
-#Display the uninstallation message
-execute if score init mas.vars matches 1 run tellraw @a ["",{"text":"[","bold":true,"color":"gray"},{"text":"Mine and Seek","bold":true,"color":"blue"},{"text":"]","bold":true,"color":"gray"},{"text":" Cleared all Mine and Seek data.","color":"yellow"}]
+# UNINSTALL
+#  This function executes all of the commands required to reset the datapack's impact on the world.
 
-#Uninstall the necessary scoreboards
-scoreboard objectives remove mas.vars
-#scoreboard objectives remove deathswap.deaths
-#scoreboard objectives remove deathswap.health
+#UNINSTALL MESSAGE
+execute if score #INIT mas.enums matches 1 run tellraw @a ["",{"text":"[","bold":true,"color":"gray"},{"text":"Mine and Seek","bold":true,"color":"blue"},{"text":"]","bold":true,"color":"gray"},{"text":" Cleared all Mine and Seek data.","color":"yellow"}]
 
-#Delete the spawnpoint armorstand
-#kill @e[tag=deathswap.spawn]
+#REMOVE PERMANENT SCOREBOARDS
+scoreboard objectives remove mas.ids
+scoreboard objectives remove mas.counters
+scoreboard objectives remove mas.enums
 
-#Remove all deathswap tags
-#tag @a[tag=deathswap.player] remove deathswap.player
-
-#Run the cleanup script
-function mas:game/cleanup
+#EXECUTE CLEANUP
+function mas:scripts/cleanup
