@@ -4,8 +4,8 @@
 #  The tether range is currently a hardcoded 5 blocks as distance can't be compared to a score (our enum).
 
 #WITHIN TETHER RANGE
-execute if entity @s[distance=..5] run scoreboard players add @p mas.idle 1
+execute if entity @s[distance=..5] run scoreboard players add @p mas.counters 1
 
 #OUTSIDE TETHER RANGE
-execute unless entity @s[distance=..5] run scoreboard players set @p mas.idle 0
+execute unless entity @s[distance=..5] run scoreboard players set @p mas.counters 0
 execute unless entity @s[distance=..5] run tp @s @p

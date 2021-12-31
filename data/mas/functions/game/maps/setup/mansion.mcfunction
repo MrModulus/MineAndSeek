@@ -1,3 +1,9 @@
+# SETUP: MANSION
+#  This function executes the commands needed to initialize the Mansion map.
+#  It should only ever be called by the map_setup function.
+#  Top-Left: 59 56 125
+#  Bottom-Right: -13 31 57
+
 #CLEAR ENTITIES
 kill @e[x=-13,y=31,z=57,dx=72,dy=25,dz=68]
 
@@ -22,8 +28,8 @@ data merge block 51 31 121 {mode:"LOAD"}
 setblock 51 30 121 minecraft:redstone_block destroy
 
 #SET SPAWNPOINTS
-summon armor_stand 21 32 59 {Marker:1b,Invisible:1b,Tags:["mas.survivor_spawn"],Rotation:[0F,0F]}
-summon armor_stand 21 32 89 {Marker:1b,Invisible:1b,Tags:["mas.hunter_spawn"],Rotation:[0F,-180F]}
+summon armor_stand 21 35 59 {Marker:1b,Invisible:1b,Tags:["mas.survivor_spawn","mas.entity"],Rotation:[0F,0F]}
+summon armor_stand 21 35 89 {Marker:1b,Invisible:1b,Tags:["mas.hunter_spawn","mas.entity"],Rotation:[0F,-180F]}
 
-#PLAY MUSIC
-scoreboard players set #MUSIC_RESET mas.enums 4600
+#SPAWN LIGHTNING MARKER
+summon armor_stand 21 35 89 {Marker:1b,Invisible:1b,Tags:["mas.lightning","mas.entity"]}

@@ -1,3 +1,4 @@
 # TICK
-#  This function is called every tick *while a game is in progress*.
+#  This function is called every tick ONLY while a game is in progress (past the locker phase).
 
+#ABILITIES

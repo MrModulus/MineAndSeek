@@ -134,7 +134,8 @@ There are some very important coding conventions that need to be adhered to, suc
 - Dummy variables in scoreboards should be prefixed with # to avoid accidentally setting values for players with the same name - even if players won't be added to that list
 - Use `_` to join multiple words in a variable name, e.g. `#round_timer` NOT `#round.timer`
 - Constant values should be set up as enums rather than being hardcoded, using the correct section of `mas.enums`, and must be CAPS_CASE to indicate that they are constants
-- Every file should have a comment describing it at the top, and comments dividing the functionality into sections. Otherwise, comments are only needed when the code is not self-explanatory.
+- Every file should have a comment describing it at the top, and comments dividing the functionality into sections. Otherwise, comments are only needed when the code is not self-explanatory
+- All entities spawned by the datapack MUST have the tag `mas.entity` for cleanup. VERY IMPORTANT!
 - Respect `global.ignore` flags when selecting entities without MaS-specific tags - more info [here](https://mc-datapacks.github.io/en/conventions/global_ignoring_tag.html)
 
 # Final Notes
@@ -143,4 +144,7 @@ The following bits of information are not super useful at the moment, but may pr
 - [Right-Click Detection](https://www.youtube.com/watch?v=xcOw4conrVM)
 - [Raycasting](https://www.youtube.com/watch?v=RTRYfrli8GU)
 - [Structures via Datapack](https://www.youtube.com/watch?v=kzme5WV0plM)
+- [Command Generator](https://mcstacker.net/)
 - [Other Tools](https://misode.github.io/)
+- [Statistics](https://minecraft.fandom.com/wiki/Statistics#List_of_custom_statistic_names)
+- [`summon snowball ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Item:{id:"minecraft:diamond_block",Count:1b}}`](https://gyazo.com/4f60726046654ec8e1d7780622466bdb)
