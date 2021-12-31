@@ -11,6 +11,9 @@ function mas:game/maps/map_music
 #EFFECTS
 function mas:game/maps/map_effects
 
+#BORDERS
+function mas:game/maps/map_borders
+
 #XP INIT
 xp set @a[tag=mas.player] 10 levels
 

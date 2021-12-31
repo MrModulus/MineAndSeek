@@ -6,7 +6,7 @@
 execute at @e[tag=mas.lightning,limit=1] run summon lightning_bolt ~ ~ ~
 
 #SCHEDULE NEXT STRIKE
-schedule function mas:game/maps/effects/lightning 30s
+execute if score #game_state mas.counters = #IN_GAME mas.enums run schedule function mas:game/maps/effects/lightning 30s
 
 #RANDOMIZE LOCATION
 execute if score #map mas.ids = #MANSION mas.enums run function mas:game/maps/effects/mansion/lightning
