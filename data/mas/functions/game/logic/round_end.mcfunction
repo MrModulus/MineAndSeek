@@ -8,5 +8,10 @@ scoreboard players operation #game_state mas.counters = #POST_GAME mas.enums
 #TP BACK TO LOBBY
 tp @a[tag=mas.player] 1 63 34
 
+#CLEAR SCHEDULES
+schedule clear mas:game/logic/five_min_msg
+schedule clear mas:game/logic/one_min_msg
+schedule clear mas:game/logic/win_survivors
+
 #CLEANUP
 function mas:scripts/cleanup

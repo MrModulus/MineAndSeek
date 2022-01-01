@@ -1,6 +1,6 @@
 # BORDERS: MANSION
 #  This function continously checks the borders for the Mansion map.
-#  It should only ever be called by the map_borders function or itself.
+#  It should only ever be called by the map setup functions or itself.
 
 #CHECK BORDERS
 #top - extended by 100 to cover corners, must be checked first

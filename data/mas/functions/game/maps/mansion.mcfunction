@@ -1,6 +1,6 @@
 # SETUP: MANSION
 #  This function executes the commands needed to initialize the Mansion map.
-#  It should only ever be called by the map_setup function.
+#  It should only ever be called by the round_setup function.
 #  Top-Left: 59 56 125
 #  Bottom-Right: -13 31 57
 
@@ -28,8 +28,13 @@ data merge block 51 31 121 {mode:"LOAD"}
 setblock 51 30 121 minecraft:redstone_block destroy
 
 #SET SPAWNPOINTS
-summon armor_stand 21 35 59 {Marker:1b,Invisible:1b,Tags:["mas.survivor_spawn","mas.entity"],Rotation:[0F,0F]}
-summon armor_stand 21 35 89 {Marker:1b,Invisible:1b,Tags:["mas.hunter_spawn","mas.entity"],Rotation:[0F,-180F]}
+summon armor_stand 21 35 59 {Marker:1b,Invisible:1b,Tags:["mas.survivor_spawn"],Rotation:[0F,0F]}
+summon armor_stand 21 35 89 {Marker:1b,Invisible:1b,Tags:["mas.hunter_spawn"],Rotation:[-180F,0F]}
 
-#SPAWN LIGHTNING MARKER
-summon armor_stand 21 35 89 {Marker:1b,Invisible:1b,Tags:["mas.lightning","mas.entity"]}
+#MAP SCHEDULES
+#music
+schedule function mas:game/maps/music/farm 45s
+#border
+schedule function mas:game/maps/borders/farm 45s
+#effects
+schedule function mas:game/maps/effects/lightning 45s

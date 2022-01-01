@@ -135,7 +135,7 @@ There are some very important coding conventions that need to be adhered to, suc
 - Use `_` to join multiple words in a variable name, e.g. `#round_timer` NOT `#round.timer`
 - Constant values should be set up as enums rather than being hardcoded, using the correct section of `mas.enums`, and must be CAPS_CASE to indicate that they are constants
 - Every file should have a comment describing it at the top, and comments dividing the functionality into sections. Otherwise, comments are only needed when the code is not self-explanatory
-- All entities spawned by the datapack MUST have the tag `mas.entity` for cleanup. VERY IMPORTANT!
+- Always use `type` and `limit` (where applicable) for entity searches, even if it's a situation where doing so feels redundant
 - Respect `global.ignore` flags when selecting entities without MaS-specific tags - more info [here](https://mc-datapacks.github.io/en/conventions/global_ignoring_tag.html)
 
 # Final Notes

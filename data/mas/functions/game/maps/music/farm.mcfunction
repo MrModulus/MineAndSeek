@@ -1,6 +1,6 @@
 # MUSIC: FARM
 #  This function plays and loops the music for the Farm map.
-#  It should only ever be called by the map_music function.
+#  It should only ever be called by the map setup functions.
 #  Ideally I wouldn't check the same condition twice, but it's not worth making the two commands into their own function.
 
 #PLAY MUSIC

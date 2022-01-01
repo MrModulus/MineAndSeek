@@ -23,7 +23,6 @@ team modify mas.hunter seeFriendlyInvisibles true
 #SCOREBOARD SETUP
 scoreboard objectives add mas.death deathCount
 scoreboard objectives add mas.health health
-scoreboard players set #survivors mas.counters 0
 #setdisplay MUST precede player setup, to update correctly
 scoreboard objectives setdisplay list mas.health
 
@@ -34,9 +33,11 @@ team join mas.survivor @a[tag=mas.player,team=!mas.hunter]
 execute as @a[tag=mas.player] run function mas:scripts/cleanse
 
 #MAP SETUP
-function mas:game/maps/map_setup
+execute if score #map mas.ids = #MANSION mas.enums run function mas:game/maps/mansion
+execute if score #map mas.ids = #FARM mas.enums run function mas:game/maps/farm
 
 #INIT LOCKER PHASE
+#todo: split these into team_init functions?
 tp @a[team=mas.survivor] 1 43 34 -90 0
 title @a[team=mas.survivor] title ["",{"text":"Survivor","bold":true,"italic":false,"color":"dark_blue"}]
 title @a[team=mas.survivor] subtitle ["",{"text":"You have 30s to pick a class","bold":true,"italic":false,"color":"blue"}]
