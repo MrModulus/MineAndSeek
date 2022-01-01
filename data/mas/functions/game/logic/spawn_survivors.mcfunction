@@ -3,7 +3,7 @@
 #  It should only ever be called from the schedule command in round_setup.
 
 #TP TO SURVIVOR SPAWN
-tp @a[team=mas.survivor] @e[tag=mas.survivor_spawn,limit=1]
+tp @a[team=mas.survivor] @e[type=minecraft:armor_stand,tag=mas.survivor_spawn,limit=1]
 
 #DISPLAY TEXT
 title @a title ["",{"text":"SURVIVORS ESCAPED","bold":true,"italic":false,"color":"dark_blue"}]
