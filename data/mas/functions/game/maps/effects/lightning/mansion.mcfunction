@@ -4,4 +4,4 @@
 
 #RANDOMIZE MARKER
 spreadplayers 23 91 0 36 false @e[type=minecraft:armor_stand,tag=mas.lightning,limit=1]
-execute unless entity @e[type=minecraft:armor_stand,tag=mas.lightning,x=-13,y=31,z=57,dx=72,dy=25,dz=68,limit=1] run schedule function mas:game/maps/effects/lightning/mansion 1t
+execute as @e[type=minecraft:armor_stand,tag=mas.lightning,limit=1] unless predicate mas:maps/in_mansion_range run schedule function mas:game/maps/effects/lightning/mansion 1t

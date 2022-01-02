@@ -11,4 +11,4 @@ title @a[team=mas.survivor] subtitle ["",{"text":"We smell your fear...","bold":
 title @a[team=mas.hunter] subtitle ["",{"text":"Bleed them dry!","bold":true,"italic":false,"color":"red"}]
 
 #TRIGGER ROUND START
-function mas:game/logic/round_start
+function mas:game/state/start

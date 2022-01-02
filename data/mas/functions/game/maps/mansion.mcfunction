@@ -1,11 +1,10 @@
 # SETUP: MANSION
 #  This function executes the commands needed to initialize the Mansion map.
-#  It should only ever be called by the round_setup function.
-#  Top-Left: 59 56 125
-#  Bottom-Right: -13 31 57
+#  It should only ever be called by the round setup function.
 
 #CLEAR ENTITIES
-kill @e[x=-13,y=31,z=57,dx=72,dy=25,dz=68]
+#todo: check if execute .. if predicate ... is actually better than @e[predicate=...]
+execute as @e if predicate mas:maps/in_mansion_range
 
 #LOAD MAP
 data merge block -13 31 57 {mode:"LOAD"}
@@ -28,8 +27,8 @@ data merge block 51 31 121 {mode:"LOAD"}
 setblock 51 30 121 minecraft:redstone_block destroy
 
 #SET SPAWNPOINTS
-summon armor_stand 21 35 59 {Marker:1b,Invisible:1b,Tags:["mas.survivor_spawn"],Rotation:[0F,0F]}
-summon armor_stand 21 35 89 {Marker:1b,Invisible:1b,Tags:["mas.hunter_spawn"],Rotation:[-180F,0F]}
+summon armor_stand 21 35 59 {Marker:1b,Invisible:1b,Tags:["mas.survivor_spawn","mas.entity"],Rotation:[0F,0F]}
+summon armor_stand 21 35 89 {Marker:1b,Invisible:1b,Tags:["mas.hunter_spawn","mas.entity"],Rotation:[180F,0F]}
 
 #MAP SCHEDULES
 #music

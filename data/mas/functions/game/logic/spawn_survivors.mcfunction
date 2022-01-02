@@ -1,6 +1,6 @@
 # SPAWN SURVIVORS
 #  This function spawns the Survivors, broadcasts a message accordingly, and sets up the next schedule.
-#  It should only ever be called from the schedule command in round_setup.
+#  It should only ever be called from the schedule command in round setup.
 
 #TP TO SURVIVOR SPAWN
 tp @a[team=mas.survivor] @e[type=minecraft:armor_stand,tag=mas.survivor_spawn,limit=1]

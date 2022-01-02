@@ -6,3 +6,9 @@ scoreboard objectives add mas.bools dummy
 
 #EXECUTE SETUP
 execute if score #init mas.bools matches 0 run function #mas:setup
+
+#END ANY EXISTING GAME
+function mas:game/state/end
+
+#PREVENT MID-GAME LEAVE EXPLOIT
+schedule function mas:scripts/dc_check 2s

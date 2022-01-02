@@ -3,11 +3,8 @@
 #  An example of this is scoreboards that need to be persistent between games.
 
 #GAMERULES
-gamerule doMobSpawning false
 gamerule naturalRegeneration false
-gamerule spectatorsGenerateChunks false
 gamerule doImmediateRespawn true
-gamerule doFireTick false
 
 #SCOREBOARD SETUP
 #mas.ids - used to track player/tether pairs and the selected map
@@ -28,6 +25,9 @@ scoreboard players set #POST_GAME mas.enums 2
 scoreboard players set #MANSION mas.enums 0
 scoreboard players set #FARM mas.enums 1
 scoreboard players set #LODGE mas.enums 2
+
+#UPDATE GAME STATE
+scoreboard players operation #game_state mas.counters = #POST_GAME mas.enums
 
 #INSTALL MESSAGE
 tellraw @a ["",{"text":"[","bold":true,"color":"gray"},{"text":"MineAndSeek","bold":true,"color":"blue"},{"text":"]","bold":true,"color":"gray"},{"text":" Installation Successful!","color":"green"}]

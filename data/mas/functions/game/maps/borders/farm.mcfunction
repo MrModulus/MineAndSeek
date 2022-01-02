@@ -2,15 +2,20 @@
 #  This function continously checks the borders for the Farm map.
 #  It should only ever be called by the map setup functions or itself.
 
-#CHECK BORDERS
-#top - extended by 100 to cover corners, must be checked first
-execute at @a[tag=mas.player,x=-23,y=0,z=-40,dx=100,dy=250,dz=263,limit=1] run tp @p -24 ~ ~
-#bottom - extended by 100 to cover corners, must be checked first
-execute at @a[tag=mas.player,x=-61,y=0,z=-40,dx=-100,dy=250,dz=263,limit=1] run tp @p -60 ~ ~
-#left
-execute at @a[tag=mas.player,x=-61,y=0,z=60,dx=38,dy=250,dz=-100,limit=1] run tp @p ~ ~ 59
-#right
-execute at @a[tag=mas.player,x=-61,y=0,z=123,dx=38,dy=250,dz=100,limit=1] run tp @p ~ ~ 122
+#DISALLOW PLAYER ENTRY
+tp @a[tag=!mas.player,predicate=mas:maps/in_farm_range] 1.5 63 35.5 180 0
+
+#DISALLOW PLAYER EXIT
+execute at @a[tag=mas.player] as @e[type=minecraft:armor_stand,tag=mas.border_marker,scores={mas.id=0..}] if score @p mas.id = @s mas.id run function mas:game/maps/borders/markers/farm
+
+#DISALLOW ENTITY ENTRY
+#dropped items, naturally spawned, etc
+kill @e[type=!minecraft:player,tag=!mas.entity,predicate=mas:maps/in_farm_range]
+
+#DISALLOW ENTITY EXIT
+kill @e[type=!minecraft:player,tag=mas.entity,predicate=!mas:maps/in_farm_range]
 
 #LOOP
+#its redundant to check IN_GAME here and schedule per-tick when we already have tick_seconds, but its equally redundant 
+# to check map id in tick_seconds when we already checked it during map setup. at least this way map stuff stays self-contained.
 execute if score #game_state mas.counters = #IN_GAME mas.enums run schedule function mas:game/maps/borders/farm 1s

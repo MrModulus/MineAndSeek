@@ -1,6 +1,17 @@
-#Start the game if there are enough players
-execute if score players deathswap.vars > ZERO deathswap.vars unless score players deathswap.vars matches 1 run function deathswap:logic/begin
+# ROUND START
+#  This function will update the game state, initialize the XP timer, set hunter regen, and schedule the round functions.
+#  It should only ever be triggered by the spawn_hunters function.
 
-#Otherwise, display an error message
-execute if score players deathswap.vars matches 0 run tellraw @s ["",{"text":"[","bold":true,"color":"gray"},{"text":"DeathSwap","bold":true,"color":"blue"},{"text":"]","bold":true,"color":"gray"},{"text":" Not enough players to start a game.","color":"red"}]
-execute if score players deathswap.vars matches 1 run tellraw @s ["",{"text":"[","bold":true,"color":"gray"},{"text":"DeathSwap","bold":true,"color":"blue"},{"text":"]","bold":true,"color":"gray"},{"text":" Not enough players to start a game.","color":"red"}]
+#UPDATE GAME STATE
+scoreboard players operation #game_state mas.counters = #IN_GAME mas.enums
+
+#XP INIT
+xp set @a[tag=mas.player] 10 levels
+
+#HUNTER REGEN
+effect give @a[team=mas.hunter] minecraft:regeneration 9999 127 true
+
+#SCHEDULES
+schedule function mas:game/logic/tick_second 1s
+schedule function mas:game/logic/xp_timer 60s
+schedule function mas:game/logic/five_min_msg 300s

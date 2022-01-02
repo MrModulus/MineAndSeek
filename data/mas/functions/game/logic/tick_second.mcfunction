@@ -5,8 +5,7 @@
 execute as @a[scores={mas.death=1..}] run function mas:game/logic/death
 
 #IDLE CHECK
-#technically the tag check isnt needed since we delete spectator markers, but it's more efficient
-execute at @a[team=mas.survivor,tag=!mas.spectator] as @e[type=minecraft:armor_stand,scores={mas.id=0..}] if score @p mas.id = @s mas.id run function mas:game/logic/idle_check
+execute at @a[team=mas.survivor,tag=!mas.spectator] as @e[type=minecraft:armor_stand,tag=mas.idle_marker,scores={mas.id=0..}] if score @p mas.id = @s mas.id run function mas:game/logic/idle_check
 #25s idle, give warning - could make this a function to avoid two checks, but eh
 title @a[team=mas.survivor,scores={mas.counters=25}] title ["",{"text":"Warning","bold":false,"italic":false,"color":"white"}]
 title @a[team=mas.survivor,scores={mas.counters=25}] subtitle ["",{"text":"You will be revealed soon unless you move!","bold":false,"italic":false,"color":"white"}]
@@ -28,12 +27,3 @@ execute if score #hunters mas.counters matches 0 run function mas:game/logic/win
 #we treat spectator as a tag, not a team, because some spells use it
 gamemode spectator @a[tag=mas.player,tag=mas.spectator]
 gamemode adventure @a[tag=mas.player,tag=!mas.spectator]
-
-#REMOVE DROPPED ITEMS
-kill @e[type=minecraft:item,tag=mas.entity]
-
-#REMOVE GROUNDED ARROWS
-kill @e[type=minecraft:arrow,tag=mas.entity,nbt={inGround:1b}]
-
-#LOOP
-schedule function mas:game/logic/tick_second 1s
