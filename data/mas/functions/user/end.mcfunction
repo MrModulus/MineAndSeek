@@ -1,9 +1,7 @@
-#todo: implement this
+# END
+#  This function will let a player attempt to end the game.
+#  It can be called by any player at any time.
 
-
-#Display an error message if no game in progress
-execute if score timer deathswap.vars matches -2 run tellraw @s ["",{"text":"[","bold":true,"color":"gray"},{"text":"DeathSwap","bold":true,"color":"blue"},{"text":"]","bold":true,"color":"gray"},{"text":" No game in progress.","color":"red"}]
-
-#Otherwise, end the game
-execute unless score timer deathswap.vars matches -2 run tellraw @a ["",{"text":"[","bold":true,"color":"gray"},{"text":"DeathSwap","bold":true,"color":"blue"},{"text":"]","bold":true,"color":"gray"},{"text":" The game has been ended prematurely by an admin."}]
-execute unless score timer deathswap.vars matches -2 run function deathswap:logic/end
+#ATTEMPT TO END
+execute unless score #game_state mas.counters = #POST_GAME mas.enums run tellraw @s ["",{"text":"[","bold":true,"color":"gray"},{"text":"MineAndSeek","bold":true,"color":"blue"},{"text":"]","bold":true,"color":"gray"},{"text":" There is no game in progress.","color":"red"}]
+execute if score #game_state mas.counters = #POST_GAME mas.enums run function mas:game/state/end
