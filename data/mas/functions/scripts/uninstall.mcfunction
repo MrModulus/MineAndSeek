@@ -7,10 +7,16 @@ execute if score #init mas.bools matches 1 run tellraw @a ["",{"text":"[","bold"
 #EXECUTE CLEANUP
 function mas:game/state/end
 
-#REMOVE PERMANENT SCOREBOARDS
+#REMOVE TEAMS
+team remove mas.survivor
+team remove mas.hunter
+
+#REMOVE SCOREBOARDS
+scoreboard objectives remove mas.death
+scoreboard objectives remove mas.health
 scoreboard objectives remove mas.ids
 scoreboard objectives remove mas.counters
 scoreboard objectives remove mas.enums
 
 #CLEAR SCHEDULES
-schedule clear mas:scripts/dc_check
+schedule clear mas:game/logic/dc_check

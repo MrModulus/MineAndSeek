@@ -12,8 +12,14 @@ execute at @e[type=minecraft:armor_stand,tag=mas.survivor_spawn,limit=1] run tp 
 title @s title ["",{"text":"SPECTATING","bold":true,"italic":true,"color":"white"}]
 
 #DISMISS IDLING
-#todo: delete idle marker here
+#technically we dont need to delete idle marker for dead players cuz they get ignored (due to spectator tag), but its less entities to match ids against
+execute at @s as @e[type=minecraft:armor_stand,tag=mas.idle_marker] if score @s mas.ids = @p mas.ids run kill @s
 scoreboard players reset @s mas.counters
 
-#RESET DEATHS
+#RESET DEATHS/HEALTH
 scoreboard players reset @s mas.death
+scoreboard players reset @s mas.health
+
+#LEAVE TEAM
+#need to team leave in death function, cant just exclude spectators from counting functions cuz not all spectators are dead
+team leave @s

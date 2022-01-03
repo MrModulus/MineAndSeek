@@ -11,4 +11,4 @@ execute if score #init mas.bools matches 0 run function #mas:setup
 function mas:game/state/end
 
 #PREVENT MID-GAME LEAVE EXPLOIT
-schedule function mas:scripts/dc_check 2s
+schedule function mas:game/logic/dc_check 2s

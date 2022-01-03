@@ -7,6 +7,10 @@ gamerule naturalRegeneration false
 gamerule doImmediateRespawn true
 
 #SCOREBOARD SETUP
+#mas.death - used to detect survivor death
+scoreboard objectives add mas.death deathCount
+#mas.health - used to display living survivors' health in tablist
+scoreboard objectives add mas.health health
 #mas.ids - used to track player/tether pairs and the selected map
 scoreboard objectives add mas.ids dummy
 #mas.counters - used for tracking game state, player count, survivor count, and idles
@@ -25,6 +29,18 @@ scoreboard players set #POST_GAME mas.enums 2
 scoreboard players set #MANSION mas.enums 0
 scoreboard players set #FARM mas.enums 1
 scoreboard players set #LODGE mas.enums 2
+
+#TEAM CREATION
+team add mas.survivor
+team modify mas.survivor color dark_blue
+team modify mas.survivor friendlyFire false
+team modify mas.survivor nametagVisibility hideForOtherTeams
+team modify mas.survivor seeFriendlyInvisibles true
+team add mas.hunter
+team modify mas.hunter color dark_red
+team modify mas.hunter friendlyFire false
+team modify mas.hunter nametagVisibility hideForOtherTeams
+team modify mas.hunter seeFriendlyInvisibles true
 
 #UPDATE GAME STATE
 scoreboard players operation #game_state mas.counters = #POST_GAME mas.enums

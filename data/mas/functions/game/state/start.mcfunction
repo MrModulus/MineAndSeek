@@ -1,17 +1,31 @@
-# ROUND START
-#  This function will update the game state, initialize the XP timer, set hunter regen, and schedule the round functions.
-#  It should only ever be triggered by the spawn_hunters function.
+# ROUND SETUP
+#  This function will setup the teams, scoreboards, and players as needed for the round to start.
+#  It should only ever be triggered by the start function.
 
 #UPDATE GAME STATE
-scoreboard players operation #game_state mas.counters = #IN_GAME mas.enums
+scoreboard players operation #game_state mas.counters = #PRE_GAME mas.enums
 
-#XP INIT
-xp set @a[tag=mas.player] 10 levels
+#SETDISPLAY FOR HEALTH
+scoreboard objectives setdisplay list mas.health
 
-#HUNTER REGEN
-effect give @a[team=mas.hunter] minecraft:regeneration 9999 127 true
+#PLAYER SETUP
+execute if score #players mas.counters <= #ONE_HUNTER_LIMIT mas.enums run team join mas.hunter @a[tag=mas.player,sort=random,limit=1]
+execute if score #players mas.counters > #ONE_HUNTER_LIMIT mas.enums run team join mas.hunter @a[tag=mas.player,sort=random,limit=2]
+team join mas.survivor @a[tag=mas.player,team=!mas.hunter]
+execute as @a[tag=mas.player] run function mas:game/logic/cleanse
 
-#SCHEDULES
-schedule function mas:game/logic/tick_second 1s
-schedule function mas:game/logic/xp_timer 60s
-schedule function mas:game/logic/five_min_msg 300s
+#MAP SETUP
+execute if score #map mas.ids = #MANSION mas.enums run function mas:game/maps/mansion
+execute if score #map mas.ids = #FARM mas.enums run function mas:game/maps/farm
+
+#INIT LOCKER PHASE
+#todo: split these into team_init functions?
+tp @a[team=mas.survivor] 1 43 34 -90 0
+title @a[team=mas.survivor] title ["",{"text":"Survivor","bold":true,"italic":false,"color":"dark_blue"}]
+title @a[team=mas.survivor] subtitle ["",{"text":"You have 30s to pick a class","bold":true,"italic":false,"color":"blue"}]
+tp @a[team=mas.hunter] 1 53 34 -90 0
+title @a[team=mas.hunter] title ["",{"text":"Hunter","bold":true,"italic":false,"color":"dark_red"}]
+title @a[team=mas.hunter] subtitle ["",{"text":"You have 45s to pick a class","bold":true,"italic":false,"color":"red"}]
+
+#SCHEDULE SURVIVOR SPAWN
+schedule function mas:game/logic/spawn_survivors 30s
