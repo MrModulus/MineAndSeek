@@ -1,6 +1,12 @@
 # ONE MINUTE MESSAGE
-#  This function broadcasts that there is only one minute left and schedules the survivor win condition.
-#  It should only ever be called from the schedule command in five_min_msg.
+#  Purpose:
+#    Informs the players that the 9 minute mark has been reached and sets up the timer for the Survivor win condition.
+#  End Effect:
+#    Messages a title and subtitle to each player, schedules the Survivor win condition.
+#  Called by:
+#    game/state/round_start
+#  Additional notes:
+#    Using the scheduling method, this function is essential as it stretches the round duration.
 
 #DISPLAY TEXT
 title @a title ["",{"text":"1 MIN LEFT","bold":true,"italic":false,"color":"white"}]

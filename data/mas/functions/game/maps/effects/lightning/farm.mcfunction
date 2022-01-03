@@ -1,8 +1,15 @@
 # LIGHTNING: FARM
-#  This function will control the lightning effect for the Farm map.
-#  This should only ever be called by the lightning function and itself.
+#  Purpose:
+#    Scramble the lightning marker using the Farm boundaries.
+#  End Effect:
+#    Spawns the marker randomly in a radius, then loops itself until the marker position is within
+#    the map's boundaries.
+#  Called by:
+#    game/maps/effects/lightning, then itself
+#  Additional notes:
+#    Using the predicate directly in the selector for the schedule condition may be more efficient. 
+#    TODO (medium): Explore this.
 
 #RANDOMIZE MARKER
 spreadplayers 23 91 0 32 false @e[type=minecraft:armor_stand,tag=mas.lightning,limit=1]
-#todo: check if this is better using execute unless entity with predicate in selector
 execute as @e[type=minecraft:armor_stand,tag=mas.lightning,limit=1] unless predicate mas:maps/in_farm_range run schedule function mas:game/maps/effects/lightning/farm 1t

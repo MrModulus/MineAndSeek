@@ -1,8 +1,13 @@
 # UNINSTALL
-#  This function executes all of the commands required to reset the datapack's impact on the world.
-
-#UNINSTALL MESSAGE
-execute if score #init mas.bools matches 1 run tellraw @a ["",{"text":"[","bold":true,"color":"gray"},{"text":"MineAndSeek","bold":true,"color":"blue"},{"text":"]","bold":true,"color":"gray"},{"text":" Cleared all Mine and Seek data.","color":"yellow"}]
+#  Purpose:
+#    Essentially undoes what the install function does, aiming to reset the datapack's impact on the world.
+#  End Effect:
+#    Ends any existing rounds to trigger cleanup, deletes teams and scoreboards, clears the dc_check schedule, 
+#    then sends a success message.
+#  Called by:
+#    scripts/init (through #setup), or by player
+#  Additional notes:
+#    None
 
 #EXECUTE CLEANUP
 function mas:game/state/end
@@ -20,3 +25,6 @@ scoreboard objectives remove mas.enums
 
 #CLEAR SCHEDULES
 schedule clear mas:game/logic/dc_check
+
+#UNINSTALL MESSAGE
+tellraw @a ["",{"text":"[","bold":true,"color":"gray"},{"text":"MineAndSeek","bold":true,"color":"blue"},{"text":"]","bold":true,"color":"gray"},{"text":" Cleared all Mine and Seek data.","color":"yellow"}]

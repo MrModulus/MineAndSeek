@@ -1,6 +1,12 @@
 # DEATH
-#  This function tags newly dead players as spectators, tp's them, shows them a message, and resets their deaths.
-#  It should only ever be called from the from the tick_second function.
+#  Purpose:
+#    Handles the case where a Survivor has been killed.
+#  End Effect:
+#    Turns the Survivor into a spectator, removing them from the Survivor team and reseting their death/health scores.
+#  Called by:
+#    game/logic/tick_second
+#  Additional notes: 
+#    None
 
 #ADD SPECTATOR TAG
 tag @s add mas.spectator

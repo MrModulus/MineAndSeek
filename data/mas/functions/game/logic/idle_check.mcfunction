@@ -1,7 +1,13 @@
 # IDLE CHECK
-#  This function checks to see if a player is within range of their tether and acts accordingly.
-#  @s represents an armor_stand (tether) with a given mas.id, @p represents the matching player.
-#  The tether range is currently a hardcoded 5 blocks as distance can't be compared to a score (our enum).
+#  Purpose:
+#    Punishes players for AFKing in a single spot for too long or just jiggling back and forth to avoid penalty.
+#  End Effect:
+#    Increments the idle counter if in range of the player, teleports the marker to the player and resets the idle counter otherwise.
+#  Called by:
+#    game/logic/tick_second
+#  Additional notes:
+#    The tether range is currently hardcoded as 5 as distance can't be compared to a score (our enum).
+#    @s represents the marker, @p represents the player.
 
 #WITHIN TETHER RANGE
 execute if entity @s[distance=..5] run scoreboard players add @p mas.counters 1

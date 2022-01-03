@@ -1,6 +1,12 @@
 # WIN: SURVIVORS
-#  This function triggers when the timer has run out, broadcasting a message.
-#  It should only ever be called from the scheduled command in one_min_msg.
+#  Purpose:
+#    Handles the case in which Survivors have won the round, ie Hunter count reaches 0 or the timer does.
+#  End Effect:
+#    Sets spectator mode for all, displays text, plays win/loss sound effects, summons fireworks, and triggers round end.
+#  Called by:
+#    game/logic/tick_second
+#  Additional notes:
+#    None
 
 #SET ALL TO SPECTATOR
 tag @a[tag=mas.player] add mas.spectator

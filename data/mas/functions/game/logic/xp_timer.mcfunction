@@ -1,9 +1,16 @@
 # XP TIMER
-#  This function updates the xp bar every minute until the end of the game.
-#  It should only ever be called from spawn_hunters or itself.
+#  Purpose:
+#    Keeps player XP levels equal to the minutes left in a round.
+#  End Effect:
+#    Removes one XP level and schedules itself to loop again in a minute if still in game.
+#  Called by:
+#    game/state/round_start, then itself
+#  Additional notes:
+#    The schedule condition isn't technically needed since XP is only set after round start,
+#    but it's a tiny optimization and doesn't hurt to have.
 
 #XP UPDATE
 xp add @a[tag=mas.player] -1 levels
 
-#SCHEDULE
-schedule function mas:game/logic/xp_timer 60s
+#LOOP EVERY MINUTE
+execute if score #game_state mas.counters = #IN_GAME mas.enums run schedule function mas:game/logic/xp_timer 60s

@@ -1,6 +1,12 @@
 # FIVE MINUTES MESSAGE
-#  This function broadcasts that there is only five minutes left and schedules the one minute message.
-#  It should only ever be called from the schedule command in spawn_hunters.
+#  Purpose:
+#    Informs the players that the halfway mark has been reached and sets up the timer for the next warning.
+#  End Effect:
+#    Messages a title and subtitle to each player, schedules the one minute message.
+#  Called by:
+#    game/state/round_start
+#  Additional notes: 
+#    Using the scheduling method, this function is essential as it stretches the round duration.
 
 #DISPLAY TEXT
 title @a title ["",{"text":"5 MIN LEFT","bold":true,"italic":false,"color":"white"}]

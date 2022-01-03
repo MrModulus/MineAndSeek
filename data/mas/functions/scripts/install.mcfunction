@@ -1,10 +1,31 @@
 # INSTALL
-#  This function executes all of the one-time setup needed for the datapack.
-#  An example of this is scoreboards that need to be persistent between games.
+#  Purpose:
+#    Handles all of the one-time setup needed for the datapack to function, such as scoreboards and teams.
+#  End Effect:
+#    Disables natural regen, enables immediate respawn, initializes the teams and scoreboards, then sends a
+#    success message.
+#  Called by:
+#    scripts/init (through #setup)
+#  Additional notes:
+#    There may be a workaround for the naturalRegeneration gamerule, and the immediateRespawn may not be necessary
+#    for functionality. It would be nice if we could decouple these. TODO (low): Explore this.
+
 
 #GAMERULES
 gamerule naturalRegeneration false
 gamerule doImmediateRespawn true
+
+#TEAM CREATION
+team add mas.survivor
+team modify mas.survivor color dark_blue
+team modify mas.survivor friendlyFire false
+team modify mas.survivor nametagVisibility hideForOtherTeams
+team modify mas.survivor seeFriendlyInvisibles true
+team add mas.hunter
+team modify mas.hunter color dark_red
+team modify mas.hunter friendlyFire false
+team modify mas.hunter nametagVisibility hideForOtherTeams
+team modify mas.hunter seeFriendlyInvisibles true
 
 #SCOREBOARD SETUP
 #mas.death - used to detect survivor death
@@ -29,18 +50,6 @@ scoreboard players set #POST_GAME mas.enums 2
 scoreboard players set #MANSION mas.enums 0
 scoreboard players set #FARM mas.enums 1
 scoreboard players set #LODGE mas.enums 2
-
-#TEAM CREATION
-team add mas.survivor
-team modify mas.survivor color dark_blue
-team modify mas.survivor friendlyFire false
-team modify mas.survivor nametagVisibility hideForOtherTeams
-team modify mas.survivor seeFriendlyInvisibles true
-team add mas.hunter
-team modify mas.hunter color dark_red
-team modify mas.hunter friendlyFire false
-team modify mas.hunter nametagVisibility hideForOtherTeams
-team modify mas.hunter seeFriendlyInvisibles true
 
 #UPDATE GAME STATE
 scoreboard players operation #game_state mas.counters = #POST_GAME mas.enums

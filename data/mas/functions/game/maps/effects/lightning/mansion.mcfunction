@@ -1,6 +1,14 @@
 # LIGHTNING: MANSION
-#  This function will control the lightning effect for the Mansion map.
-#  This should only ever be called by the lightning function and itself.
+#  Purpose:
+#    Scramble the lightning marker using the Mansion boundaries.
+#  End Effect:
+#    Spawns the marker randomly in a radius, then loops itself until the marker position is within
+#    the map's boundaries.
+#  Called by:
+#    game/maps/effects/lightning, then itself
+#  Additional notes:
+#    Using the predicate directly in the selector for the schedule condition may be more efficient. 
+#    TODO (medium): Explore this.
 
 #RANDOMIZE MARKER
 spreadplayers 23 91 0 36 false @e[type=minecraft:armor_stand,tag=mas.lightning,limit=1]

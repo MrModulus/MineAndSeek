@@ -1,6 +1,12 @@
 # LEAVE
-#  This function will let a player attempt to leave the game.
-#  It can be called by any player at any time.
+#  Purpose:
+#    Allows the player to attempt to leave the game.
+#  End Effect:
+#    Leaves the player from the game if they're in one, sends an error message if they aren't.
+#  Called by:
+#    player
+#  Additional notes:
+#    None
 
 #ATTEMPT TO LEAVE
 execute unless entity @s[tag=mas.player] run tellraw @s ["",{"text":"[","bold":true,"color":"gray"},{"text":"MineAndSeek","bold":true,"color":"blue"},{"text":"]","bold":true,"color":"gray"},{"text":" You are not in the game.","color":"red"}]

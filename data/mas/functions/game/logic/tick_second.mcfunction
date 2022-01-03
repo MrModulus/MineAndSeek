@@ -1,5 +1,13 @@
 # TICK SECOND
-#  This function is called every second ONLY while a game is in progress (past the locker phase).
+#  Purpose:
+#    Executes round-specific functionality that can be run per second instead of per tick.
+#  End Effect:
+#    Checks for deaths, idling, team player counts (for win conditions), and forces gamemodes.
+#  Called by:
+#    game/state/round_start
+#  Additional notes:
+#    None
+
 
 #DEATH CHECK
 execute as @a[scores={mas.death=1..}] run function mas:game/logic/death

@@ -1,6 +1,15 @@
-# ROUND SETUP
-#  This function will setup the teams, scoreboards, and players as needed for the round to start.
-#  It should only ever be triggered by the start function.
+# START
+#  Purpose:
+#    Initiates the locker phase of the game, in which players choose their classes.
+#  End Effect:
+#    Updates the game state, sets the tablist health display, assigns the teams, triggers the
+#    setup function corresponding to the chosen map, TP's the players to the lockers, shows them
+#    messages, and schedules the function for spawning the Survivors into the map.
+#  Called by:
+#    players/start
+#  Additional notes:
+#    The TP's and messages could be split into two team_init functions to avoid using the same selector
+#    several times, which may be more efficient. TODO (medium): Return to this.
 
 #UPDATE GAME STATE
 scoreboard players operation #game_state mas.counters = #PRE_GAME mas.enums
@@ -19,7 +28,6 @@ execute if score #map mas.ids = #MANSION mas.enums run function mas:game/maps/ma
 execute if score #map mas.ids = #FARM mas.enums run function mas:game/maps/farm
 
 #INIT LOCKER PHASE
-#todo: split these into team_init functions?
 tp @a[team=mas.survivor] 1 43 34 -90 0
 title @a[team=mas.survivor] title ["",{"text":"Survivor","bold":true,"italic":false,"color":"dark_blue"}]
 title @a[team=mas.survivor] subtitle ["",{"text":"You have 30s to pick a class","bold":true,"italic":false,"color":"blue"}]

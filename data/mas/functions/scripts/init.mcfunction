@@ -1,5 +1,14 @@
 # INIT
-#  This function is required to prevent the install function from running everytime the pack or world is reloaded.
+#  Purpose:
+#    Executes on datapack or world reload. Used for resetting game/player state and setting up the datapack
+#    if it hasn't been already.
+#  End Effect:
+#    Installs the datapack if it hasn't been installed yet, then resets the game state using the end function
+#    and the player state using the dc_check function.
+#  Called by:
+#    minecraft
+#  Additional notes:
+#    Schedules are cleared on load, which is why dc_check needs to be renewed here.
 
 #REQUIRED SCOREBOARD
 scoreboard objectives add mas.bools dummy
@@ -11,4 +20,4 @@ execute if score #init mas.bools matches 0 run function #mas:setup
 function mas:game/state/end
 
 #PREVENT MID-GAME LEAVE EXPLOIT
-schedule function mas:game/logic/dc_check 2s
+function mas:game/logic/dc_check

@@ -1,6 +1,13 @@
 # INFO
-#  This function simply prints information about the datapack to the chat.
-#  It can be called by any player at any time.
+#  Purpose:
+#    Prints information about the datapack to the chat.
+#  End Effect:
+#    Toggles the sendCommandFeedback gamerule, sends the information, then resets the gamerule through
+#    a function call.
+#  Called by:
+#    player
+#  Additional notes:
+#    None
 
 #TOGGLE GAMERULE
 execute store result score #gr_scf mas.bools run gamerule sendCommandFeedback

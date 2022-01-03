@@ -1,6 +1,12 @@
 # SPAWN SURVIVORS
-#  This function spawns the Survivors, broadcasts a message accordingly, and sets up the next schedule.
-#  It should only ever be called from the schedule command in round setup.
+#  Purpose:
+#    Spawns the Survivors and schedules the Hunter spawning.
+#  End Effect:
+#    Survivors will be TP'd, a message will be shown to all players, and the Hunter spawn will be scheduled.
+#  Called by:
+#    game/state/start
+#  Additional notes:
+#    None
 
 #TP TO SURVIVOR SPAWN
 tp @a[team=mas.survivor] @e[type=minecraft:armor_stand,tag=mas.survivor_spawn,limit=1]

@@ -1,6 +1,6 @@
- {
-       "pack": {
-           "pack_format": 6,
-           "description": "WIP Mine & Seek Datapack"
-       }
-   }
+{
+   "pack": {
+        "pack_format": 8,
+        "description": "Mine & Seek Datapack"
+    }
+}

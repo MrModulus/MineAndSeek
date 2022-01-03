@@ -1,6 +1,13 @@
 # ROUND START
-#  This function will update the game state, initialize the XP timer, set hunter regen, and schedule the round functions.
-#  It should only ever be triggered by the spawn_hunters function.
+#  Purpose:
+#    Initiates the actual round phase of the game, in which Survivors hide and Hunters seek.
+#  End Effect:
+#    Updates the game state, initializes the XP timer, sets the regen for Hunters, and begins the timers for
+#    the five minute mark and per-second round ticks.
+#  Called by:
+#    game/logic/spawn_hunters
+#  Additional notes:
+#    None
 
 #UPDATE GAME STATE
 scoreboard players operation #game_state mas.counters = #IN_GAME mas.enums

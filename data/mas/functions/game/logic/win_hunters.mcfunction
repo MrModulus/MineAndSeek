@@ -1,6 +1,12 @@
 # WIN: HUNTERS
-#  This function triggers when all survivors have been killed, broadcasting a message and clearing all schedules.
-#  It should only ever be called from the tick function.
+#  Purpose:
+#    Handles the case in which Hunters have won the round, ie Survivor count reaches 0 before the timer does.
+#  End Effect:
+#    Sets spectator mode for all, displays text, plays win/loss sound effects, summons fireworks, and triggers round end.
+#  Called by:
+#    game/logic/tick_second
+#  Additional notes:
+#    None
 
 #SET ALL TO SPECTATOR
 tag @a[tag=mas.player] add mas.spectator

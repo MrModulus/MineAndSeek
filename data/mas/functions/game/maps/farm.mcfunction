@@ -1,9 +1,20 @@
 # SETUP: FARM
-#  This function executes the commands needed to initialize the Farm map.
-#  It should only ever be called by the round setup function.
-
-#CLEAR ENTITIES
-execute as @e if predicate mas:maps/in_farm_range
+#  Purpose:
+#    Handles all of the setup needed for the Farm map at round start.
+#  End Effect:
+#    Map is loaded via structure blocks, team spawnpoints are set, and music/effects/borders are scheduled
+#    to kick in as the round starts.
+#  Called by:
+#    game/state/start
+#  Additional notes:
+#    The map loading method is specific to our world. To decouple it, we would need to setblock a
+#    structure block with nbt data rather than doing data merge. In fact, that may be more efficient
+#    anyway. TODO (medium): Explore this.
+#    Also, if we do decouple from the world, then the boundaries and spawnpoints would also need to be
+#    decoupled.
+#    Lastly, the schedules use 45s here to align with the start of the round, so this should be updated
+#    if the time for Hunter spawn is updated too. Ideally we find a way to do music/border/effect stuff
+#    all from the round start function using predicates. TODO (low): Return to this.
 
 #LOAD MAP
 data merge block -61 26 60 {mode:"LOAD"}
