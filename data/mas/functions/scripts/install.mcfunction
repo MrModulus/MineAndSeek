@@ -53,8 +53,9 @@ scoreboard players set #MANSION mas.enums 0
 scoreboard players set #FARM mas.enums 1
 scoreboard players set #LODGE mas.enums 2
 
-#UPDATE GAME STATE
+#SET DEFAULT MAP AND UPDATE GAME STATE
 scoreboard players operation #game_state mas.counters = #POST_GAME mas.enums
+scoreboard players set #map mas.ids 0
 
 #INSTALL MESSAGE
 tellraw @a ["",{"text":"[","bold":true,"color":"gray"},{"text":"MineAndSeek","bold":true,"color":"blue"},{"text":"]","bold":true,"color":"gray"},{"text":" Installation Successful!","color":"green"}]

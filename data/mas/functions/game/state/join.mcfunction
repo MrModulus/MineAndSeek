@@ -14,6 +14,9 @@
 #ADD PLAYER TAG
 tag @s add mas.player
 
+#RESET DC CHECK
+scoreboard players reset @s mas.joined
+
 #JOINED PRE_GAME
 #might later change this to allow joining during locker phase.
 #execute if score #game_state mas.counters = #PRE_GAME mas.enums run XYZ

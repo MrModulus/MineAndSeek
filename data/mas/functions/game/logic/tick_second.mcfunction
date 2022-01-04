@@ -35,3 +35,6 @@ execute if score #hunters mas.counters matches 0 run function mas:game/logic/win
 #we treat spectator as a tag, not a team, because some spells use it
 gamemode spectator @a[tag=mas.player,tag=mas.spectator]
 gamemode adventure @a[tag=mas.player,tag=!mas.spectator]
+
+#LOOP EVERY SECOND
+schedule function mas:game/logic/tick_second 1s

@@ -25,8 +25,7 @@ tag @s remove mas.player
 function mas:game/logic/cleanse
 function mas:game/logic/reset_tags
 
-#RESET SCOREBOARDS
-scoreboard players reset @s mas.joined
+#RESET ID/IDLE
 scoreboard players reset @s mas.ids
 scoreboard players reset @s mas.counters
 
