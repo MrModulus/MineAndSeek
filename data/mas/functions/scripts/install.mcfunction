@@ -39,7 +39,7 @@ scoreboard objectives add mas.ids dummy
 #mas.counters - used for tracking game state, player count, survivor count, and idles
 scoreboard objectives add mas.counters dummy
 #mas.bools - used for tracking datapack init and gamerules (created in init function)
-scoreboard players set #init mas.bools 1
+scoreboard players set #init mas.bools 0
 #mas.enums - used for storing constant integers
 scoreboard objectives add mas.enums dummy
 #  settings
@@ -62,4 +62,4 @@ scoreboard players set #map mas.ids 0
 tellraw @a ["",{"text":"[","bold":true,"color":"gray"},{"text":"MineAndSeek","bold":true,"color":"blue"},{"text":"]","bold":true,"color":"gray"},{"text":" Installation Successful!","color":"green"}]
 
 #DELAYED INFO MESSAGE
-execute as @a run schedule function mas:players/info 3s
+schedule function mas:players/info 3s
