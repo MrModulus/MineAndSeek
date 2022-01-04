@@ -5,7 +5,7 @@
 #    Ends any existing rounds to trigger cleanup, deletes teams and scoreboards, clears the dc_check schedule, 
 #    then sends a success message.
 #  Called by:
-#    scripts/init (through #setup), or by player
+#    player
 #  Additional notes:
 #    None
 
@@ -17,6 +17,7 @@ team remove mas.survivor
 team remove mas.hunter
 
 #REMOVE SCOREBOARDS
+scoreboard objectives remove mas.bools
 scoreboard objectives remove mas.death
 scoreboard objectives remove mas.health
 scoreboard objectives remove mas.ids

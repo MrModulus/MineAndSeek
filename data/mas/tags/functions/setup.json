@@ -1,7 +1,0 @@
-{
-  "values": [
-    "mas:scripts/info",
-    "mas:scripts/uninstall",
-    "mas:scripts/install"
-  ]
-}

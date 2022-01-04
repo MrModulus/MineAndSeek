@@ -9,12 +9,13 @@
 #    minecraft
 #  Additional notes:
 #    Schedules are cleared on load, which is why dc_check needs to be renewed here.
+#    We use an unless condition because the #init var doesn't exist by default and thus an if will fail.
 
 #REQUIRED SCOREBOARD
 scoreboard objectives add mas.bools dummy
 
 #EXECUTE SETUP
-execute if score #init mas.bools matches 0 run function #mas:setup
+execute unless score #init mas.bools matches 1 run function mas:scripts/install
 
 #END ANY EXISTING GAME
 function mas:game/state/end

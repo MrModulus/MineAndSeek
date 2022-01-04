@@ -3,7 +3,7 @@
 #    Handles all of the one-time setup needed for the datapack to function, such as scoreboards and teams.
 #  End Effect:
 #    Disables natural regen, enables immediate respawn, initializes the teams and scoreboards, then sends a
-#    success message.
+#    success message and a delayed info message.
 #  Called by:
 #    scripts/init (through #setup)
 #  Additional notes:
@@ -57,3 +57,5 @@ scoreboard players operation #game_state mas.counters = #POST_GAME mas.enums
 #INSTALL MESSAGE
 tellraw @a ["",{"text":"[","bold":true,"color":"gray"},{"text":"MineAndSeek","bold":true,"color":"blue"},{"text":"]","bold":true,"color":"gray"},{"text":" Installation Successful!","color":"green"}]
 
+#DELAYED INFO MESSAGE
+schedule function mas:players/info 3s
