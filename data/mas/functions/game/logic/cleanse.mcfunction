@@ -19,4 +19,4 @@ gamemode adventure
 effect give @s minecraft:saturation 1 100 true
 #force health display update
 effect give @s minecraft:instant_damage 1 0 true
-effect give @s minecraft:instant_health 1 100 true
+effect give @s minecraft:instant_health 2 100 true

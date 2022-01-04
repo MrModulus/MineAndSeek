@@ -28,6 +28,8 @@ team modify mas.hunter nametagVisibility hideForOtherTeams
 team modify mas.hunter seeFriendlyInvisibles true
 
 #SCOREBOARD SETUP
+#mas.joined - used to check for player join (stat is updated on join, not leave)
+scoreboard objectives add mas.joined minecraft.custom:minecraft.leave_game
 #mas.death - used to detect survivor death
 scoreboard objectives add mas.death deathCount
 #mas.health - used to display living survivors' health in tablist
