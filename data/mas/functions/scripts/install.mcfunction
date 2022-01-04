@@ -62,4 +62,4 @@ scoreboard players set #map mas.ids 0
 tellraw @a ["",{"text":"[","bold":true,"color":"gray"},{"text":"MineAndSeek","bold":true,"color":"blue"},{"text":"]","bold":true,"color":"gray"},{"text":" Installation Successful!","color":"green"}]
 
 #DELAYED INFO MESSAGE
-schedule function mas:players/info 3s
+execute as @a run schedule function mas:players/info 3s
