@@ -8,7 +8,7 @@
 #    minecraft
 #  Additional notes:
 #    We need to clear the health display to only allow Survivor health to show up. Also, player counting
-#    only really needs to happen during POST_GAME, so it may be more efficient to add an execute condition.
+#    only really needs to happen during NO_GAME, so it may be more efficient to add an execute condition.
 #    The health display clearing and player counting could probably be done every second instead.
 #    TODO (medium): Return to this.
 

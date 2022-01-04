@@ -19,10 +19,10 @@ scoreboard players reset @s mas.joined
 
 #JOINED PRE_GAME
 #might later change this to allow joining during locker phase.
-#execute if score #game_state mas.counters = #PRE_GAME mas.enums run XYZ
+execute if score #game_state mas.counters = #PRE_GAME mas.enums run kill @s
 
 #JOINED DURING GAME
-execute unless score #game_state mas.counters = #POST_GAME mas.enums run kill @s
+execute if score #game_state mas.counters = #IN_GAME mas.enums run kill @s
 
 #SET ID
 scoreboard players operation @s mas.ids = #players mas.counters

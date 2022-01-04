@@ -45,16 +45,17 @@ scoreboard objectives add mas.enums dummy
 #  settings
 scoreboard players set #ONE_HUNTER_LIMIT mas.enums 5
 #  states
-scoreboard players set #PRE_GAME mas.enums 0
-scoreboard players set #IN_GAME mas.enums 1
-scoreboard players set #POST_GAME mas.enums 2
+scoreboard players set #NO_GAME mas.enums 0
+scoreboard players set #PRE_GAME mas.enums 1
+scoreboard players set #IN_GAME mas.enums 2
+scoreboard players set #POST_GAME mas.enums 3
 #  maps
 scoreboard players set #MANSION mas.enums 0
 scoreboard players set #FARM mas.enums 1
 scoreboard players set #LODGE mas.enums 2
 
 #SET DEFAULT MAP AND UPDATE GAME STATE
-scoreboard players operation #game_state mas.counters = #POST_GAME mas.enums
+scoreboard players operation #game_state mas.counters = #NO_GAME mas.enums
 scoreboard players set #map mas.ids 0
 
 #INSTALL MESSAGE

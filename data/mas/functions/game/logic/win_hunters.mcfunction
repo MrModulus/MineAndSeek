@@ -8,6 +8,9 @@
 #  Additional notes:
 #    None
 
+#UPDATE GAME STATE
+scoreboard players operation #game_state mas.counters = #POST_GAME mas.enums
+
 #SET ALL TO SPECTATOR
 tag @a[tag=mas.player] add mas.spectator
 

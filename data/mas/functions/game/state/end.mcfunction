@@ -11,7 +11,7 @@
 #    TODO (low): Return to this.
 
 #UPDATE GAME STATE
-scoreboard players operation #game_state mas.counters = #POST_GAME mas.enums
+scoreboard players operation #game_state mas.counters = #NO_GAME mas.enums
 
 #FORCE PLAYER LEAVE
 execute as @a[tag=mas.player] run function mas:game/state/leave

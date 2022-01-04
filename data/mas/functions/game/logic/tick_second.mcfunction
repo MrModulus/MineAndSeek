@@ -37,4 +37,4 @@ gamemode spectator @a[tag=mas.player,tag=mas.spectator]
 gamemode adventure @a[tag=mas.player,tag=!mas.spectator]
 
 #LOOP EVERY SECOND
-schedule function mas:game/logic/tick_second 1s
+execute if score #game_state mas.counters = #IN_GAME mas.enums run schedule function mas:game/logic/tick_second 1s
