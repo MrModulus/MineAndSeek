@@ -1,4 +1,3 @@
 schedule function mas:tests/tick 1t
-tellraw @a ["",{"text":"Tick: "},{"score":{"name":"#test","objective":"mas.counters"}}]
-scoreboard players add #test mas.counters 1
-execute if score #test mas.counters matches 500 run scoreboard players set #test mas.counters 0
+execute at @e[type=minecraft:armor_stand,tag=mas.idle_marker] run particle minecraft:angry_villager ~ ~ ~ 0 0 0 10 10
+execute at @e[type=minecraft:armor_stand,tag=mas.border_marker] run particle minecraft:ambient_entity_effect ~ ~ ~ 0 0 0 10 10

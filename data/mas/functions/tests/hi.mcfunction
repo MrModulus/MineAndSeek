@@ -1,1 +1,0 @@
-tellraw @a ["",{"text":"Hi. Tick: "},{"score":{"name":"#test","objective":"mas.counters"}}]

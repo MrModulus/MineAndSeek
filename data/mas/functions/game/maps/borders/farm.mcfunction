@@ -22,7 +22,6 @@ tp @a[tag=!mas.player,predicate=mas:maps/in_farm_range] 1.5 63 35.5 180 0
 execute at @a[tag=mas.player] as @e[type=minecraft:armor_stand,tag=mas.border_marker,scores={mas.id=0..}] if score @p mas.id = @s mas.id run function mas:game/maps/borders/markers/farm
 
 #DISALLOW ENTITY ENTRY
-#dropped items, naturally spawned, etc
 kill @e[type=!minecraft:player,tag=!mas.entity,predicate=mas:maps/in_farm_range]
 
 #DISALLOW ENTITY EXIT
