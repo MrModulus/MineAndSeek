@@ -29,7 +29,5 @@ kill @e[type=!minecraft:player,tag=!mas.entity,predicate=mas:maps/in_mansion_ran
 #DISALLOW ENTITY EXIT
 kill @e[type=!minecraft:player,tag=mas.entity,predicate=!mas:maps/in_mansion_range]
 
-#LOOP
-#its redundant to check IN_GAME here and schedule per-tick when we already have tick_seconds, but its equally redundant 
-# to check map id in tick_seconds when we already checked it during map setup. at least this way map stuff stays self-contained.
-execute if score #game_state mas.counters = #IN_GAME mas.enums run schedule function mas:game/maps/borders/mansion 1s
+#LOOP EVERY SECOND
+schedule function mas:game/maps/borders/mansion 1s

@@ -7,8 +7,9 @@
 #  Called by:
 #    game/logic/win_hunters or game/logic/win_survivors, players/end, scripts/init, scripts/uninstall
 #  Additional notes:
-#    Ideally we should restore whatever the old scoreboard display was rather than resetting it.
-#    TODO (low): Return to this.
+#    Ideally we should restore whatever the old scoreboard display was rather than resetting it. TODO (low): Return to this.
+#    Also, the schedule clearing for the maps should only be done if there are preset map sizes (finite number of functions).
+#    TODO (medium): Return to this.
 
 #UPDATE GAME STATE
 scoreboard players operation #game_state mas.counters = #NO_GAME mas.enums
@@ -16,10 +17,19 @@ scoreboard players operation #game_state mas.counters = #NO_GAME mas.enums
 #FORCE PLAYER LEAVE
 execute as @a[tag=mas.player] run function mas:game/state/leave
 
-#CLEAR SCHEDULES
+#CLEAR ROUND SCHEDULES
+schedule clear mas:game/logic/xp_timer
+schedule clear mas:game/logic/tick_second
 schedule clear mas:game/logic/five_min_msg
 schedule clear mas:game/logic/one_min_msg
 schedule clear mas:game/logic/win_survivors
+
+#CLEAR MAP SCHEDULES
+schedule clear mas:game/maps/music/mansion
+schedule clear mas:game/maps/music/farm
+schedule clear mas:game/maps/borders/mansion
+schedule clear mas:game/maps/borders/farm
+schedule clear mas:game/maps/effects/lightning
 
 #CLEAR HEALTH DISPLAY
 scoreboard objectives setdisplay list

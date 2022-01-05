@@ -29,4 +29,4 @@ kill @e[type=!minecraft:player,tag=!mas.entity,predicate=mas:maps/in_farm_range]
 kill @e[type=!minecraft:player,tag=mas.entity,predicate=!mas:maps/in_farm_range]
 
 #LOOP EVERY SECOND
-execute if score #game_state mas.counters = #IN_GAME mas.enums run schedule function mas:game/maps/borders/farm 1s
+schedule function mas:game/maps/borders/farm 1s
