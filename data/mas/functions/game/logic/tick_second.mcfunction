@@ -16,7 +16,7 @@
 execute as @a[scores={mas.death=1..}] run function mas:game/logic/death
 
 #IDLE CHECK
-execute at @a[team=mas.survivor,tag=!mas.spectator] as @e[type=minecraft:armor_stand,tag=mas.idle_marker,scores={mas.id=0..}] if score @p mas.id = @s mas.id run function mas:game/logic/idle_check
+execute at @a[team=mas.survivor,tag=!mas.spectator] as @e[type=minecraft:armor_stand,tag=mas.idle_marker,scores={mas.ids=0..}] if score @p mas.ids = @s mas.ids run function mas:game/logic/idle_check
 title @a[team=mas.survivor,scores={mas.counters=25}] title ["",{"text":"Warning","bold":false,"italic":false,"color":"white"}]
 title @a[team=mas.survivor,scores={mas.counters=25}] subtitle ["",{"text":"You will be revealed soon unless you move!","bold":false,"italic":false,"color":"white"}]
 effect give @a[team=mas.survivor,scores={mas.counters=30..}] minecraft:glowing 1 0 true

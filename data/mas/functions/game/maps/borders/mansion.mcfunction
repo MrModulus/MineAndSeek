@@ -20,7 +20,7 @@
 tp @a[tag=!mas.player,predicate=mas:maps/in_mansion_range] 1.5 63 35.5 180 0
 
 #DISALLOW PLAYER EXIT
-execute at @a[tag=mas.player] as @e[type=minecraft:armor_stand,tag=mas.border_marker,scores={mas.id=0..}] if score @p mas.id = @s mas.id run function mas:game/maps/borders/markers/mansion
+execute at @a[tag=mas.player] as @e[type=minecraft:armor_stand,tag=mas.border_marker,scores={mas.ids=0..}] if score @p mas.ids = @s mas.ids run function mas:game/maps/borders/markers/mansion
 
 #DISALLOW ENTITY ENTRY
 kill @e[type=!minecraft:player,tag=!mas.entity,predicate=mas:maps/in_mansion_range]
