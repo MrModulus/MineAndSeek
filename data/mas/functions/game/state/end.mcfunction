@@ -10,9 +10,10 @@
 #    Ideally we should restore whatever the old scoreboard display was rather than resetting it. TODO (low): Return to this.
 #    Also, the schedule clearing for the maps should only be done if there are preset map sizes (finite number of functions).
 #    TODO (medium): Return to this.
-#    Lastly, none of these schedule clears are guaranteed to execute AFTER the schedule has been created (e.g. created in
-#    same tick or had already executed), so we should still manually check game state on the executes.
-#    TODO (medium): Confirm this.
+#    Lastly, player commands take priority over functions, so the premature end schedule clears are guaranteed to work. This 
+#    function is called by tick_second, the highest priority scheduled function, so the round schedule clears should be 
+#    guaranteed to work too. The map functions are all run before this one, so they should have set their schedules before this
+#    function is called, hence map schedule clearing should be guaranteed too.
 
 #UPDATE GAME STATE
 scoreboard players operation #game_state mas.counters = #NO_GAME mas.enums
