@@ -11,6 +11,9 @@
 #    The TP's and messages could be split into two team_init functions to avoid using the same selector
 #    several times, which may be more efficient. Same goes for the selector checks in player setup.
 #    TODO (medium): Return to this.
+#    After map setup, its important to tp the markers to the survivor spawn, so that they aren't killed by
+#    the border checks. The choice of survivor spawn is not arbitrary, as suvivors who escape the map during
+#    pregame will get TP'd back to the survivor spawn this way.
 
 #UPDATE GAME STATE
 scoreboard players operation #game_state mas.counters = #PRE_GAME mas.enums
@@ -28,6 +31,8 @@ scoreboard players reset @a[tag=mas.player] mas.death
 #MAP SETUP
 execute if score #map mas.ids = #MANSION mas.enums run function mas:game/maps/mansion
 execute if score #map mas.ids = #FARM mas.enums run function mas:game/maps/farm
+tp @e[type=minecraft:armor_stand,tag=mas.idle_marker] @e[type=minecraft:armor_stand,tag=mas.survivor_spawn,limit=1]
+tp @e[type=minecraft:armor_stand,tag=mas.border_marker] @e[type=minecraft:armor_stand,tag=mas.survivor_spawn,limit=1]
 
 #INIT LOCKER PHASE
 tp @a[team=mas.survivor] 1 43 34 -90 0
