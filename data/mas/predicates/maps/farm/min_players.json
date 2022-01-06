@@ -39,7 +39,8 @@
       "score": "mas.counters"
     },
     "range": {
-      "min": 2
+      "min": 2,
+      "max": 100
     }
   }
 ]
