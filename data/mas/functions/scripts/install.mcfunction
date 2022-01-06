@@ -17,7 +17,7 @@ gamerule doImmediateRespawn true
 
 #TEAM CREATION
 team add mas.survivor
-team modify mas.survivor color dark_blue
+team modify mas.survivor color blue
 team modify mas.survivor friendlyFire false
 team modify mas.survivor nametagVisibility hideForOtherTeams
 team modify mas.survivor seeFriendlyInvisibles true
