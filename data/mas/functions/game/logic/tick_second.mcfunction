@@ -26,7 +26,7 @@ kill @e[type=!minecraft:player,tag=mas.entity,predicate=!mas:maps/in_map_range]
 #IDLING EFFECTS
 title @a[team=mas.survivor,scores={mas.counters=25}] title ["",{"text":"Warning","bold":false,"italic":false,"color":"white"}]
 title @a[team=mas.survivor,scores={mas.counters=25}] subtitle ["",{"text":"You will be revealed soon unless you move!","bold":false,"italic":false,"color":"white"}]
-effect give @a[team=mas.survivor,scores={mas.counters=30..}] minecraft:glowing 1 0 true
+effect give @a[team=mas.survivor,scores={mas.counters=30..}] minecraft:glowing 2 0 true
 title @a[team=mas.survivor,scores={mas.counters=30..}] actionbar ["",{"text":"YOU ARE VISIBLE - Move to stay hidden!","bold":false,"italic":false,"color":"white"}]
 
 #SURVIVOR COUNT
