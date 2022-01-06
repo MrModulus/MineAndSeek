@@ -13,7 +13,7 @@
 #    Also, if we do decouple from the world, then the boundaries and spawnpoints would also need to be
 #    decoupled.
 #    Lastly, the schedules use 45s here to align with the start of the round, so this should be updated
-#    if the time for Hunter spawn is updated too. Ideally we find a way to do music/border/effect stuff
+#    if the time for Hunter spawn is updated too. Ideally we find a way to do music/effect stuff
 #    all from the round start function using predicates. TODO (low): Return to this.
 
 #LOAD MAP
@@ -33,7 +33,5 @@ summon armor_stand -55 36 68 {Marker:1b,Invisible:1b,Tags:["mas.hunter_spawn","m
 #MAP SCHEDULES
 #music
 schedule function mas:game/maps/music/farm 45s
-#border
-schedule function mas:game/maps/borders/farm 45s
 #effects
 schedule function mas:game/maps/effects/lightning 45s

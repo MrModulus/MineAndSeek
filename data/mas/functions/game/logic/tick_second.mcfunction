@@ -15,8 +15,15 @@
 #DEATH CHECK
 execute as @a[scores={mas.death=1..}] run function mas:game/logic/death
 
-#IDLE CHECK
-execute at @a[team=mas.survivor,tag=!mas.spectator] as @e[type=minecraft:armor_stand,tag=mas.idle_marker,scores={mas.ids=0..}] if score @p mas.ids = @s mas.ids run function mas:game/logic/idle_check
+#MARKER CHECK
+execute at @a[tag=mas.player,tag=!mas.spectator] as @e[type=minecraft:armor_stand,tag=mas.entity,scores={mas.ids=0..}] if score @p mas.ids = @s mas.ids run function mas:game/logic/marker_check
+
+#BORDER EFFECTS
+tp @a[tag=!mas.player,predicate=mas:maps/in_map_range] 1.5 63 35.5 180 0
+kill @e[type=!minecraft:player,tag=!mas.entity,predicate=mas:maps/in_map_range]
+kill @e[type=!minecraft:player,tag=mas.entity,predicate=!mas:maps/in_map_range]
+
+#IDLING EFFECTS
 title @a[team=mas.survivor,scores={mas.counters=25}] title ["",{"text":"Warning","bold":false,"italic":false,"color":"white"}]
 title @a[team=mas.survivor,scores={mas.counters=25}] subtitle ["",{"text":"You will be revealed soon unless you move!","bold":false,"italic":false,"color":"white"}]
 effect give @a[team=mas.survivor,scores={mas.counters=30..}] minecraft:glowing 1 0 true
