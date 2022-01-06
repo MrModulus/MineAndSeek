@@ -3,11 +3,11 @@
   "terms": [
     {
       "condition": "minecraft:reference",
-      "name": "mas:maps/in_mansion_range"
+      "name": "mas:maps/mansion/min_players"
     },
     {
       "condition": "minecraft:reference",
-      "name": "mas:maps/in_farm_range"
+      "name": "mas:maps/farm/min_players"
     }
   ]
 }

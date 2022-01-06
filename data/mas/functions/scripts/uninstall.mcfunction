@@ -10,7 +10,8 @@
 #    None
 
 #EXECUTE CLEANUP
-function mas:game/state/end
+scoreboard players set #end_immediately mas.bools 1
+function mas:game/state/round_end
 
 #REMOVE TEAMS
 team remove mas.survivor
