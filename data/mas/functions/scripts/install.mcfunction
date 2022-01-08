@@ -45,7 +45,7 @@ scoreboard players set #init mas.bools 0
 #mas.enums - used for storing constant integers
 scoreboard objectives add mas.enums dummy
 #  settings
-scoreboard players set #ONE_HUNTER_LIMIT mas.enums 5
+scoreboard players set #ONE_HUNTER_LIMIT mas.enums 6
 #  states
 scoreboard players set #NO_GAME mas.enums 0
 scoreboard players set #PRE_GAME mas.enums 1
