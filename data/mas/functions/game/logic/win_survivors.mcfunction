@@ -9,8 +9,7 @@
 #    None
 
 #TRIGGER ROUND END
-scoreboard players set #end_immediately mas.bools 0
-function mas:game/state/round_end
+function #mas:normal_end
 
 #DISPLAY TEXT
 title @a[tag=mas.player] title ["",{"text":"Survivors Win","bold":true,"italic":true,"color":"dark_blue"}]

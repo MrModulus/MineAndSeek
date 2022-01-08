@@ -6,15 +6,15 @@
 #  Called by:
 #    game/logic/tick_second
 #  Additional notes:
-#    None
+#    We use the !mas.hunter check instead of mas.survivor because Survivors leave their team upon death, so there
+#    are no players with team mas.survivor if Hunters win.
 
 #TRIGGER ROUND END
-scoreboard players set #end_immediately mas.bools 0
-function mas:game/state/round_end
+function #mas:normal_end
 
 #DISPLAY TEXT
 title @a[tag=mas.player] title ["",{"text":"Hunters Win","bold":true,"italic":true,"color":"dark_red"}]
-title @a[team=mas.survivor] subtitle ["",{"text":"Better luck next time!","bold":true,"italic":false,"color":"red"}]
+title @a[team=!mas.hunter] subtitle ["",{"text":"Better luck next time!","bold":true,"italic":false,"color":"red"}]
 title @a[team=mas.hunter] subtitle ["",{"text":"GGWP!","bold":true,"italic":false,"color":"red"}]
 
 #WIN/LOSS SOUND EFFECTS

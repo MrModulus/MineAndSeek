@@ -18,8 +18,7 @@ scoreboard objectives add mas.bools dummy
 execute unless score #init mas.bools matches 1 run function mas:scripts/install
 
 #END ANY EXISTING GAME
-scoreboard players set #end_immediately mas.bools 1
-function mas:game/state/round_end
+function #mas:forced_end
 
 #PREVENT MID-GAME LEAVE EXPLOIT
 function mas:game/logic/dc_check
