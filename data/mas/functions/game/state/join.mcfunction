@@ -26,7 +26,7 @@ execute if score #game_state mas.counters = #PRE_GAME mas.enums run kill @s
 execute if score #game_state mas.counters = #IN_GAME mas.enums run kill @s
 
 #SET ID
-execute as @a if score @s mas.ids = #players mas.counters run scoreboard players add #players mas.counters 1
+execute as @a[tag=mas.player] if score @s mas.ids = #players mas.counters run scoreboard players add #players mas.counters 1
 scoreboard players operation @s mas.ids = #players mas.counters
 
 #SPAWN PLAYER MARKERS
