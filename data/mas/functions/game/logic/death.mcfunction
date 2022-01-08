@@ -17,8 +17,8 @@ particle minecraft:block minecraft:red_mushroom_block ~ ~1 ~ 0 0 0 1 50
 
 #GLOBAL AND LOCAL SOUND
 playsound minecraft:block.end_gateway.spawn master @a[tag=mas.player] ~ 1000 ~ 100 1.4
-playsound minecraft:entity.player.attack.crit master @a[team=mas.hunters] ~ ~1 ~ 2 0.7
-execute at @a[team=mas.hunters] run playsound minecraft:entity.ravager.celebrate master @a[team=mas.hunters] ~ ~1 ~ 0.2 1.3
+playsound minecraft:entity.player.attack.crit master @a[team=mas.hunter] ~ ~1 ~ 2 0.7
+execute at @a[team=mas.hunter] run playsound minecraft:entity.ravager.celebrate master @a[team=mas.hunter] ~ ~1 ~ 0.2 1.3
 
 #ADD SPECTATOR TAG
 tag @s add mas.spectator
