@@ -26,6 +26,8 @@ team modify mas.hunter color dark_red
 team modify mas.hunter friendlyFire false
 team modify mas.hunter nametagVisibility hideForOtherTeams
 team modify mas.hunter seeFriendlyInvisibles true
+team add mas.spectator
+team modify mas.spectator color dark_gray
 
 #SCOREBOARD SETUP
 #mas.joined - used to check for player join (stat is updated on join, not leave)

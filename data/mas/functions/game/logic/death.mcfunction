@@ -2,12 +2,14 @@
 #  Purpose:
 #    Handles the case where a Survivor has been killed.
 #  End Effect:
-#    Turns the Survivor into a spectator, removing them from the Survivor team and resetting their death/health scores.
+#    Turns the Survivor into a spectator, joins them to the team for spectators, and resets their death/health scores.
 #  Called by:
 #    game/logic/tick_second
 #  Additional notes: 
 #    Technically we don't need to delete idle marker for dead players since they get ignored (due to spectator tag), but its less entities
 #    to match ids against. We don't kill the border marker so that spectators don't fly out of bounds.
+#    We also don't need to leave the mas.survivor team as joining a new team automatically leaves any current team. The mas.spectator team 
+#    has no real purpose other than to color the names of dead players, to differentiate them from regular players.
 
 #ADD SPECTATOR TAG
 tag @s add mas.spectator
@@ -26,5 +28,5 @@ scoreboard players reset @s mas.counters
 scoreboard players reset @s mas.death
 scoreboard players reset @s mas.health
 
-#LEAVE TEAM
-team leave @s
+#JOIN SPECTATOR TEAM
+team join mas.spectator
