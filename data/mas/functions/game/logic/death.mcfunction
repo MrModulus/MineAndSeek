@@ -6,10 +6,19 @@
 #  Called by:
 #    game/logic/tick_second
 #  Additional notes: 
+#    We play global sounds at 1000 blocks high to force a mono effect rather than a binaural one.
 #    Technically we don't need to delete idle marker for dead players since they get ignored (due to spectator tag), but its less entities
 #    to match ids against. We don't kill the bounds marker so that spectators don't fly out of bounds.
 #    We also don't need to leave the mas.survivor team as joining a new team automatically leaves any current team. The mas.spectator team 
 #    has no real purpose other than to color the names of dead players, to differentiate them from regular players.
+
+#BLOODFX
+particle minecraft:block minecraft:red_mushroom_block ~ ~1 ~ 0 0 0 1 50
+
+#GLOBAL AND LOCAL SOUND
+playsound minecraft:block.end_gateway.spawn master @a[tag=mas.player] ~ 1000 ~ 100 1.4
+playsound minecraft:entity.player.attack.crit master @a[team=mas.hunters] ~ ~1 ~ 2 0.7
+execute at @a[team=mas.hunters] run playsound minecraft:entity.ravager.celebrate master @a[team=mas.hunters] ~ ~1 ~ 0.2 1.3
 
 #ADD SPECTATOR TAG
 tag @s add mas.spectator
