@@ -31,7 +31,7 @@ scoreboard players operation @s mas.ids = #players mas.counters
 
 #SPAWN PLAYER MARKERS
 summon minecraft:marker ~ ~ ~ {Tags:["mas.idle_marker","mas.unclaimed","mas.entity"]}
-summon minecraft:marker ~ ~ ~ {Tags:["mas.border_marker","mas.unclaimed","mas.entity"]}
+summon minecraft:marker ~ ~ ~ {Tags:["mas.bounds_marker","mas.unclaimed","mas.entity"]}
 scoreboard players operation @e[type=minecraft:marker,tag=mas.entity,tag=mas.unclaimed,limit=2] mas.ids = @s mas.ids
 tag @e[type=minecraft:marker,tag=mas.entity,tag=mas.unclaimed,limit=2] remove mas.unclaimed
 
