@@ -16,7 +16,7 @@
 execute as @a[scores={mas.death=1..}] run function mas:game/logic/death
 
 #MARKER CHECK
-execute at @a[tag=mas.player,tag=!mas.spectator] as @e[type=minecraft:armor_stand,tag=mas.entity,scores={mas.ids=0..}] if score @p mas.ids = @s mas.ids run function mas:game/logic/marker_check
+execute at @a[tag=mas.player,tag=!mas.spectator] as @e[type=minecraft:marker,tag=mas.entity,scores={mas.ids=0..}] if score @p mas.ids = @s mas.ids run function mas:game/logic/marker_check
 
 #BORDER EFFECTS
 tp @a[tag=!mas.player,predicate=mas:maps/in_range] 1.5 63 35.5 180 0

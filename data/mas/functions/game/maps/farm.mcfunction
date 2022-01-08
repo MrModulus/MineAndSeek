@@ -27,11 +27,9 @@ data merge block -29 26 92 {mode:"LOAD"}
 setblock -29 25 92 minecraft:redstone_block destroy
 
 #SET SPAWNPOINTS
-summon armor_stand -44 37 68 {Marker:1b,Invisible:1b,Tags:["mas.survivor_spawn","mas.entity"],Rotation:[0F,0F]}
-summon armor_stand -55 36 68 {Marker:1b,Invisible:1b,Tags:["mas.hunter_spawn","mas.entity"],Rotation:[180F,0F]}
+summon minecraft:marker -44 37 68 {Tags:["mas.survivor_spawn","mas.entity"],Rotation:[0F,0F]}
+summon minecraft:marker -55 36 68 {Tags:["mas.hunter_spawn","mas.entity"],Rotation:[180F,0F]}
 
 #MAP SCHEDULES
-#music
 schedule function mas:game/maps/music/farm 45s
-#effects
 schedule function mas:game/maps/effects/lightning 45s

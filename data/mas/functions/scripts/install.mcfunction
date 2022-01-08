@@ -5,7 +5,7 @@
 #    Disables natural regen, enables immediate respawn, initializes the teams and scoreboards, then sends a
 #    success message and a delayed info message.
 #  Called by:
-#    scripts/init (through #setup)
+#    scripts/init
 #  Additional notes:
 #    There may be a workaround for the naturalRegeneration gamerule, and the immediateRespawn may not be necessary
 #    for functionality. It would be nice if we could decouple these. TODO (low): Explore this.
