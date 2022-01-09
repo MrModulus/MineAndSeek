@@ -20,12 +20,6 @@ tag @s add mas.player
 #RESET DC CHECK
 scoreboard players reset @s mas.joined
 
-#JOINED PRE_GAME
-execute if score #game_state mas.counters = #PRE_GAME mas.enums run kill @s
-
-#JOINED DURING GAME
-execute if score #game_state mas.counters = #IN_GAME mas.enums run kill @s
-
 #SET ID
 scoreboard players operation @s mas.ids = #curr_id mas.counters
 scoreboard players add #curr_id mas.counters 1
@@ -36,6 +30,12 @@ execute if score #game_state mas.counters = #NO_GAME mas.enums run summon minecr
 execute unless score #game_state mas.counters = #NO_GAME mas.enums at @e[type=minecraft:marker,tag=mas.survivor_spawn,limit=1] run summon minecraft:marker ~ ~30 ~ {Tags:["mas.bounds_marker","mas.unclaimed","mas.entity"]}
 scoreboard players operation @e[type=minecraft:marker,tag=mas.entity,tag=mas.unclaimed,limit=2] mas.ids = @s mas.ids
 tag @e[type=minecraft:marker,tag=mas.entity,tag=mas.unclaimed,limit=2] remove mas.unclaimed
+
+#JOINED PRE_GAME
+execute if score #game_state mas.counters = #PRE_GAME mas.enums run function mas:game/logic/spectate
+
+#JOINED DURING GAME
+execute if score #game_state mas.counters = #IN_GAME mas.enums run function mas:game/logic/spectate
 
 #MESSAGE
 tellraw @s ["",{"text":"[","bold":true,"color":"gray"},{"text":"MineAndSeek","bold":true,"color":"blue"},{"text":"]","bold":true,"color":"gray"},{"text":" You have joined the game.","color":"green"}]
