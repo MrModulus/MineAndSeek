@@ -14,7 +14,7 @@
 #    has no real purpose other than to color the names of dead players, to differentiate them from regular players.
 
 #BLOOD EFFECT
-particle minecraft:block minecraft:red_mushroom_block ~ ~1 ~ 0 0 0 1 50
+execute as @e[type=minecraft:marker,tag=mas.border_marker] if score @s mas.ids = @p mas.ids run particle minecraft:block minecraft:red_mushroom_block ~ ~1 ~ 0 0 0 1 50
 
 #SOUND EFFECTS
 playsound minecraft:entity.player.attack.crit master @a[team=mas.hunter] ~ ~1 ~ 2 0.7
