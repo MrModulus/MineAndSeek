@@ -6,7 +6,8 @@
 #  Called by:
 #    scripts/main, game/logic/tick_second
 #  Additional notes:
-#    None.
+#    As a temporary fix for the lightning effect, we exclude the lightning marker from the killing of out-of-bounds 
+#    mas.entity, but we should really have a better method. TODO (high): Make a better lightning system.
 
 #TP FOREIGN PLAYERS
 tp @a[tag=!mas.player,predicate=mas:maps/in_bounds] 1.5 63 35.5 180 0
@@ -15,4 +16,4 @@ tp @a[tag=!mas.player,predicate=mas:maps/in_bounds] 1.5 63 35.5 180 0
 kill @e[type=!minecraft:player,tag=!mas.entity,predicate=mas:maps/in_bounds]
 
 #KILL ESCAPED MAS ENTITIES
-kill @e[type=!minecraft:player,tag=mas.entity,predicate=!mas:maps/in_bounds]
+kill @e[type=!minecraft:player,tag=mas.entity,tag=!mas.lightning,predicate=!mas:maps/in_bounds]
