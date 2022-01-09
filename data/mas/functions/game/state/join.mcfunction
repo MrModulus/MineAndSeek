@@ -10,8 +10,9 @@
 #    Could potentially allow players to join alive during the locker phase.
 #    The entity check for setting the ids of the markers is also used twice, so it could be turned into
 #    its own function to optimize it. TODO (low): Return to this.
-#    Also, the reason we have the execute when setting ID is to deal with the unlikely situation that multiple
-#    players attempt to join in the same tick (not so unlikely if using execute as @a to join)
+#    Also, the reason we have the execute conditions for the bounds marker is because we don't want the
+#    bounds marker to be deleted by the bound effects, but we don't really care about the idle marker (since
+#    joining mid-game will set you to spectator anyway).
 
 #ADD PLAYER TAG
 tag @s add mas.player
@@ -31,7 +32,8 @@ scoreboard players add #curr_id mas.counters 1
 
 #SPAWN PLAYER MARKERS
 summon minecraft:marker ~ ~ ~ {Tags:["mas.idle_marker","mas.unclaimed","mas.entity"]}
-summon minecraft:marker ~ ~ ~ {Tags:["mas.bounds_marker","mas.unclaimed","mas.entity"]}
+execute if score #game_state mas.counters = #NO_GAME mas.enums run summon minecraft:marker ~ ~ ~ {Tags:["mas.bounds_marker","mas.unclaimed","mas.entity"]}
+execute unless score #game_state mas.counters = #NO_GAME mas.enums at @e[type=minecraft:marker,tag=mas.survivor_spawn,limit=1] run summon minecraft:marker ~ ~30 ~ {Tags:["mas.bounds_marker","mas.unclaimed","mas.entity"]}
 scoreboard players operation @e[type=minecraft:marker,tag=mas.entity,tag=mas.unclaimed,limit=2] mas.ids = @s mas.ids
 tag @e[type=minecraft:marker,tag=mas.entity,tag=mas.unclaimed,limit=2] remove mas.unclaimed
 
