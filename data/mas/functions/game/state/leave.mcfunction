@@ -23,13 +23,13 @@ tag @s remove mas.player
 function mas:game/logic/cleanse
 function mas:game/logic/reset_tags
 
-#RESET ID/IDLE
-scoreboard players reset @s mas.ids
-scoreboard players reset @s mas.counters
-
 #KILL MARKERS
 execute at @s as @e[type=minecraft:marker,tag=mas.idle_marker] if score @s mas.ids = @p mas.ids run kill @s
 execute at @s as @e[type=minecraft:marker,tag=mas.bounds_marker] if score @s mas.ids = @p mas.ids run kill @s
+
+#RESET ID/IDLE
+scoreboard players reset @s mas.ids
+scoreboard players reset @s mas.counters
 
 #SEND MESSAGE
 tellraw @s ["",{"text":"[","bold":true,"color":"gray"},{"text":"MineAndSeek","bold":true,"color":"blue"},{"text":"]","bold":true,"color":"gray"},{"text":" You have been removed from the game."}]
