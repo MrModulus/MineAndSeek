@@ -8,8 +8,8 @@
 #  Additional notes:
 #    Need to check death tickwise for death effects and spectator tp to work properly.
 
-#FOREIGN ENTITY CHECK
-kill @e[type=!minecraft:player,tag=!mas.entity,predicate=mas:maps/in_bounds]
+#BOUND EFFECTS
+function mas:game/logic/bound_effects
 
 #DEATH CHECK
 execute as @a[team=mas.survivor,scores={mas.death=1..}] at @s run function mas:game/logic/death
