@@ -34,13 +34,14 @@ title @a[team=mas.hunter] title ["",{"text":"Hunter","bold":true,"italic":false,
 title @a[team=mas.hunter] subtitle ["",{"text":"You have 45s to pick a class","bold":true,"italic":false,"color":"red"}]
 
 #PLAY LOCKER MUSIC
-stopsound @a[tag=mas.player] *
+stopsound @a[tag=mas.player]
 playsound music_disc.stal master @a[tag=mas.player] ~ 1000 ~ 100 0.8
 
 #LOCKER TIMER INIT
 xp set @a[team=mas.survivor] 30 levels
 xp set @a[team=mas.hunter] 45 levels
 schedule function mas:game/logic/xp_timer 1s
+title @a[tag=mas.player] actionbar "SECONDS TILL SPAWN:"
 
 #SCHEDULE SURVIVOR SPAWN
 schedule function mas:game/logic/spawn_survivors 30s

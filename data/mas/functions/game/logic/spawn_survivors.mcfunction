@@ -19,6 +19,7 @@ title @a[team=mas.hunter] subtitle ["",{"text":"Prepare for the hunt!","bold":tr
 
 #XP TIMER INIT
 xp set @a[team=mas.survivor] 15 levels
+title @a[team=mas.survivor] actionbar "SECONDS TILL HUNTER ARRIVAL:"
 
 #SCHEDULE HUNTER SPAWN
 schedule function mas:game/logic/spawn_hunters 15s

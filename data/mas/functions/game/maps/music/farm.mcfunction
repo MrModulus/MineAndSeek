@@ -9,7 +9,7 @@
 #    None
 
 #PLAY MUSIC
-stopsound @a[tag=mas.player] *
+stopsound @a[tag=mas.player]
 playsound minecraft:music_disc.13 master @a[tag=mas.player] ~ 1000 ~ 100 0.8 1
 
 #LOOP EVERY 135 SECONDS

@@ -9,7 +9,7 @@
 #    None
 
 #PLAY MUSIC
-stopsound @a[tag=mas.player] *
+stopsound @a[tag=mas.player]
 playsound minecraft:music_disc.pigstep master @a[tag=mas.player] ~ 1000 ~ 100 0.6 1
 
 #LOOP EVERY 230 SECONDS
