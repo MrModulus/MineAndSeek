@@ -2,7 +2,7 @@
 #  Purpose:
 #    Executes round-specific functionality that can be run per second instead of per tick.
 #  End Effect:
-#    Checks for deaths, idling, bounds, team player counts (for win conditions), and forces gamemodes.
+#    Checks idling, bounds, team player counts (for win conditions), and forces gamemodes.
 #  Called by:
 #    game/state/round_start
 #  Additional notes:
@@ -17,7 +17,6 @@ execute at @a[tag=mas.player,tag=!mas.spectator] as @e[type=minecraft:marker,tag
 
 #BOUND EFFECTS
 tp @a[tag=!mas.player,predicate=mas:maps/in_bounds] 1.5 63 35.5 180 0
-kill @e[type=!minecraft:player,tag=!mas.entity,predicate=mas:maps/in_bounds]
 kill @e[type=!minecraft:player,tag=mas.entity,predicate=!mas:maps/in_bounds]
 
 #IDLING EFFECTS

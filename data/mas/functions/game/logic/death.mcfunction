@@ -25,7 +25,7 @@ execute at @a[team=mas.hunter] run playsound minecraft:entity.ravager.celebrate 
 tag @s add mas.spectator
 
 #TP TO SPECTATOR SPAWN
-execute at @e[type=minecraft:marker,tag=mas.survivor_spawn,limit=1] run tp @s ~ ~30 ~ ~ 45
+execute at @e[type=minecraft:marker,tag=mas.survivor_spawn,limit=1] run tp @s ~ ~30 ~ ~ 60
 
 #SHOW SPECTATOR MESSAGE
 title @s title ["",{"text":"SPECTATING","bold":true,"italic":true,"color":"white"}]
