@@ -5,7 +5,7 @@
 #    Plays the death effects, turns the Survivor into a spectator, joins them to the team for spectators, and resets
 #    their death/health scores.
 #  Called by:
-#    game/logic/tick_second
+#    game/logic/tick
 #  Additional notes:
 #    We play the sounds at 1000 blocks to eliminate the stereo effect and make the sound mono.
 #    Technically we don't need to delete idle marker for dead players since they get ignored (due to spectator tag), but its less entities
@@ -24,8 +24,8 @@ execute at @a[team=mas.hunter] run playsound minecraft:entity.ravager.celebrate 
 #ADD SPECTATOR TAG
 tag @s add mas.spectator
 
-#TP TO TILT CAMERA
-tp @s ~ ~ ~ ~ 45
+#TP TO SPECTATOR SPAWN
+execute at @e[type=minecraft:marker,tag=mas.survivor_spawn,limit=1] run tp @s ~ ~30 ~ ~ 45
 
 #SHOW SPECTATOR MESSAGE
 title @s title ["",{"text":"SPECTATING","bold":true,"italic":true,"color":"white"}]
