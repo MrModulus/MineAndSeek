@@ -13,7 +13,7 @@
 #    1 sec?).
 
 #MARKER CHECK
-execute at @a[tag=mas.player,tag=!mas.spectator] as @e[type=minecraft:marker,tag=mas.entity,scores={mas.ids=0..}] if score @p mas.ids = @s mas.ids run function mas:game/logic/marker_check
+execute at @a[tag=mas.player] as @e[type=minecraft:marker,tag=mas.entity,scores={mas.ids=0..}] if score @p mas.ids = @s mas.ids run function mas:game/logic/marker_check
 
 #IDLING EFFECTS
 title @a[team=mas.survivor,scores={mas.counters=25}] title ["",{"text":"Warning","bold":false,"italic":false,"color":"white"}]
