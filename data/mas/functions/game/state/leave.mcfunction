@@ -9,9 +9,7 @@
 #  Additional notes:
 #    TP is done first to account for TP damage.
 #    It's important that we kill the markers on leave so that there are less entities to check for id matching.
-#    May be more efficient to combine the marker entity check and simply use mas.entity. Alternatively, if we
-#    only id match once (at the round start), the first point doesn't matter and we can just let the round end
-#    kill them off. TODO (medium): Return to this.
+#    May be more efficient to combine the marker entity check and simply use mas.entity. TODO (medium): Return to this.
 
 #TP BACK TO LOBBY
 tp @s 1.5 63 35.5 180 0

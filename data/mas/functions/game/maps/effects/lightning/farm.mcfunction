@@ -8,7 +8,8 @@
 #    game/maps/effects/lightning, then itself
 #  Additional notes:
 #    Using the predicate directly in the selector for the schedule condition may be more efficient. Also,
-#    we use the bigger of x1-x2 and z1-z2 to determine spreadplayers radius, but there must be a better way.
+#    we use the bigger of x1-x2 and z1-z2 to determine spreadplayers radius, but there must be a better way,
+#    such as using random scoreboard vars to set the marker position within bounds.
 #    TODO (medium): Explore this.
 
 #RANDOMIZE MARKER
