@@ -6,7 +6,6 @@
 #  Called by:
 #    game/state/round_start
 #  Additional notes:
-#    Death check has to execute on @e instead of @a since @a will wait until respawn.
 #    Idle check code could be made into a function to avoid two checks. TODO (low): Return to this.
 #    We force spectator mode for a tag, not a team, because some spells use it.
 #    Loop code MUST check game state because otherwise the scheduling occurs AFTER the schedule is
@@ -14,7 +13,7 @@
 #    1 sec?).
 
 #DEATH CHECK
-execute as @e[type=minecraft:player,scores={mas.death=1..}] run function mas:game/logic/death
+execute as @a[team=mas.survivor,scores={mas.death=1..}] at @s run function mas:game/logic/death
 
 #MARKER CHECK
 execute at @a[tag=mas.player,tag=!mas.spectator] as @e[type=minecraft:marker,tag=mas.entity,scores={mas.ids=0..}] if score @p mas.ids = @s mas.ids run function mas:game/logic/marker_check

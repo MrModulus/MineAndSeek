@@ -11,6 +11,8 @@
 #    The TP's and messages could be split into two team_init functions to avoid using the same selector
 #    several times, which may be more efficient. Same goes for the selector checks in player setup.
 #    TODO (medium): Return to this.
+#    If wanting to decouple the pack from the world, the player spawnpoints should first be saved and then restored.
+#    TODO (medium): Return to this.
 
 #UPDATE GAME STATE
 scoreboard players operation #game_state mas.counters = #PRE_GAME mas.enums
@@ -24,6 +26,9 @@ scoreboard players reset @a[tag=mas.player] mas.death
 
 #MAP SETUP
 function mas:game/maps/setup
+
+#SET RESPAWN FOR SPECTATORS
+execute at @e[type=minecraft:marker,tag=mas.survivor_spawn,limit=1] run spawnpoint @a[team=mas.survivor] ~ ~30 ~
 
 #INIT LOCKER PHASE
 tp @a[team=mas.survivor] 1 43 34 -90 0
