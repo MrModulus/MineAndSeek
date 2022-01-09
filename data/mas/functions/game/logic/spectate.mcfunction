@@ -2,15 +2,19 @@
 #  Purpose:
 #    Turns a player into a spectator, because they died or joined mid-game.
 #  End Effect:
-#    Adds the spectator tag, TP's to spectator spawn, shows message, dismisses their idling stuff, joins them to the team for spectators,
-#    resets their death/health scores, and joins the spectator team.
+#    Sets gamemode, adds the spectator tag, TP's to spectator spawn, shows message, dismisses their idling stuff, joins them to the team 
+#    for spectators, resets their death/health scores, and joins the spectator team.
 #  Called by:
 #    game/logic/death, game/state/join
 #  Additional notes:
+#    We initially set the gamemode to make sure it's immediately set, even though tick_second would've caught it eventually.
 #    Technically we don't need to delete idle marker for dead players since they get ignored (due to spectator tag), but its less entities
 #    to match ids against. We don't kill the bounds marker so that spectators don't fly out of bounds.
 #    We also don't need to leave the mas.survivor team as joining a new team automatically leaves any current team. The mas.spectator team 
 #    has no real purpose other than to color the names of dead players, to differentiate them from regular players.
+
+#SET GAMEMODE
+gamemode spectator @s
 
 #ADD SPECTATOR TAG
 tag @s add mas.spectator
