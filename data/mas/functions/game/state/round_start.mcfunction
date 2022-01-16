@@ -8,7 +8,7 @@
 #    game/logic/spawn_hunters
 #  Additional notes:
 #    The tick_second function MUST be the first scheduled so that it takes priority.
-#    XP timer is set to 11 instead of 10 to account for the immediate removal of one level after pregame.
+#    XP timer is set to 1 extra to account for the immediate removal of one level after pregame.
 
 #UPDATE GAME STATE
 scoreboard players operation #game_state mas.counters = #IN_GAME mas.enums
@@ -17,7 +17,9 @@ scoreboard players operation #game_state mas.counters = #IN_GAME mas.enums
 scoreboard objectives setdisplay list mas.health
 
 #XP INIT
-xp set @a[tag=mas.player] 11 levels
+execute if predicate mas:map/is_small run xp set @a[tag=mas.player] 7 levels
+execute if predicate mas:map/is_medium run xp set @a[tag=mas.player] 9 levels
+execute if predicate mas:map/is_large run xp set @a[tag=mas.player] 11 levels
 title @a[tag=mas.player] actionbar "MINUTES TILL ROUND END:"
 
 #HUNTER REGEN
@@ -25,4 +27,6 @@ effect give @a[team=mas.hunter] minecraft:regeneration 9999 127 true
 
 #SCHEDULES
 schedule function mas:game/logic/tick_second 1s
-schedule function mas:game/logic/five_min_msg 300s
+execute if predicate mas:map/is_small run schedule function mas:game/logic/halfway_msg 180s
+execute if predicate mas:map/is_medium run schedule function mas:game/logic/halfway_msg 240s
+execute if predicate mas:map/is_large run schedule function mas:game/logic/halfway_msg 300s

@@ -23,7 +23,7 @@ execute as @a[tag=mas.player] run function mas:game/logic/cleanse
 scoreboard players reset @a[tag=mas.player] mas.death
 
 #MAP SETUP
-function mas:game/maps/setup
+function mas:game/map/setup
 
 #INIT LOCKER PHASE
 tp @a[team=mas.survivor] 1 43 34 -90 0

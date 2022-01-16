@@ -11,7 +11,7 @@
 #    @s represents the marker, @p represents the player.
 
 #WITHIN MAP RANGE
-execute if score @p[predicate=mas:maps/in_bounds] mas.ids = @s mas.ids run tp @s @p
+execute if score @p[x=0,y=0,z=0,dx=95,dy=95,dz=95] mas.ids = @s mas.ids run tp @s @p
 
 #OUTSIDE MAP RANGE
-execute unless score @p[predicate=mas:maps/in_bounds] mas.ids = @s mas.ids run tp @p @s
+execute unless score @p[x=0,y=0,z=0,dx=95,dy=95,dz=95] mas.ids = @s mas.ids run tp @p @s

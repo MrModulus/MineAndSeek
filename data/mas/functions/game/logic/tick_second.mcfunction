@@ -6,7 +6,7 @@
 #  Called by:
 #    game/state/round_start
 #  Additional notes:
-#    Idle check code could be made into a function to avoid two checks. TODO (low): Return to this.
+#    Idle effect code could be made into a function to avoid 4 checks. TODO (low): Return to this.
 #    We force spectator mode for a tag, not a team, because some spells use it.
 #    Loop code MUST check game state because otherwise the scheduling occurs AFTER the schedule is
 #    cleared in round end, even after moving it to the top (maybe the round end code takes more than
@@ -16,10 +16,7 @@
 execute at @a[tag=mas.player] as @e[type=minecraft:marker,tag=mas.entity,scores={mas.ids=0..}] if score @p mas.ids = @s mas.ids run function mas:game/logic/marker_check
 
 #IDLING EFFECTS
-title @a[team=mas.survivor,scores={mas.counters=25}] title ["",{"text":"Warning","bold":false,"italic":false,"color":"white"}]
-title @a[team=mas.survivor,scores={mas.counters=25}] subtitle ["",{"text":"You will be revealed soon unless you move!","bold":false,"italic":false,"color":"white"}]
-effect give @a[team=mas.survivor,scores={mas.counters=30..}] minecraft:glowing 2 0 true
-title @a[team=mas.survivor,scores={mas.counters=30..}] actionbar ["",{"text":"YOU ARE VISIBLE - Move to stay hidden!","bold":false,"italic":false,"color":"white"}]
+execute as @a[team=mas.survivor,scores={mas.counters=25..},tag=!mas.spectator] run function mas:game/logic/idle_effects
 
 #SURVIVOR COUNT
 scoreboard players set #survivors mas.counters 0

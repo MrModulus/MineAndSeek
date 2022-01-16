@@ -9,6 +9,7 @@
 #  Additional notes:
 #    There may be a workaround for the naturalRegeneration gamerule, and the immediateRespawn may not be necessary
 #    for functionality. It would be nice if we could decouple these. TODO (low): Explore this.
+#    SMALL maps must have ids from 0-9, MEDIUM maps must have ids from 10-19, LARGE maps must have ids from 20-29.
 
 
 #GAMERULES
@@ -52,9 +53,9 @@ scoreboard players set #PRE_GAME mas.enums 1
 scoreboard players set #IN_GAME mas.enums 2
 scoreboard players set #POST_GAME mas.enums 3
 #  maps
-scoreboard players set #MANSION mas.enums 0
-scoreboard players set #FARM mas.enums 1
-scoreboard players set #LODGE mas.enums 2
+scoreboard players set #FARM mas.enums 0
+scoreboard players set #MANSION mas.enums 10
+scoreboard players set #LODGE mas.enums 20
 
 #SET DEFAULT MAP AND UPDATE GAME STATE
 scoreboard players operation #game_state mas.counters = #NO_GAME mas.enums

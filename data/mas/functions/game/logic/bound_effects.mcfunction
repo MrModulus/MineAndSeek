@@ -4,16 +4,15 @@
 #  End Effect:
 #    TPs or kills all foreign entities within the map bounds.
 #  Called by:
-#    scripts/main, game/logic/tick_second
+#    scripts/main
 #  Additional notes:
-#    As a temporary fix for the lightning effect, we exclude the lightning marker from the killing of out-of-bounds 
-#    mas.entity, but we should really have a better method. TODO (high): Make a better lightning system.
+#    None.
 
 #TP FOREIGN PLAYERS
-tp @a[tag=!mas.player,predicate=mas:maps/in_bounds] 1.5 63 35.5 180 0
+tp @a[x=0,y=0,z=0,dx=95,dy=95,dz=95,tag=!mas.player] 1.5 63 35.5 180 0
 
 #KILL FOREIGN ENTITIES
-kill @e[type=!minecraft:player,tag=!mas.entity,predicate=mas:maps/in_bounds]
+kill @e[x=0,y=0,z=0,dx=95,dy=95,dz=95,type=!minecraft:player,tag=!mas.entity]
 
 #KILL ESCAPED MAS ENTITIES
-kill @e[type=!minecraft:player,tag=mas.entity,tag=!mas.lightning,predicate=!mas:maps/in_bounds]
+execute as @e[type=!minecraft:player,tag=mas.entity] unless entity @s[x=0,y=0,z=0,dx=95,dy=95,dz=95] run kill @s

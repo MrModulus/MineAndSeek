@@ -5,14 +5,10 @@
 #    Spawns a lightning marker if it doesn't exist already, summons lightning at its location, then
 #    scrambles the marker location and loops every 30 seconds.
 #  Called by:
-#    game/maps/farm or game/maps/mansion, then itself
+#    game/map/farm or game/map/mansion, then itself
 #  Additional notes:
 #    We could summon the marker at round start to avoid calling the spawn check repeatedly, but it's 
 #    probably better for effects to be self-contained. TODO (low): Decide if this is actually true.
-#    Also, if we use preset map sizes, we can spreadplayers using the assumption of the largest map's
-#    boundaries then simply use an alternatives predicate to check if it's in range, to avoid checking
-#    map enum here and needing two separate functions. We could also just use conditional execution on
-#    the map id for the spreadplayers part. TODO (medium): Explore this.
 
 #SPAWN MARKER IF NOT SPAWNED
 execute unless entity @e[type=minecraft:marker,tag=mas.lightning,limit=1] at @e[type=minecraft:marker,tag=mas.hunter_spawn,limit=1] run summon minecraft:marker ~ ~ ~ {Tags:["mas.lightning","mas.entity"]}
@@ -21,8 +17,7 @@ execute unless entity @e[type=minecraft:marker,tag=mas.lightning,limit=1] at @e[
 execute at @e[type=minecraft:marker,tag=mas.lightning,limit=1] run summon lightning_bolt ~ ~ ~ {Tags:["mas.entity"]}
 
 #RANDOMIZE LOCATION
-execute if score #map mas.ids = #MANSION mas.enums run function mas:game/maps/effects/lightning/mansion
-execute if score #map mas.ids = #FARM mas.enums run function mas:game/maps/effects/lightning/farm
+spreadplayers 47.5 47.5 0 47 false @e[type=minecraft:marker,tag=mas.lightning,limit=1]
 
 #LOOP EVERY 30 SECONDS
-schedule function mas:game/maps/effects/lightning 30s
+schedule function mas:game/map/effects/lightning 30s

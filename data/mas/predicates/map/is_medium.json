@@ -1,0 +1,16 @@
+{
+    "condition": "minecraft:value_check",
+    "value": {
+      "type": "minecraft:score",
+      "target": {
+        "type": "minecraft:fixed",
+        "name": "#map"
+      },
+      "score": "mas.ids"
+    },
+    "range": {
+      "min": 10,
+      "max": 19
+    }
+  }
+  

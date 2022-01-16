@@ -15,12 +15,12 @@
 #    Return to this.
 
 #MAP-SPECIFIC SETUP
-execute if score #map mas.ids = #MANSION mas.enums run function mas:game/maps/mansion
-execute if score #map mas.ids = #FARM mas.enums run function mas:game/maps/farm
+execute if score #map mas.ids = #MANSION mas.enums run function mas:game/map/mansion
+execute if score #map mas.ids = #FARM mas.enums run function mas:game/map/farm
 
 #TP MARKERS INTO BOUNDS
 tp @e[type=minecraft:marker,tag=mas.idle_marker] @e[type=minecraft:marker,tag=mas.survivor_spawn,limit=1]
 tp @e[type=minecraft:marker,tag=mas.bounds_marker] @e[type=minecraft:marker,tag=mas.survivor_spawn,limit=1]
 
 #REMOVE ENTITIES
-kill @e[type=!minecraft:player,tag=!mas.entity,predicate=mas:maps/in_bounds]
+kill @e[x=0,y=0,z=0,dx=95,dy=95,dz=95,type=!minecraft:player,tag=!mas.entity]
