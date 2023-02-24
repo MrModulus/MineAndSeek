@@ -1,20 +1,20 @@
 
 # Welcome to MineAndSeek!
 
-MineAndSeek is a minigame datapack designed by EternalLawn and implemented by LordKanelsnegle. It is intended for personal use, but we anticipate its growth and welcome the opporunity for matchmaking, player statistics, and the ability to play any time.
+Hide-and-seek is a minigame datapack designed by EternalLawn and implemented by LordKanelsnegle. It is intended for personal use, but we anticipate its growth and welcome the opportunity for matchmaking, player statistics, and the ability to play at any time.
 
 # Game Design
 
-The premise of the game offers a dangerously fun spin on hide and seek, with players having access to specialized classes that can shift the tides of victory with their unique abilities. Players are divided into two factions, "Hunters" and "Survivors", and spend up to 10 minutes in precreated maps trying to achieve victory for their faction. 
-- Hunters are designed with the sole intent of seeking and defeating Survivors; they win if they can defeat all Survivors before time runs out.
-- Survivors are designed to befuddle Hunters, and protect themselves and their allies; they win if they at least one Survivor lives when time runs out.
+The premise of the game offers a dangerously fun spin on hide and seek, with players having access to specialized classes that can shift the tides of victory with their unique abilities. Players are divided into two factions, "Hunters" and "Survivors", and spend up to 10 minutes in pre-created maps trying to achieve victory for their faction. 
+- Hunters are designed to seek and defeat Survivors; they win if they can defeat all Survivors before time runs out.
+- Survivors are designed to befuddle Hunters and protect themselves and their allies; they win if at least one Survivor lives when time runs out.
 
 ## Hunters (Experimental)
 
 <details>
   <summary>Clyde: The Savage</summary>
   
-  > Once a hardworking family man, now a living corpse that thrives only under the false hope that his long dead family will be reunited with him should he deliver the Survivors. Simple to play, hard to escape.
+  > Once a hardworking family man, now a living corpse that thrives only under the false hope that his long-dead family will be reunited with him should he deliver the Survivors. Simple to play, hard to escape.
   
   > **Weapon - The Cleaver**
   <br>Medium Damage Axe.
@@ -32,7 +32,7 @@ The premise of the game offers a dangerously fun spin on hide and seek, with pla
 <details>
   <summary>Percival: The Tracker</summary>
   
-  > He watched as all his animal friends morphed into horrific zombies, but cared for them all the same. Lived in peace with the zombies in a forest until the Survivors started hunting them. In the name of vengeance, he will take the role as hunter. Silent as a breeze, deadly as a storm. 
+  > He watched as all his animal friends morphed into horrific zombies but cared for them all the same. Lived in peace with the zombies in a forest until the Survivors started hunting them. In the name of vengeance, he will take the role of a hunter. Silent as a breeze, deadly as a storm. 
   
   > **Weapon - Silk Touch**
   <br>Medium Damage Bow + Low Damage Sword.
@@ -48,7 +48,7 @@ The premise of the game offers a dangerously fun spin on hide and seek, with pla
 </details>
 
 <details>
-  <summary>Minverva: The Wicked</summary>
+  <summary>Minerva: The Wicked</summary>
   
   > A proud, fallen queen who was blood-bound to protect over 10,000 lives - she ruined all of them. A master manipulator who can get even the dead to do her bidding, she thrives off the power her subjects provide. Although once upon a time she let them down, she won’t let their corpses do the same in return. Tricky and oppressive when left unchecked.
   
@@ -56,7 +56,7 @@ The premise of the game offers a dangerously fun spin on hide and seek, with pla
   <br>Low Damage Wand
   
   > **Passive - Eerie Presence**
-  <br>Summon a Zombie where you're standing every 40 seconds. You zombies are revealed to you and will attack Survivors. *“I wish I was you, so I too could serve a beautiful queen.”*
+  <br>Summon a Zombie where you're standing every 40 seconds. Your zombies are revealed to you and will attack Survivors. *“I wish I was you, so I too could serve a beautiful queen.”*
   
   > **Active - Tainted Legacy**
   <br>Teleport to the location you’re looking at. Spawn a zombie where you were standing originally. (CD: 20s). *“You should be honored.”*
@@ -72,7 +72,7 @@ Survivors are designed with roles, as opposed to Hunters.
 <details>
   <summary>Tina Nelson Tucker: The TNT [Control]</summary>
   
-  > Science gives mankind the power to reach for the stars, but also to inevitably crash and burn. Too bad Tina forgot the first part. The tools she made as a nuclear engineer for the government failed to stop Aurora, but what better way to make up for it than destroying everything the Corruption brought with it? Debuffs and cripples with various chemicals (some of which she may have breathed in a little of).
+  > Science gives mankind the power to reach for the stars and inevitably crash and burn. Too bad Tina forgot the first part. The tools she made as a nuclear engineer for the government failed to stop Aurora, but what better way to make up for it than destroying everything the Corruption brought with it? Debuffs and cripples with various chemicals (some of which she may have breathed in a little of).
   
   > **Weapon - Sparky**
   <br>Flint and Steel
@@ -84,7 +84,7 @@ Survivors are designed with roles, as opposed to Hunters.
   <br>Throw a mysterious concoction that slows Hunters by 50% and reduces their damage by 50% for 5s; also deals damage to enemy deployables. Can hold up to 3. *“How z’at taste?”*
   
   > **Ultimate - The Big One**
-  <br>aaaaaaaaaaaaa
+  <br>Drop a hazardous bomb, causing all Hunters to become dizzy and eventually black out. When they wake up 3 seconds later, they return to the map’s spawn point. *“Smell that? Me neither! My nose don’t work.”*
  
 </details>
 
@@ -109,25 +109,25 @@ Survivors are designed with roles, as opposed to Hunters.
 <details>
   <summary>Ava: The Seer [Trickster]</summary>
   
-  > Blinded and cast out as a child, she roamed the forest until she knew every tree by every dent in its bark. The animals and spirits became were merciful to her when her life wasn’t and became her family. Once she became 18 she decided she was strong enough to seek her brother who unbeknown to her had become a Hunter. Perhaps it’s a blessing that she cannot see how her world was corrupted.
+  > Blinded and cast out as a child, she roamed the forest until she knew every tree by every dent in its bark. The animals and spirits became were merciful to her when her life wasn’t and became her family. Once she became 18, she decided she was strong enough to seek her brother who unbeknown to her had become a Hunter. Perhaps it’s a blessing that she cannot see how her world was corrupted.
   
   > **Agony:**
   <br>Bow
   
   > **Passive - Eye for an Eye**
-  <br>Your weapon shots inflict Blindess on Hunters for 1 second. *“I may have lost my sight, but I still have vision.”*
+  <br>Your weapon shots inflict Blindness on Hunters for 1 second. *“I may have lost my sight, but I still have vision.”*
   
   > **Active - Guide Me**
-  <br>Spawn a sentry Hawk in your location. You can have up to 3 active and they will reveal hunters in a radius. If a hunter defeats one of these hawks, all Survivors are healed for 2 hearts. (CD: 30s). *“Please, be my eyes.”*
+  <br>Spawn a sentry Hawk in your location. You can have up to 3 active and they will reveal hunters in a radius. If a hunter defeat one of these hawks, all Survivors are healed for 2 hearts. (CD: 30s). *“Please, be my eyes.”*
   
   > **Ultimate - The Overseer**
-  <br>Spawn an Elder bear behind a random Hunter, it is revealed, has a lot of health, large, and Hunters cannot use their skills until it is killed or it disappears in 20 seconds. *“Guardian, protect us!”*
+  <br>Spawn an Elder bear behind a random Hunter, it is revealed, has a lot of health, large, and Hunters cannot use their skills until it is killed, or it disappears in 20 seconds. *“Guardian, protect us!”*
  
 </details>
 <details>
   <summary>Princess Stormbliss: The Blizzard [Control]</summary>
   
-  > There was once a kingdom that was plagued with snow born from the frigid queen’s heart. She locked away her daughter, leaving her with nothing but the neverending snow on her balcony and her imagination. No princess is without power, and when the Terrorforming happened, she got the freedom she needed. She now seeks to chill the flames of destruction caused by not only the Corruption, but also her mother.
+  > There was once a kingdom that was plagued with snow born from the frigid queen’s heart. She locked away her daughter, leaving her with nothing but the never-ending snow on her balcony and her imagination. No princess is without power; when the Terrorforming happened, she got the freedom she needed. She now seeks to chill the flames of destruction caused by not only the Corruption, but also her mother.
   
   > **Weapon - Snowballs**
   <br>Special Snowballs.
@@ -169,7 +169,7 @@ Survivors are designed with roles, as opposed to Hunters.
   <br>Rotten Flesh
   
   > **Passive - Bloodlust**
-  <br>Your ability does not have a cooldown, and Instead uses 4 hearts of health. If Hunters are successfully hit by your ability, you gain 2 hearts for every Hunter hit. 
+  <br>Your ability does not have a cooldown and instead uses 4 hearts of health. If Hunters are successfully hit by your ability, you gain 2 hearts for every Hunter hit. 
   
   > **Active - Why is it Spicy?**
   <br>Fire a large wall-piercing beam of energy that inflicts Nausea and Slows all Hunters in its path for 5 seconds. This also damages deployables. *“Pardon me.”*
@@ -184,7 +184,7 @@ Survivors are designed with roles, as opposed to Hunters.
   
   > WIP
   
-  > **Weapon - Bang for your Buck:**
+  > **Weapon - Bang for your Buck**
   <br>Gun (Crossbow)
   
   > **Passive - **
@@ -203,7 +203,7 @@ Survivors are designed with roles, as opposed to Hunters.
   
   > WIP
   
-  > **Weapon - Finny:**
+  > **Weapon - Finny**
   <br>Fish
   
   > **Passive - My Dude**
@@ -240,11 +240,11 @@ Contains the functions needed for installing/uninstalling the datapack, these sh
 
 ## Structures
 
-This folder contains the structures needed to load the different maps at the beginning of every round. For now, it's not actually used, but in the future it might be useful to have the datapack itself control the structures for portability or to allow other users to contribute their own maps.
+This folder contains the structures needed to load the different maps at the beginning of every round. For now, it's not actually used, but in the future, it might be useful to have the datapack itself control the structures for portability or to allow other users to contribute their own maps.
 
 ## Tags
 
-This folder contains the tags used to group different things together, such as functions or blocks. At the moment we only use the tags to group together the functions needed for setting up the datapack, though in the future they could be used for other things. For instance, rather than checking for 5 different block types individually, you could group them and check for a specific tag.
+This folder contains the tags used to group different things together, such as functions or blocks. Now, we only use the tags to group together the functions needed for setting up the datapack, though in the future they could be used for other things. For instance, rather than checking for 5 different block types individually, you could group them and check for a specific tag.
 
 
 # To-Do
@@ -253,17 +253,17 @@ The to-do's of this project are ever-changing, but this is a tentative list of w
 
 ## Bugs
 
-Any bug fixes that are within our control can be found here. These are generally high priority.
+Any bug fixes that are within our control can be found here. These are generally high-priority.
 - Example
 
 ## Balancing
 
-Any balancing changes that need to be made can be found here. These are generally medium priority.
+Any balancing changes that need to be made can be found here. These are generally medium-priority.
 - Example
 
 ## New Concepts
 
-Any new ideas or WIP classes/abilities/etc can be found here. These are generally low priority.
+Any new ideas or WIP classes/abilities/etc can be found here. These are generally low-priority.
 - Example
 
 ## Caveats
@@ -273,19 +273,19 @@ Any bugs or issues that are version-dependent or faults with Minecraft itself ca
 # Coding Conventions
 
 There are some very important coding conventions that need to be adhered to, such as the naming of certain variables or tags. These will be updated as time goes on and are currently as follows:
-- All tag, scoreboard, and variable names should be prefixed with `mas.` to reduce chance of conflict with other datapacks
+- All tag, scoreboard, and variable names should be prefixed with `mas.` to reduce the chance of conflict with other datapacks
 - Dummy variables in scoreboards should be prefixed with # to avoid accidentally setting values for players with the same name - even if players won't be added to that list
 - Use `_` to join multiple words in a variable name, e.g. `#round_timer` NOT `#round.timer`
 - Constant values should be set up as enums rather than being hardcoded, using the correct section of `mas.enums`, and must be CAPS_CASE to indicate that they are constants
-- Every file should have a comment describing it at the top, and comments dividing the functionality into sections. Otherwise, comments are only needed when the code is not self-explanatory
+- Every file should have a comment describing it at the top and comments dividing the functionality into sections. Otherwise, comments are only needed when the code is not self-explanatory
 - All entities spawned by the datapack MUST have the tag `mas.entity` for cleanup. VERY IMPORTANT!
-- Try to keep things self-contained; namely, map related things should ONLY be used within map files, such as the `#map` enum
+- Try to keep things self-contained; namely, map-related things should ONLY be used within map files, such as the `#map` enum
 - Always use `type` and `limit` (where applicable) for entity searches, even if it's a situation where doing so feels redundant
 - Respect `global.ignore` flags when selecting entities without MaS-specific tags - more info [here](https://mc-datapacks.github.io/en/conventions/global_ignoring_tag.html)
 
 # Final Notes
 
-The following bits of information are not super useful at the moment, but may prove to be interesting or useful in the future.
+The following bits of information are not super useful at the moment but may prove to be interesting or useful in the future.
 - [Right-Click Detection](https://www.youtube.com/watch?v=xcOw4conrVM)
 - [Raycasting](https://www.youtube.com/watch?v=RTRYfrli8GU)
 - [Structures via Datapack](https://www.youtube.com/watch?v=kzme5WV0plM)
