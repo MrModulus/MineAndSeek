@@ -5,7 +5,7 @@ MineAndSeek is a minigame datapack designed by EternalLawn and implemented by Lo
 
 # Game Design
 
-The premise of the game offers a dangerously fun spin on hide and seek, with players having access to specialized classes that can make shift the tides of victory with their unique abilities. Players are divided two factions, "Hunters" and "Survivors", and spend up to (around) 10 minutes in precreated maps trying to achieve victory for their faction. 
+The premise of the game offers a dangerously fun spin on hide and seek, with players having access to specialized classes that can shift the tides of victory with their unique abilities. Players are divided into two factions, "Hunters" and "Survivors", and spend up to 10 minutes in precreated maps trying to achieve victory for their faction. 
 - Hunters are designed with the sole intent of seeking and defeating Survivors; they win if they can defeat all Survivors before time runs out.
 - Survivors are designed to befuddle Hunters, and protect themselves and their allies; they win if they at least one Survivor lives when time runs out.
 
@@ -14,19 +14,19 @@ The premise of the game offers a dangerously fun spin on hide and seek, with pla
 <details>
   <summary>Clyde: The Savage</summary>
   
-  > Once a hardworking family man, now a living corpse that thrives only under the false hope that his long dead family will be reunited with him should he deliver the Survivors; Living or Dead. Simple to play, hard to escape.
+  > Once a hardworking family man, now a living corpse that thrives only under the false hope that his long dead family will be reunited with him should he deliver the Survivors. Simple to play, hard to escape.
   
   > **Weapon - The Cleaver**
   <br>Medium Damage Axe.
   
   > **Passive - Bloodlust**
-  <br>Can hear the heartbeat of nearby survivors and gains a 20% speed boost when close. *“Your heart’s final words are poetry.”*
+  <br>Can hear the heartbeat of nearby Survivors and gains a 20% speed boost when close. *“Your heart’s final words are poetry.”*
   
   > **Active - Unrelenting**
-  <br>Enter a state of rage which gives you 20% speed, apply bleeding damage, and you become temporarily immune to debuffs for 8s. (CD: 40s) *“Death couldn’t stop me. Did you think you could?”*
+  <br>Enter a state of rage which gives you 20% speed, apply bleeding damage, and makes you temporarily immune to debuffs for 8s. (CD: 40s) *“Death couldn’t stop me. Did you think you could?”*
   
   > **Ultimate - Scream for Me*
-  <br>Spread a nightmare-inducing Paranoia effect to all survivors no matter where they are, blinding them and befuddling their senses for 8 seconds. *“Rest in peace.”*
+  <br>Spread a nightmare-inducing Paranoia effect to all Survivors, blinding them and befuddling their senses for 8 seconds. *“Rest in peace.”*
 </details>
 
 <details>
@@ -38,31 +38,31 @@ The premise of the game offers a dangerously fun spin on hide and seek, with pla
   <br>Medium Damage Bow + Low Damage Sword.
   
   > **Passive - I See You**
-  <br>All arrows reveal hit targets and they cannot heal for 1 second. *“Death is merciful, but I am not.”*
+  <br>All arrows reveal targets and prevent healing for 1 second. *“Justice is blind, but I am not.”*
   
   > **Active - Ensare**
-  <br>Plant a trap on the spot and enter stealth for a brief period. Trap placement is permanent until detonated or the skill is used again, and stealth lasts 5 seconds. Traps root and reveal victims within range for 2 seconds. (CD: 30s). *“Don’t scream too much.”*
+  <br>Plant a trap on the spot and enter stealth for a brief period. Trap placement is permanent until detonated or until the skill is used again, and stealth lasts 5 seconds. Traps root and reveal victims within range for 2 seconds. (CD: 30s). *“Don’t scream too much.”*
   
   > **Ultimate - You Can't Run**
-  <br>Fire a global, wide, wall-piercing shot that deals tremendous damage to all unfortunate enough to be caught. *“You don’t deserve to live.”*
+  <br>Fire a global, wide, wall-piercing shot that deals tremendous damage to all unfortunate enough to be caught in its path. *“You don’t deserve to live.”*
 </details>
 
 <details>
   <summary>Minverva: The Wicked</summary>
   
-  > A proud fallen queen who was blood-bound to protect over 10,000 lives; and she ruined all of them. A master manipulator who can even get the dead to do her bidding, she thrives under the power her subjects provide. Even though once upon a time she let them down, she won’t let their corpses do the same. Tricky and oppressive when left unchecked.
+  > A proud, fallen queen who was blood-bound to protect over 10,000 lives - she ruined all of them. A master manipulator who can get even the dead to do her bidding, she thrives off the power her subjects provide. Although once upon a time she let them down, she won’t let their corpses do the same in return. Tricky and oppressive when left unchecked.
   
   > **Weapon - Twisted Scepter**
   <br>Low Damage Wand
   
   > **Passive - Eerie Presence**
-  <br>Summon a Zombie where you're standing every 40 seconds. You zombies are revealed to you and will attack Survivors. *“I wish I was you, so I could too serve a beautiful queen.”*
+  <br>Summon a Zombie where you're standing every 40 seconds. You zombies are revealed to you and will attack Survivors. *“I wish I was you, so I too could serve a beautiful queen.”*
   
   > **Active - Tainted Legacy**
-  <br>Throw an Ender Pearl to teleport to the location you’re looking. Spawn a zombie where you were standing originally. (CD: 20s). *“You should be honored.”*
+  <br>Teleport to the location you’re looking at. Spawn a zombie where you were standing originally. (CD: 20s). *“You should be honored.”*
   
   > **Ultimate - For the Queen!**
-  <br> Spawn a bloodthirsty creeper directly behind every Survivor, these zombies have increased speed, and will explode dealing high damage. These creepers last 10 seconds. *“Devour them…”*
+  <br> Spawn a bloodthirsty creeper directly behind every Survivor. These minions have increased speed and will explode to deal high damage. They last for 10 seconds. *“Devour them…”*
 </details>
 
 
@@ -72,7 +72,7 @@ Survivors are designed with roles, as opposed to Hunters.
 <details>
   <summary>Tina Nelson Tucker: The TNT [Control]</summary>
   
-  > Science gives mankind the power to reach for the stars, but inevitably crash and burn; too bad Tina forgot the first part. The tools she made as a nuclear engineer for the government failed to stop Aurora, but what better way to make up for it than destroying everything the Corruption brought with it, especially the Hunters. Debuffs and cripples with various chemicals (she may have breathed a little of it in).
+  > Science gives mankind the power to reach for the stars, but also to inevitably crash and burn. Too bad Tina forgot the first part. The tools she made as a nuclear engineer for the government failed to stop Aurora, but what better way to make up for it than destroying everything the Corruption brought with it? Debuffs and cripples with various chemicals (some of which she may have breathed in a little of).
   
   > **Weapon - Sparky**
   <br>Flint and Steel
@@ -81,7 +81,7 @@ Survivors are designed with roles, as opposed to Hunters.
   <br>Your alchemical genius (or craziness) allows you to craft another potion while crouching for 8 seconds. *“I dunno who Geneva is but she better get her convention up on outta here.”*
   
   > **Active - Bubbly Boys**
-  <br>Throw a mysterious concoction that slows hunters by 50% and they deal 50% less damage for 5s; also deals damage to enemy deployables. Can hold up to 3. *“How z’at taste?”*
+  <br>Throw a mysterious concoction that slows Hunters by 50% and reduces their damage by 50% for 5s; also deals damage to enemy deployables. Can hold up to 3. *“How z’at taste?”*
   
   > **Ultimate - The Big One**
   <br>aaaaaaaaaaaaa
