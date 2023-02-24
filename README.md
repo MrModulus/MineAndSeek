@@ -1,79 +1,222 @@
 
 # Welcome to MineAndSeek!
 
-MineAndSeek is a minigame datapack designed by EternalLawn and implemented by LordKanelsnegle. It's only really intended for personal use at the moment, but for our own sakes, a breakdown of the project structure can be found below.
+MineAndSeek is a minigame datapack designed by EternalLawn and implemented by LordKanelsnegle. It is intended for personal use, but we anticipate its growth and welcome the opporunity for matchmaking, player statistics, and the ability to play any time.
 
 # Game Design
 
-The overall premise of the game is simple - hide and seek, with the flair of specialized classes. The seekers are referred to as "Hunters", and the hiders are referred to as "Survivors". Every class has a passive ability/perk, an active ability, and an ultimate ability. Lawn, please check this part and modify it as you deem fit :-)
+The premise of the game offers a dangerously fun spin on hide and seek, with players having access to specialized classes that can make shift the tides of victory with their unique abilities. Players are divided two factions, "Hunters" and "Survivors", and spend up to (around) 10 minutes in precreated maps trying to achieve victory for their faction. 
+- Hunters are designed with the sole intent of seeking and defeating Survivors; they win if they can defeat all Survivors before time runs out.
+- Survivors are designed to befuddle Hunters, and protect themselves and their allies; they win if they at least one Survivor lives when time runs out.
 
-## Hunters
+## Hunters (Experimental)
 
 <details>
-  <summary>Mr Example, The Rogue Warrior</summary>
+  <summary>Clyde: The Savage</summary>
   
-  > A small lore-y character description
+  > Once a hardworking family man, now a living corpse that thrives only under the false hope that his long dead family will be reunited with him should he deliver the Survivors; Living or Dead. Simple to play, hard to escape.
   
-  > **Passive - Yo Mama**
-  <br>EEEEEEEE
+  > **Weapon - The Cleaver**
+  <br>Medium Damage Axe.
   
-  > **Active - My Mama**
-  <br>ooooooo
+  > **Passive - Bloodlust**
+  <br>Can hear the heartbeat of nearby survivors and gains a 20% speed boost when close. *“Your heart’s final words are poetry.”*
   
-  > **Ultimate - Our Mama**
+  > **Active - Unrelenting**
+  <br>Enter a state of rage which gives you 20% speed, apply bleeding damage, and you become temporarily immune to debuffs for 8s. (CD: 40s) *“Death couldn’t stop me. Did you think you could?”*
+  
+  > **Ultimate - Scream for Me*
+  <br>Spread a nightmare-inducing Paranoia effect to all survivors no matter where they are, blinding them and befuddling their senses for 8 seconds. *“Rest in peace.”*
+</details>
+
+<details>
+  <summary>Percival: The Tracker</summary>
+  
+  > He watched as all his animal friends morphed into horrific zombies, but cared for them all the same. Lived in peace with the zombies in a forest until the Survivors started hunting them. In the name of vengeance, he will take the role as hunter. Silent as a breeze, deadly as a storm. 
+  
+  > **Weapon - Silk Touch**
+  <br>Medium Damage Bow + Low Damage Sword.
+  
+  > **Passive - I See You**
+  <br>All arrows reveal hit targets and they cannot heal for 1 second. *“Death is merciful, but I am not.”*
+  
+  > **Active - Ensare**
+  <br>Plant a trap on the spot and enter stealth for a brief period. Trap placement is permanent until detonated or the skill is used again, and stealth lasts 5 seconds. Traps root and reveal victims within range for 2 seconds. (CD: 30s). *“Don’t scream too much.”*
+  
+  > **Ultimate - You Can't Run**
+  <br>Fire a global, wide, wall-piercing shot that deals tremendous damage to all unfortunate enough to be caught. *“You don’t deserve to live.”*
+</details>
+
+<details>
+  <summary>Minverva: The Wicked</summary>
+  
+  > A proud fallen queen who was blood-bound to protect over 10,000 lives; and she ruined all of them. A master manipulator who can even get the dead to do her bidding, she thrives under the power her subjects provide. Even though once upon a time she let them down, she won’t let their corpses do the same. Tricky and oppressive when left unchecked.
+  
+  > **Weapon - Twisted Scepter**
+  <br>Low Damage Wand
+  
+  > **Passive - Eerie Presence**
+  <br>Summon a Zombie where you're standing every 40 seconds. You zombies are revealed to you and will attack Survivors. *“I wish I was you, so I could too serve a beautiful queen.”*
+  
+  > **Active - Tainted Legacy**
+  <br>Throw an Ender Pearl to teleport to the location you’re looking. Spawn a zombie where you were standing originally. (CD: 20s). *“You should be honored.”*
+  
+  > **Ultimate - For the Queen!**
+  <br> Spawn a bloodthirsty creeper directly behind every Survivor, these zombies have increased speed, and will explode dealing high damage. These creepers last 10 seconds. *“Devour them…”*
+</details>
+
+
+## Survivors (Experimental)
+Survivors are designed with roles, as opposed to Hunters.
+
+<details>
+  <summary>Tina Nelson Tucker: The TNT [Control]</summary>
+  
+  > Science gives mankind the power to reach for the stars, but inevitably crash and burn; too bad Tina forgot the first part. The tools she made as a nuclear engineer for the government failed to stop Aurora, but what better way to make up for it than destroying everything the Corruption brought with it, especially the Hunters. Debuffs and cripples with various chemicals (she may have breathed a little of it in).
+  
+  > **Weapon - Sparky**
+  <br>Flint and Steel
+  
+  > **Passive - Crackhead Energy**
+  <br>Your alchemical genius (or craziness) allows you to craft another potion while crouching for 8 seconds. *“I dunno who Geneva is but she better get her convention up on outta here.”*
+  
+  > **Active - Bubbly Boys**
+  <br>Throw a mysterious concoction that slows hunters by 50% and they deal 50% less damage for 5s; also deals damage to enemy deployables. Can hold up to 3. *“How z’at taste?”*
+  
+  > **Ultimate - The Big One**
   <br>aaaaaaaaaaaaa
  
 </details>
 
 <details>
-  <summary>Mrs Example, The Vile Purge</summary>
+  <summary>Scarecrow: The Still [Support]</summary>
   
-  > A small lore-y character description
+  > A passionate and extremely talented farmer who gets into his work – REALLY into his work. The last in a long line of agricultural geniuses, he watched as the Terrorforming soiled the land and caused untamed beasts to desecrate his family’s hard work. He now takes it upon himself to patiently stand among the Survivors’ much-needed crops from sunrise to sunset and protects them with his life, while ending the life of any that test his patience. 
   
-  > **Passive - Yo Mama**
-  <br>EEEEEEEE
+  > **Weapon - Wooden Arm**
+  <br>Wooden Sword
   
-  > **Active - My Mama**
-  <br>ooooooo
+  > **Passive - Undying Patience**
+  <br>Grant self and nearby allies 20% damage reduction. If a hunter deals 5 hearts of your health worth of damage to you, they are stunned for 1s. *“The seed of vengeance has been planted, and I will watch it grow.”*
   
-  > **Ultimate - Our Mama**
-  <br>aaaaaaaaaaaaa
+  > **Active - Wind Dance**
+  <br>Heal yourself and nearby allies in a large range for 3 hearts. They gain 50% additional damage reduction. (CD: 40). *“I shall protect the harvest.”*
+  
+  > **Ultimate - Silent Bulwark**
+  <br>Plant yourself on the spot and become invisible. All other Survivors become immune to damage and debuffs for 8 seconds. *“What senseless Violence.”*
  
 </details>
-
-## Survivors
+<details>
+  <summary>Ava: The Seer [Trickster]</summary>
+  
+  > Blinded and cast out as a child, she roamed the forest until she knew every tree by every dent in its bark. The animals and spirits became were merciful to her when her life wasn’t and became her family. Once she became 18 she decided she was strong enough to seek her brother who unbeknown to her had become a Hunter. Perhaps it’s a blessing that she cannot see how her world was corrupted.
+  
+  > **Agony:**
+  <br>Bow
+  
+  > **Passive - Eye for an Eye**
+  <br>Your weapon shots inflict Blindess on Hunters for 1 second. *“I may have lost my sight, but I still have vision.”*
+  
+  > **Active - Guide Me**
+  <br>Spawn a sentry Hawk in your location. You can have up to 3 active and they will reveal hunters in a radius. If a hunter defeats one of these hawks, all Survivors are healed for 2 hearts. (CD: 30s). *“Please, be my eyes.”*
+  
+  > **Ultimate - The Overseer**
+  <br>Spawn an Elder bear behind a random Hunter, it is revealed, has a lot of health, large, and Hunters cannot use their skills until it is killed or it disappears in 20 seconds. *“Guardian, protect us!”*
+ 
+</details>
+<details>
+  <summary>Princess Stormbliss: The Blizzard [Control]</summary>
+  
+  > There was once a kingdom that was plagued with snow born from the frigid queen’s heart. She locked away her daughter, leaving her with nothing but the neverending snow on her balcony and her imagination. No princess is without power, and when the Terrorforming happened, she got the freedom she needed. She now seeks to chill the flames of destruction caused by not only the Corruption, but also her mother.
+  
+  > **Weapon - Snowballs**
+  <br>Special Snowballs.
+  
+  > **Passive - Permafrost**
+  <br>Your snowballs knock back and slow Hunters by 25% for 1 second. *“You’ve bathed the world in red, now I will bathe it in white.”*
+  
+  > **Active - Loyal Subjects**
+  <br>Summon a loyal snowman who runs up to nearby Hunters and explodes, freezing them for 2 seconds. (CD: 40). *“Freeze them in time.”*
+  
+  > **Ultimate - White Blood**
+  <br>Call upon your weather powers to summon a blizzard that follows Hunters, slowing them by 90% and obscuring their vision for 8 seconds. *“Your hearts are frozen.”*
+ 
+</details>
+<details>
+  <summary>Jasone: The Kid [Trickster]</summary>
+  
+  > A kid from a poor family with nothing but clothes on his back and lightning running through his veins. He grew up with the wholesome aspiration of becoming an athlete and becoming famous enough to get his family out of the gutter. Now the corruption may have taken his family, but not his energy. They say lightning doesn’t strike in the same place twice, but that’s because they haven’t seen Jasone.
+  
+  > **Weapon - Ego**
+  <br>Sword
+  
+  > **Passive - Adrenaline Rush**
+  <br>If you receive damage your speed increases by 20% and you reveal the Hunters who attacked you for 2 seconds.
+  
+  > **Active - Spark Mark**
+  <br>Plant a mark on the ground and gain 20% movement speed for 8 seconds. Reactivating the skill within this duration returns you to the Mark. (CD: 40s)
+  
+  > **Ultimate - Pandemonium**
+  <br>Channel the vengeance of your ancestors to strike all Hunters on the map with searing Lightning, stunning them for 1 second, and increasing your speed by 100% for 8 seconds.
+ 
+</details>
+<details>
+  <summary>Zombie McDeadface: The Undead [Control]</summary>
+  
+  > WIP
+  
+  > **Weapon - These Hands:**
+  <br>Rotten Flesh
+  
+  > **Passive - Bloodlust**
+  <br>Your ability does not have a cooldown, and Instead uses 4 hearts of health. If Hunters are successfully hit by your ability, you gain 2 hearts for every Hunter hit. 
+  
+  > **Active - Why is it Spicy?**
+  <br>Fire a large wall-piercing beam of energy that inflicts Nausea and Slows all Hunters in its path for 5 seconds. This also damages deployables. *“Pardon me.”*
+  
+  > **Ultimate - Table Turner**
+  <br>Turn all Hunters into Zombies for 5 seconds. *“Have a taste of your own medicine!”*
+ 
+</details>
 
 <details>
-  <summary>Mr Example, The Unseen</summary>
+  <summary>Zane: The Gambler [Trickster]</summary>
   
-  > A small lore-y character description
+  > WIP
   
-  > **Passive - Yo Mama**
-  <br>EEEEEEEE
+  > **Weapon - Bang for your Buck:**
+  <br>Gun (Crossbow)
   
-  > **Active - My Mama**
-  <br>ooooooo
+  > **Passive - **
+  <br>WIP
   
-  > **Ultimate - Our Mama**
-  <br>aaaaaaaaaaaaa
+  > **Active - Test of Fate**
+  <br>Heal for 1 heart, then flip a coin, if it’s heads reveal all hunters on the map for 4 seconds, if it’s tails you are revealed for 1 second. (CD: 30s)
+  
+  > **Ultimate - Stock Exchange**
+  <br>All Hunters have their positions swapped, then you swap places with one of those Hunters and grant all Hunters nausea for 5 seconds. *“It’s your problem now.”*
  
 </details>
 
 <details>
-  <summary>Mrs Example, The Trickster</summary>
+  <summary>Cascade: The Surfer [Support]</summary>
   
-  > A small lore-y character description
+  > WIP
   
-  > **Passive - Yo Mama**
-  <br>EEEEEEEE
+  > **Weapon - Finny:**
+  <br>Fish
   
-  > **Active - My Mama**
-  <br>ooooooo
+  > **Passive - My Dude**
+  <br>The spirit of your dolphin buddy watches over you and your nearby allies, regenerating 1 heart of health every 20 seconds.
   
-  > **Ultimate - Our Mama**
-  <br>aaaaaaaaaaaaa
+  > **Active - Fintastic!**
+  <br>Summon the spirit of Fin who hovers on the spot, granting nearby allies 20% movement speed and regenerates 1 every 10 seconds, this only applies to allies in range. (CD: 40s).
+  
+  > **Ultimate - Dolphin Rush**
+  <br>Summon a spirit of Fin over the shoulders of you and your allies. He protects them by healing them for 1 heart every second, attacking nearby deployables and Hunters with water projectiles, and grants Haste for 8 seconds.
  
 </details>
+
 
 # Folders
 
