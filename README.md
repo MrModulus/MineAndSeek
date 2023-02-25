@@ -1,68 +1,77 @@
 
 # Welcome to MineAndSeek!
 
-Hide-and-seek is a minigame datapack designed by EternalLawn and implemented by LordKanelsnegle. It is intended for personal use, but we anticipate its growth and welcome the opportunity for matchmaking, player statistics, and the ability to play at any time.
+MineAndSeek is a minigame datapack designed by EternalLawn and implemented by LordKanelsnegle. It is intended for personal use, but we anticipate its growth and welcome the opportunity for matchmaking, player statistics, and the ability to play at any time.
 
 # Game Design
 
 The premise of the game offers a dangerously fun spin on hide and seek, with players having access to specialized classes that can shift the tides of victory with their unique abilities. Players are divided into two factions, "Hunters" and "Survivors", and spend up to 10 minutes in pre-created maps trying to achieve victory for their faction. 
 - Hunters are designed to seek and defeat Survivors; they win if they can defeat all Survivors before time runs out.
-- Survivors are designed to befuddle Hunters and protect themselves and their allies; they win if at least one Survivor lives when time runs out.
+- Survivors are designed to hinder Hunters and protect themselves and their allies; they win if at least one Survivor remains standing when time runs out.
 
 ## Hunters (Experimental)
 
 <details>
   <summary>Clyde: The Savage</summary>
   
-  > Once a hardworking family man, now a living corpse that thrives only under the false hope that his long-dead family will be reunited with him should he deliver the Survivors. Simple to play, hard to escape.
+  > Once a hardworking family man and butcher, now a raging figure driven by an indiscriminate desire to do what butchers do best. Simple to play, hard to escape.
   
   > **Weapon - The Cleaver**
-  <br>Medium Damage Axe.
+  <br>High Damage Axe (Iron)
   
   > **Passive - Bloodlust**
-  <br>Can hear the heartbeat of nearby Survivors and gains a 20% speed boost when close. *“Your heart’s final words are poetry.”*
+  <br>Can hear the heartbeat of nearby Survivors and gains a 20% speed boost when close. 
+  <br>*“Your heart is stricken. My footsteps quicken.”*
   
   > **Active - Unrelenting**
-  <br>Enter a state of rage which gives you 20% speed, apply bleeding damage, and makes you temporarily immune to debuffs for 8s. (CD: 40s) *“Death couldn’t stop me. Did you think you could?”*
+  <br>Enter a state of rage which gives you 20% speed, apply bleeding damage, and makes you temporarily immune to debuffs for 8s. (CD: 40s) 
+  <br>*“Death couldn’t stop me. Did you think you could?”*
   
-  > **Ultimate - Scream for Me*
-  <br>Spread a nightmare-inducing Paranoia effect to all Survivors, blinding them and befuddling their senses for 8 seconds. *“Rest in peace.”*
+  > **Ultimate - Scream for Me**
+  <br>Spread a nightmare-inducing Paranoia effect to all Survivors, blinding them and scrambling their senses for 8 seconds. 
+  <br>*“Squeal for me, piggies!”*
 </details>
 
 <details>
   <summary>Percival: The Tracker</summary>
   
-  > He watched as all his animal friends morphed into horrific zombies but cared for them all the same. Lived in peace with the zombies in a forest until the Survivors started hunting them. In the name of vengeance, he will take the role of a hunter. Silent as a breeze, deadly as a storm. 
+  > Originally a caretaker of the forest, he watched as The Corruption slowly mutated his animal companions into horrific zombies but cared for them all the same. After witnessing a group of Survivors hunting them down, he swore that the hunters would become the hunted. Silent as a breeze, deadly as a storm. 
   
-  > **Weapon - Silk Touch**
-  <br>Medium Damage Bow + Low Damage Sword.
+  > **Weapon - Shadowstrike, Ol' Reliable**
+  <br>Medium Damage Bow, Low Damage Sword (Wooden)
   
-  > **Passive - I See You**
-  <br>All arrows reveal targets and prevent healing for 1 second. *“Justice is blind, but I am not.”*
+  > **Passive - Eagle's Eye**
+  <br>All arrows reveal targets and prevent healing for 1 second.
+  <br>*“Justice is blind, but I am not.”*
   
-  > **Active - Ensare**
-  <br>Plant a trap on the spot and enter stealth for a brief period. Trap placement is permanent until detonated or until the skill is used again, and stealth lasts 5 seconds. Traps root and reveal victims within range for 2 seconds. (CD: 30s). *“Don’t scream too much.”*
+  > **Active - Ensared**
+  <br>Plant a trap at your position and enter stealth for a brief period. Trap placement is permanent until detonated or until the skill is used again, and stealth lasts 5 seconds. Traps root and reveal victims within range for 2 seconds. (CD: 30s).
+  <br>*“Don’t scream too much.”*
   
-  > **Ultimate - You Can't Run**
-  <br>Fire a global, wide, wall-piercing shot that deals tremendous damage to all unfortunate enough to be caught in its path. *“You don’t deserve to live.”*
+  > **Ultimate - You Can't Hide**
+  <br>Fire a global, wide, wall-piercing shot that deals tremendous damage to all unfortunate enough to be caught in its path.
+  <br>*“You don’t deserve to live.”*
 </details>
 
 <details>
   <summary>Minerva: The Wicked</summary>
   
-  > A proud, fallen queen who was blood-bound to protect over 10,000 lives - she ruined all of them. A master manipulator who can get even the dead to do her bidding, she thrives off the power her subjects provide. Although once upon a time she let them down, she won’t let their corpses do the same in return. Tricky and oppressive when left unchecked.
+  > A proud, fallen queen who was blood-bound to protect thousands of lives - she ruined all of them. A master manipulator who can get even the dead to do her bidding, she thrives off the power her subjects provide. Tricky and oppressive when left unchecked.
   
-  > **Weapon - Twisted Scepter**
-  <br>Low Damage Wand
+  > **Weapon - Black Scythe**
+  <br>Low Damage Hoe (Netherite)
   
   > **Passive - Eerie Presence**
-  <br>Summon a Zombie where you're standing every 40 seconds. Your zombies are revealed to you and will attack Survivors. *“I wish I was you, so I too could serve a beautiful queen.”*
+  <br>Summon a Zombie at your position every 40 seconds. Your zombies are revealed to you and will attack Survivors. 
+  <br>*“If only I were you, so that I too could serve such a beautiful queen.”*
   
   > **Active - Tainted Legacy**
-  <br>Teleport to the location you’re looking at. Spawn a zombie where you were standing originally. (CD: 20s). *“You should be honored.”*
+  <br>Hold to charge. Teleport a distance proportional to the charge duration, in the direction you're facing. Spawn a zombie where you were standing originally. (CD: 20s). 
+  <br>*“You should be honored.”*
   
   > **Ultimate - For the Queen!**
-  <br> Spawn a bloodthirsty creeper directly behind every Survivor. These minions have increased speed and will explode to deal high damage. They last for 10 seconds. *“Devour them…”*
+  <br> Spawn a bloodthirsty creeper directly behind every Survivor. These minions have increased speed and will explode to deal high damage. They last for 10 seconds. 
+  <br>*“Seek and destroy.”*
 </details>
 
 
