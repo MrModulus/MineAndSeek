@@ -312,7 +312,7 @@ Any balancing changes that need to be made can be found here. These are generall
 ## New Concepts
 
 Any new ideas or WIP classes/abilities/etc can be found here. These are generally low-priority.
-- Example
+- **Beacons** - The Corruption Beacon system is an objective-based addition to Mine and Seek that incentivizes players to outsmart each other and promote active gameplay. Every 3 minutes these beacons will spawn at one of the predetermined points (usually two or three) on each map randomly. The arrival of these points is broadcast to all players. Survivors must remain in the 7x7 zone to charge a meter for a short time, and upon completion, a portion of time is removed from the overall timer, hastening their chances for victory. This will naturally attract Hunters, who can occupy the zone to remove the meter’s progress is the Survivors were chased off before they could finish.
 
 ## Caveats
 Any bugs or issues that are version-dependent or faults with Minecraft itself can be found here. They won't be actively worked on, but are worth noting for future reference in case they eventually get fixed.
