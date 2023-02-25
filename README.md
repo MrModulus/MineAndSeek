@@ -209,7 +209,7 @@ Survivors are designed with roles, as opposed to Hunters.
 </details>
 
 <details>
-  <summary>Zombie McDeadface: The Undead [Controller]</summary>
+  <summary>{WIP} // Zombie McDeadface: The Undead [Controller]</summary>
   
   > WIP
   
@@ -228,7 +228,7 @@ Survivors are designed with roles, as opposed to Hunters.
 </details>
 
 <details>
-  <summary>Zane: The Gambler [Trickster]</summary>
+  <summary>{WIP} // Zane: The Gambler [Trickster]</summary>
   
   > WIP
   
@@ -247,7 +247,7 @@ Survivors are designed with roles, as opposed to Hunters.
 </details>
 
 <details>
-  <summary>Cascade: The Surfer [Support]</summary>
+  <summary>{WIP} // Cascade: The Surfer [Support]</summary>
   
   > WIP
   
