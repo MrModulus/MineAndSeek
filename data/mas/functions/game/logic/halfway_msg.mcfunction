@@ -13,7 +13,7 @@ title @a[tag=mas.player] title ["",{"text":"HALFWAY THERE","bold":true,"italic":
 title @a[team=mas.hunter] subtitle ["",{"text":"Get them already!","bold":true,"italic":false,"color":"red"}]
 title @a[team=mas.survivor] subtitle ["",{"text":"Youre doing well!","bold":true,"italic":false,"color":"blue"}]
 
-#SCHEDULE 1 MIN MSG
-execute if predicate mas:map/is_small run schedule function mas:game/logic/one_min_msg 120s
-execute if predicate mas:map/is_medium run schedule function mas:game/logic/one_min_msg 180s
-execute if predicate mas:map/is_large run schedule function mas:game/logic/one_min_msg 240s
+#SCHEDULE HALFTIME MSG
+execute if predicate mas:map/is_small run schedule function mas:game/logic/one_min_msg 180s
+execute if predicate mas:map/is_medium run schedule function mas:game/logic/one_min_msg 240s
+execute if predicate mas:map/is_large run schedule function mas:game/logic/one_min_msg 300s
