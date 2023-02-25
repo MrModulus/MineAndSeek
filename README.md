@@ -62,38 +62,61 @@ The premise of the game offers a dangerously fun spin on hide and seek, with pla
   <br>Low Damage Hoe (Netherite)
   
   > **Passive - Eerie Presence**
-  <br>Summon a Zombie at your position every 40 seconds. Your zombies are revealed to you and will attack Survivors. 
+  <br>The game starts with zombies scattered around the map. Summon a Zombie at your position every 30 seconds. Your zombies are revealed to you and will attack Survivors. 
   <br>*“If only I were you, so that I too could serve such a beautiful queen.”*
   
-  > **Active - Tainted Legacy**
-  <br>Hold to charge. Teleport a distance proportional to the charge duration, in the direction you're facing. Spawn a zombie where you were standing originally. (CD: 20s). 
-  <br>*“You should be honored.”*
+  > **Active - Soul Release**
+  <br>Teleport to a zombie that you are looking at, consuming it in the process. Spawn a zombie where you were standing originally. (CD: 20s). 
+  <br>*“You are dismissed.”*
   
   > **Ultimate - For the Queen!**
   <br> Spawn a bloodthirsty creeper directly behind every Survivor. These minions have increased speed and will explode to deal high damage. They last for 10 seconds. 
   <br>*“Seek and destroy.”*
 </details>
 
+<details>
+  <summary>Troy: The Drowned</summary>
+  
+  > A man of the sea, he assumed her tides could protect him from The Corruption. He gathered all of his loved ones onto his boat and sailed off, safe at last - only to find that he was gravely mistaken. His command of the waves was all that remained.
+  
+  > **Weapon - The Kraken**
+  <br>Low Damage Trident
+  
+  > **Passive - Downpour**
+  <br>The map remains in a perpetual downfall. Experience no slowdown in water.
+  <br>*“A cloud hangs over us all.”*
+  
+  > **Active - Kraken's Propulsion**
+  <br>Hold your trident to charge it while exposed to water. Dash in the direction you are facing, proportional to the charge time. (CD: 20s). 
+  <br>*“You can't escape the Kraken.”*
+  
+  > **Ultimate - Phantom Flood**
+  <br> Leave a trail of water wherever you walk for 20 seconds. 
+  <br>*“Wash them away.”*
+</details>
 
 ## Survivors (Experimental)
 Survivors are designed with roles, as opposed to Hunters.
 
 <details>
-  <summary>Tina Nelson Tucker: The TNT [Control]</summary>
+  <summary>Tina Nelson Tucker: The TNT [Controller]</summary>
   
-  > Science gives mankind the power to reach for the stars and inevitably crash and burn. Too bad Tina forgot the first part. The tools she made as a nuclear engineer for the government failed to stop Aurora, but what better way to make up for it than destroying everything the Corruption brought with it? Debuffs and cripples with various chemicals (some of which she may have breathed in a little of).
+  > Science gave mankind the power to reach for the stars, but also to inevitably crash and burn. Too bad Tina forgot the first part. The tools she made as a nuclear engineer for the government failed to stop Aurora, but what better way to make up for it than destroying everything the Corruption brought with it?
   
   > **Weapon - Sparky**
   <br>Flint and Steel
   
   > **Passive - Crackhead Energy**
-  <br>Your alchemical genius (or craziness) allows you to craft another potion while crouching for 8 seconds. *“I dunno who Geneva is but she better get her convention up on outta here.”*
+  <br>Your alchemical genius (or craziness) allows you to craft another potion while crouching for 8 seconds. 
+  <br>*“I dunno who Geneva is but she better get her convention up on outta here.”*
   
   > **Active - Bubbly Boys**
-  <br>Throw a mysterious concoction that slows Hunters by 50% and reduces their damage by 50% for 5s; also deals damage to enemy deployables. Can hold up to 3. *“How z’at taste?”*
+  <br>Throw a mysterious concoction that slows Hunters by 50% and reduces their damage by 50% for 5s; also deals damage to enemy deployables. Can hold up to 3. 
+  <br>*“How z’at taste?”*
   
-  > **Ultimate - The Big One**
-  <br>Drop a hazardous bomb, causing all Hunters to become dizzy and eventually black out. When they wake up 3 seconds later, they return to the map’s spawn point. *“Smell that? Me neither! My nose don’t work.”*
+  > **Ultimate - Fat Man**
+  <br>Drop a hazardous bomb, causing all afflicted Hunters to become dizzy and eventually black out. They awake 3 seconds later, back at their spawnpoint. 
+  <br>*“Smell that? Me neither! My nose don’t work.”*
  
 </details>
 
@@ -103,74 +126,90 @@ Survivors are designed with roles, as opposed to Hunters.
   > A passionate and extremely talented farmer who gets into his work – REALLY into his work. The last in a long line of agricultural geniuses, he watched as the Terrorforming soiled the land and caused untamed beasts to desecrate his family’s hard work. He now takes it upon himself to patiently stand among the Survivors’ much-needed crops from sunrise to sunset and protects them with his life, while ending the life of any that test his patience. 
   
   > **Weapon - Wooden Arm**
-  <br>Wooden Sword
+  <br>Stick
   
   > **Passive - Undying Patience**
-  <br>Grant self and nearby allies 20% damage reduction. If a hunter deals 5 hearts of your health worth of damage to you, they are stunned for 1s. *“The seed of vengeance has been planted, and I will watch it grow.”*
+  <br>Grant self and nearby allies 20% armor. If a hunter deals 5 hearts of your health worth of damage to you, they are stunned for 1s. 
+  <br>*“The seed of protection has been planted, and I will watch it grow.”*
   
   > **Active - Wind Dance**
-  <br>Heal yourself and nearby allies in a large range for 3 hearts. They gain 50% additional damage reduction. (CD: 40). *“I shall protect the harvest.”*
+  <br>Heal yourself and nearby allies in a large range for 3 hearts. They gain 50% additional damage reduction. (CD: 40). 
+  <br>*“I shall protect the harvest.”*
   
-  > **Ultimate - Silent Bulwark**
-  <br>Plant yourself on the spot and become invisible. All other Survivors become immune to damage and debuffs for 8 seconds. *“What senseless Violence.”*
+  > **Ultimate - One For All**
+  <br>Root yourself into the ground, granting all other Survivors immunity to damage and debuffs for 8 seconds. Reveals you to all Hunters.
+  <br>*“Here to defend. Here to stay.”*
  
 </details>
+
 <details>
   <summary>Ava: The Seer [Trickster]</summary>
   
-  > Blinded and cast out as a child, she roamed the forest until she knew every tree by every dent in its bark. The animals and spirits became were merciful to her when her life wasn’t and became her family. Once she became 18, she decided she was strong enough to seek her brother who unbeknown to her had become a Hunter. Perhaps it’s a blessing that she cannot see how her world was corrupted.
+  > Blinded and cast out as a child, she roamed the forest until she knew every nook of every tree. The animals and spirits were merciful to her when her life wasn’t, becoming her new family. Once she became 18, she decided she was strong enough to seek her brother who unbeknown to her had become a Hunter. Perhaps it’s a blessing that she cannot see how her world was corrupted.
   
-  > **Agony:**
+  > **Weapon - Agony**
   <br>Bow
   
   > **Passive - Eye for an Eye**
-  <br>Your weapon shots inflict Blindness on Hunters for 1 second. *“I may have lost my sight, but I still have vision.”*
+  <br>Your weapon shots inflict Blindness on Hunters for 1 second. 
+  <br>*“I may have lost sight, but I still have vision.”*
   
   > **Active - Guide Me**
-  <br>Spawn a sentry Hawk in your location. You can have up to 3 active and they will reveal hunters in a radius. If a hunter defeat one of these hawks, all Survivors are healed for 2 hearts. (CD: 30s). *“Please, be my eyes.”*
+  <br>Spawn a sentry Hawk in your location, capped at two Hawks. Hawks reveal nearby Hunters until destroyed, then heal all Survivors for 2 hearts. (CD: 30s). 
+  <br>*“Please, be my eyes.”*
   
   > **Ultimate - The Overseer**
-  <br>Spawn an Elder bear behind a random Hunter, it is revealed, has a lot of health, large, and Hunters cannot use their skills until it is killed, or it disappears in 20 seconds. *“Guardian, protect us!”*
+  <br>Spawn an sentry Bear behind a random Hunter. The Bear has high health and prevents Hunters from using their abilities until killed or after 20 seconds.
+  <br>*“Guardian, stall them!”*
  
 </details>
+
 <details>
-  <summary>Princess Stormbliss: The Blizzard [Control]</summary>
+  <summary>Princess Stormbliss: The Blizzard [Controller]</summary>
   
-  > There was once a kingdom that was plagued with snow born from the frigid queen’s heart. She locked away her daughter, leaving her with nothing but the never-ending snow on her balcony and her imagination. No princess is without power; when the Terrorforming happened, she got the freedom she needed. She now seeks to chill the flames of destruction caused by not only the Corruption, but also her mother.
+  > The daughter of a queen who ruled through fear and tyranny, she now seeks to chill the flames of destruction caused by not only the Corruption, but her mother too.
   
   > **Weapon - Snowballs**
-  <br>Special Snowballs.
+  <br>Snowballs
   
   > **Passive - Permafrost**
-  <br>Your snowballs knock back and slow Hunters by 25% for 1 second. *“You’ve bathed the world in red, now I will bathe it in white.”*
+  <br>Your snowballs knockback and slow Hunters by 25% for 1 second. 
+  <br>*“You’ve bathed the world in red, now I will bathe it in white.”*
   
   > **Active - Loyal Subjects**
-  <br>Summon a loyal snowman who runs up to nearby Hunters and explodes, freezing them for 2 seconds. (CD: 40). *“Freeze them in time.”*
+  <br>Summon a loyal snowman who runs up to nearby Hunters and explodes, freezing them for 2 seconds. (CD: 40). 
+  <br>*“Freeze them in time.”*
   
   > **Ultimate - White Blood**
-  <br>Call upon your weather powers to summon a blizzard that follows Hunters, slowing them by 90% and obscuring their vision for 8 seconds. *“Your hearts are frozen.”*
+  <br>Call upon your winter powers to summon a blizzard that follows Hunters, slowing them and obscuring their vision for 10 seconds. 
+  <br>*“Your hearts are frozen.”*
  
 </details>
+
 <details>
   <summary>Jasone: The Kid [Trickster]</summary>
   
-  > A kid from a poor family with nothing but clothes on his back and lightning running through his veins. He grew up with the wholesome aspiration of becoming an athlete and becoming famous enough to get his family out of the gutter. Now the corruption may have taken his family, but not his energy. They say lightning doesn’t strike in the same place twice, but that’s because they haven’t seen Jasone.
+  > A kid from a poor family with nothing but the clothes on his back and lightning running through his veins. He grew up aspiring to become an athlete and becoming famous enough to pull his family out of the gutter; now the corruption may have taken his family, but not his energy. They say lightning doesn’t strike in the same place twice, but that’s because they haven’t seen Jasone.
   
   > **Weapon - Ego**
-  <br>Sword
+  <br>Blaze Rod
   
   > **Passive - Adrenaline Rush**
-  <br>If you receive damage your speed increases by 20% and you reveal the Hunters who attacked you for 2 seconds.
+  <br>Gain a speed boost when hit and reveal the Hunter who attacked you for 2 seconds.
+  <br>*“Adrenaline is the only performance drug I need.”*
   
   > **Active - Spark Mark**
-  <br>Plant a mark on the ground and gain 20% movement speed for 8 seconds. Reactivating the skill within this duration returns you to the Mark. (CD: 40s)
+  <br>Plant a Mark at your position and gain movement speed for 6 seconds. Reactivating the skill within this duration returns you to your Mark. (CD: 40s)
+  <br>*“On your marks... get set... go!”*
   
-  > **Ultimate - Pandemonium**
-  <br>Channel the vengeance of your ancestors to strike all Hunters on the map with searing Lightning, stunning them for 1 second, and increasing your speed by 100% for 8 seconds.
+  > **Ultimate - Flash**
+  <br>Channel the vengeance of your ancestors to strike all Hunters on the map with searing Lightning, stunning them for 1 second, and increasing your speed for each Hunter hit for 8 seconds.
+  <br>*“Say cheese!”*
  
 </details>
+
 <details>
-  <summary>Zombie McDeadface: The Undead [Control]</summary>
+  <summary>Zombie McDeadface: The Undead [Controller]</summary>
   
   > WIP
   
