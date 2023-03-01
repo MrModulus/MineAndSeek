@@ -27,6 +27,10 @@ setblock -1503 35 -36 air destroy
 setblock -1503 35 -35 air destroy
 setblock -1503 35 -34 air destroy
 setblock -1503 35 -33 air destroy
+setblock -1503 34 -36 minecraft:grass_block destroy
+setblock -1503 34 -35 minecraft:grass_block destroy
+setblock -1503 35 -34 minecraft:grass_block destroy
+setblock -1503 35 -33 minecraft:grass_block destroy
 
 #SET SPAWNPOINTS
 summon minecraft:marker -1459.5 35.5 -64.5 {Tags:["mas.survivor_spawn","mas.entity"],Rotation:[0F,0F]}
