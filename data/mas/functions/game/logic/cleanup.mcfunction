@@ -13,6 +13,6 @@ kill @e[tag=mas.entity]
 
 #CLEAR ROUND SCHEDULES
 schedule clear mas:game/logic/xp_timer
-schedule clear mas:game/logic/five_min_msg
+schedule clear mas:game/logic/halfway_msg
 schedule clear mas:game/logic/one_min_msg
 schedule clear mas:game/logic/win_survivors
