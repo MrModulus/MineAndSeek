@@ -15,18 +15,22 @@
 #    all from the round start function using predicates. TODO (low): Return to this.
 
 #LOAD MAP
-setblock 0 -17 0 structure_block[mode=load]{name:"mas:mansion1",posX:0,posY:1,posZ:0,sizeX:48,sizeY:48,sizeZ:48,rotation:"NONE",mirror:"NONE",mode:"LOAD",ignoreEntities:0b} destroy
-setblock 0 -18 0 minecraft:redstone_block destroy
-setblock 0 -17 48 structure_block[mode=load]{name:"mas:mansion2",posX:0,posY:1,posZ:0,sizeX:48,sizeY:48,sizeZ:48,rotation:"NONE",mirror:"NONE",mode:"LOAD",ignoreEntities:0b} destroy
-setblock 0 -18 48 minecraft:redstone_block destroy
-setblock 48 -17 0 structure_block[mode=load]{name:"mas:mansion3",posX:0,posY:1,posZ:0,sizeX:48,sizeY:48,sizeZ:48,rotation:"NONE",mirror:"NONE",mode:"LOAD",ignoreEntities:0b} destroy
-setblock 48 -18 0 minecraft:redstone_block destroy
-setblock 48 -17 48 structure_block[mode=load]{name:"mas:mansion4",posX:0,posY:1,posZ:0,sizeX:48,sizeY:48,sizeZ:48,rotation:"NONE",mirror:"NONE",mode:"LOAD",ignoreEntities:0b} destroy
-setblock 48 -18 48 minecraft:redstone_block destroy
+setblock -1503 35 -36 structure_block[mode=load]{name:"mas:mansion1",posX:48,posY:-16,posZ:-46,sizeX:48,sizeY:48,sizeZ:48,rotation:"NONE",mirror:"NONE",mode:"LOAD",ignoreEntities:0b} destroy
+setblock -1503 35 -35 structure_block[mode=load]{name:"mas:mansion2",posX:48,posY:-16,posZ:1,sizeX:48,sizeY:48,sizeZ:48,rotation:"NONE",mirror:"NONE",mode:"LOAD",ignoreEntities:0b} destroy
+setblock -1503 35 -34 structure_block[mode=load]{name:"mas:mansion3",posX:0,posY:-16,posZ:-48,sizeX:48,sizeY:48,sizeZ:48,rotation:"NONE",mirror:"NONE",mode:"LOAD",ignoreEntities:0b} destroy
+setblock -1503 35 -33 structure_block[mode=load]{name:"mas:mansion4",posX:0,posY:-16,posZ:-1,sizeX:48,sizeY:48,sizeZ:48,rotation:"NONE",mirror:"NONE",mode:"LOAD",ignoreEntities:0b} destroy
+setblock -1503 34 -36 minecraft:redstone_block destroy
+setblock -1503 34 -35 minecraft:redstone_block destroy
+setblock -1503 35 -34 minecraft:redstone_block destroy
+setblock -1503 35 -33 minecraft:redstone_block destroy
+setblock -1503 35 -36 air destroy
+setblock -1503 35 -35 air destroy
+setblock -1503 35 -34 air destroy
+setblock -1503 35 -33 air destroy
 
 #SET SPAWNPOINTS
-summon minecraft:marker 21 35 59 {Tags:["mas.survivor_spawn","mas.entity"],Rotation:[0F,0F]}
-summon minecraft:marker 21 35 89 {Tags:["mas.hunter_spawn","mas.entity"],Rotation:[180F,0F]}
+summon minecraft:marker -1459.5 35.5 -64.5 {Tags:["mas.survivor_spawn","mas.entity"],Rotation:[0F,0F]}
+summon minecraft:marker -1459.5 35.5 -25.5 {Tags:["mas.hunter_spawn","mas.entity"],Rotation:[180F,0F]}
 
 #MAP SCHEDULES
 schedule function mas:game/map/music/mansion 45s

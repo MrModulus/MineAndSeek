@@ -12,7 +12,7 @@
 #    May be more efficient to combine the marker entity check and simply use mas.entity. TODO (medium): Return to this.
 
 #TP BACK TO LOBBY
-tp @s 1.5 63 35.5 180 0
+tp @s -399.5 35 803.5 0 0
 
 #STOP SOUND
 stopsound @s

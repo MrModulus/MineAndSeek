@@ -23,4 +23,4 @@ tp @e[type=minecraft:marker,tag=mas.idle_marker] @e[type=minecraft:marker,tag=ma
 tp @e[type=minecraft:marker,tag=mas.bounds_marker] @e[type=minecraft:marker,tag=mas.survivor_spawn,limit=1]
 
 #REMOVE ENTITIES
-kill @e[x=0,y=0,z=0,dx=95,dy=95,dz=95,type=!minecraft:player,tag=!mas.entity]
+kill @e[x=-1503,y=34,z=-82,dx=95,dy=95,dz=95,type=!minecraft:player,tag=!mas.entity]

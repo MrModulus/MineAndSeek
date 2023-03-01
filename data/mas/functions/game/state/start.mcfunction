@@ -26,10 +26,10 @@ scoreboard players reset @a[tag=mas.player] mas.death
 function mas:game/map/setup
 
 #INIT LOCKER PHASE
-tp @a[team=mas.survivor] 1 43 34 -90 0
+tp @a[team=mas.survivor] -471.5 35 793.5 90 0
 title @a[team=mas.survivor] title ["",{"text":"Survivor","bold":true,"italic":false,"color":"dark_blue"}]
 title @a[team=mas.survivor] subtitle ["",{"text":"You have 30s to pick a class","bold":true,"italic":false,"color":"blue"}]
-tp @a[team=mas.hunter] 1 53 34 -90 0
+tp @a[team=mas.hunter] -471.5 35 811.5 90 0
 title @a[team=mas.hunter] title ["",{"text":"Hunter","bold":true,"italic":false,"color":"dark_red"}]
 title @a[team=mas.hunter] subtitle ["",{"text":"You have 45s to pick a class","bold":true,"italic":false,"color":"red"}]
 
