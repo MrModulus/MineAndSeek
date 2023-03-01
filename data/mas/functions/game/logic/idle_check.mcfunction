@@ -21,8 +21,8 @@ execute if entity @s[distance=..5] if score @p[tag=!mas.spectator] mas.ids = @s 
 
 #OUTSIDE TETHER RANGE
 execute unless entity @s[distance=..5] run scoreboard players set @p mas.counters 0
-execute if score @p[x=-1503,y=34,z=-82,dx=95,dy=95,dz=95] mas.ids = @s mas.ids unless entity @s[distance=..5] run tp @s @p
+execute if score @p[x=-1503,y=18,z=-82,dx=95,dy=95,dz=95] mas.ids = @s mas.ids unless entity @s[distance=..5] run tp @s @p
 
 #IDLE EFFECT PROCS
-execute if score @p[x=-1503,y=34,z=-82,dx=95,dy=95,dz=95,scores={mas.counters=25}] mas.ids = @s mas.ids run tp @s @p
-execute if score @p[x=-1503,y=34,z=-82,dx=95,dy=95,dz=95,scores={mas.counters=30}] mas.ids = @s mas.ids run tp @s @p
+execute if score @p[x=-1503,y=18,z=-82,dx=95,dy=95,dz=95,scores={mas.counters=25}] mas.ids = @s mas.ids run tp @s @p
+execute if score @p[x=-1503,y=18,z=-82,dx=95,dy=95,dz=95,scores={mas.counters=30}] mas.ids = @s mas.ids run tp @s @p
