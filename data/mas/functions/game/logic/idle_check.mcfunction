@@ -17,12 +17,12 @@
 #    @s represents the marker, @p represents the player.
 
 #WITHIN TETHER RANGE
-execute if entity @s[distance=..5] if score @p[tag=!mas.spectator] mas.ids = @s mas.ids run scoreboard players add @p mas.counters 1
+execute at @a[tag=!mas.spectator,tag=mas.check,limit=1] if entity @s[distance=..5] run scoreboard players add @a[tag=mas.check,limit=1] mas.counters 1
 
 #OUTSIDE TETHER RANGE
-execute unless entity @s[distance=..5] run scoreboard players set @p mas.counters 0
-execute if score @p[x=-1503,y=18,z=-82,dx=95,dy=95,dz=95] mas.ids = @s mas.ids unless entity @s[distance=..5] run tp @s @p
+execute at @a[tag=mas.check,limit=1] unless entity @s[distance=..5] run scoreboard players set @p mas.counters 0
+execute at @a[x=-1503,y=18,z=-82,dx=95,dy=95,dz=95,tag=mas.check,limit=1] unless entity @s[distance=..5] run tp @s @a[tag=mas.check,limit=1]
 
 #IDLE EFFECT PROCS
-execute if score @p[x=-1503,y=18,z=-82,dx=95,dy=95,dz=95,scores={mas.counters=25}] mas.ids = @s mas.ids run tp @s @p
-execute if score @p[x=-1503,y=18,z=-82,dx=95,dy=95,dz=95,scores={mas.counters=30}] mas.ids = @s mas.ids run tp @s @p
+tp @s @a[x=-1503,y=18,z=-82,dx=95,dy=95,dz=95,scores={mas.counters=25},tag=mas.check,limit=1]
+tp @s @a[x=-1503,y=18,z=-82,dx=95,dy=95,dz=95,scores={mas.counters=30},tag=mas.check,limit=1]

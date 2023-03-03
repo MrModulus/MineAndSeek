@@ -8,6 +8,13 @@
 #  Additional notes:
 #    @s represents the marker, @p represents the player.
 
+scoreboard players operation $id mas.ids = @s mas.ids
+execute as @a if score @s mas.ids = $id mas.ids run tag @s add mas.check
+
 #IDLE/BORDER MARKER CHECKS
 execute if entity @s[tag=mas.idle_marker] run function mas:game/logic/idle_check
-# execute if entity @s[tag=mas.bounds_marker] run function mas:game/logic/bounds_check
+execute if entity @s[tag=mas.bounds_marker] run function mas:game/logic/bounds_check
+
+tag @a[tag=mas.check,limit=1] remove mas.check
+
+# TODO: better commenting, fix doc comments
