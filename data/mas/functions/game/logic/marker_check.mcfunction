@@ -10,4 +10,4 @@
 
 #IDLE/BORDER MARKER CHECKS
 execute if entity @s[tag=mas.idle_marker] run function mas:game/logic/idle_check
-execute if entity @s[tag=mas.bounds_marker] run function mas:game/logic/bounds_check
+# execute if entity @s[tag=mas.bounds_marker] run function mas:game/logic/bounds_check
