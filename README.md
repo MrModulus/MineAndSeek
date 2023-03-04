@@ -274,40 +274,49 @@ All of the folders of interest are in `data/mas`, so assume all folders discusse
 
 This folder contains chunks of code known as "functions", which can be run individually. Some of these are called every tick while others are called at specific times.
 
-### Classes
-Contains functions for each of the classes, separated into `hunter` and `survivor` folders. These include their respective abilities and kits.
-
 ### Game
-Contains functions pertaining to joining/leaving the game and moderator commands in case something goes wrong.
+Contains the functions that interact directly with the game itself, such as the state logic, map logic, and tickwise effects.
 
-### Logic
-Contains the functions that control the flow of the game, such as the code for initializing rounds or cleaning up after they're done.
+### Players
+Contains the player-facing functions, which apply some basic checks before running the underlying `game/state` functions. This includes joining/leaving the game and moderator commands in case something goes wrong.
 
 ### Scripts
 Contains the functions needed for installing/uninstalling the datapack, these shouldn't need to change too often. Any variables or scoreboards and such that are needed for the game to work properly should be initialized in the `install` function and removed in the `uninstall` function.
 
-## Structures
+### Tests
+Contains functions used for testing and debugging.
 
-This folder contains the structures needed to load the different maps at the beginning of every round. For now, it's not actually used, but in the future, it might be useful to have the datapack itself control the structures for portability or to allow other users to contribute their own maps.
+## Predicates
+
+This folder contains the predicates used to determine whether certain functions should execute. At the moment this mainly revolves around checking map sizes to determine player counts and match durations.
 
 ## Tags
 
 This folder contains the tags used to group different things together, such as functions or blocks. Now, we only use the tags to group together the functions needed for setting up the datapack, though in the future they could be used for other things. For instance, rather than checking for 5 different block types individually, you could group them and check for a specific tag.
 
-
 # To-Do
 
 The to-do's of this project are ever-changing, but this is a tentative list of what work there is to be done.
 
+## Features
+This is the in-progress list of features currently being implemented:
+- Map selection
+- Adding non-WIP classes
+
 ## Bugs
 
-Any bug fixes that are within our control can be found here. These are generally high-priority.
-- Example
+Any bug fixes that are within our control can be found here:
+- [Investigate]  Sometimes hunter_spawn marker is placed at survivor spawn, might be getting teleported there
+- [Investigate]  Spectators can escape bounds via lower bound. Strange because x/z bounds while underground still work, until you pass the delete zone
+- [Inconsistent] Sometimes player gets mas.spectator tag when Hunters spawn, but stays on the Survivor team.... not sure what triggers this, maybe just a timing thing/tick lag? Likely caused by a previous game's round_end, since thats the only thing that sets spectator tag but not team
+- [Inconsistent] Sometimes spectators spawn at world spawn (lobby)
+- [Inconsistent] One corner of the farm map loaded when the mansion loaded??
+- [Tweak]        Maybe enforce bounds from pre_game, but ignore survivors (and then hunters) until they spawn respectively
 
 ## Balancing
 
 Any balancing changes that need to be made can be found here. These are generally medium-priority.
-- Example
+- None
 
 ## New Concepts
 
@@ -316,7 +325,7 @@ Any new ideas or WIP classes/abilities/etc can be found here. These are generall
 
 ## Caveats
 Any bugs or issues that are version-dependent or faults with Minecraft itself can be found here. They won't be actively worked on, but are worth noting for future reference in case they eventually get fixed.
-- Example
+- None
 
 # Coding Conventions
 
@@ -326,6 +335,7 @@ There are some very important coding conventions that need to be adhered to, suc
 - Use `_` to join multiple words in a variable name, e.g. `#round_timer` NOT `#round.timer`
 - Constant values should be set up as enums rather than being hardcoded, using the correct section of `mas.enums`, and must be CAPS_CASE to indicate that they are constants
 - Every file should have a comment describing it at the top and comments dividing the functionality into sections. Otherwise, comments are only needed when the code is not self-explanatory
+- If there's something that should be revisited in the future, add a `TODO (priority):` where `priority` is either `low`, `medium`, or `high`. Ideally this should only be used in the `Notes` section of a file
 - All entities spawned by the datapack MUST have the tag `mas.entity` for cleanup. VERY IMPORTANT!
 - Try to keep things self-contained; namely, map-related things should ONLY be used within map files, such as the `#map` enum
 - Always use `type` and `limit` (where applicable) for entity searches, even if it's a situation where doing so feels redundant
@@ -333,11 +343,19 @@ There are some very important coding conventions that need to be adhered to, suc
 
 # Final Notes
 
-The following bits of information are not super useful at the moment but may prove to be interesting or useful in the future.
+The following bits of information are not may prove to be interesting or useful in the future:
+- Function execution priority: User Commands > Tick > Schedules (in order of scheduling)
+- Functions execute sequentially and fully, as if you copy pasted the entire function into where it was called
+- There are 4 possible inputs for any given item: f (switch to offhand), left click, right click, q (drop item)
+- There are 2 modifiers that could be combined with an input or used on their own: shift (crouch), space (jump)
+- Play areas must be `/forceload`ed to ensure the game entities (like spawn markers) are loaded
 - [Right-Click Detection](https://www.youtube.com/watch?v=xcOw4conrVM)
 - [Raycasting](https://www.youtube.com/watch?v=RTRYfrli8GU)
 - [Structures via Datapack](https://www.youtube.com/watch?v=kzme5WV0plM)
 - [Command Generator](https://mcstacker.net/)
 - [Other Tools](https://misode.github.io/)
 - [Statistics](https://minecraft.fandom.com/wiki/Statistics#List_of_custom_statistic_names)
+- [MC Wiki Resources](https://www.reddit.com/r/MinecraftCommands/wiki/resources)
+- [Per-Class Skins p1](https://www.youtube.com/watch?v=ny5k8-looII)
+- [Per-Class Skins p2](https://www.reddit.com/r/MinecraftHelp/comments/kd3j0n/how_do_i_change_armor_texture_to_look_like_skin/)
 - [`summon snowball ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Item:{id:"minecraft:diamond_block",Count:1b}}`](https://gyazo.com/4f60726046654ec8e1d7780622466bdb)
