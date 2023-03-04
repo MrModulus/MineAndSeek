@@ -7,7 +7,7 @@
 #    game/state/leave
 #  Additional notes:
 #    This will eventually also be used by the kit functions, which is why it's in its own function.
-#    TODO (low): Update this comment when applicable.
+#    TODO (high): Update this file when applicable.
 
 #SURVIVOR TAGS
 tag @s remove mas.archer

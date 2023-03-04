@@ -19,8 +19,7 @@ execute if score #map mas.ids = #MANSION mas.enums run function mas:game/map/man
 execute if score #map mas.ids = #FARM mas.enums run function mas:game/map/farm
 
 #TP MARKERS INTO BOUNDS
-tp @e[type=minecraft:marker,tag=mas.idle_marker] @e[type=minecraft:marker,tag=mas.survivor_spawn,limit=1]
-tp @e[type=minecraft:marker,tag=mas.bounds_marker] @e[type=minecraft:marker,tag=mas.survivor_spawn,limit=1]
+tp @e[type=minecraft:marker,tag=mas.entity] @e[type=minecraft:marker,tag=mas.survivor_spawn,limit=1]
 
 #REMOVE ENTITIES
 kill @e[x=-1503,y=18,z=-82,dx=95,dy=95,dz=95,type=!minecraft:player,tag=!mas.entity]

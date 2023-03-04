@@ -11,7 +11,8 @@
 #    Technically we don't need to delete idle marker for dead players since they get ignored (due to spectator tag), but its less entities
 #    to match ids against. We don't kill the bounds marker so that spectators don't fly out of bounds.
 #    We also don't need to leave the mas.survivor team as joining a new team automatically leaves any current team. The mas.spectator team 
-#    has no real purpose other than to color the names of dead players, to differentiate them from regular players.
+#    has no real purpose other than to color the names of dead players, to differentiate them from regular players. We use tag to keep
+#    spectating team-locked, and to preserve team colors at round ends.
 
 #SET GAMEMODE
 gamemode spectator @s

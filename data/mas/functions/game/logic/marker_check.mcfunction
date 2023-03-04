@@ -8,8 +8,8 @@
 #  Additional notes:
 #    @s represents the marker, @p represents the player.
 
-scoreboard players operation $id mas.ids = @s mas.ids
-execute as @a if score @s mas.ids = $id mas.ids run tag @s add mas.check
+scoreboard players operation $check_id mas.ids = @s mas.ids
+execute as @a if score @s mas.ids = $check_id mas.ids run tag @s add mas.check
 
 #IDLE/BORDER MARKER CHECKS
 execute if entity @s[tag=mas.idle_marker] run function mas:game/logic/idle_check
