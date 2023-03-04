@@ -9,10 +9,10 @@
 #    None.
 
 #TP FOREIGN PLAYERS
-tp @a[x=-1504,y=17,z=-83,dx=97,dy=97,dz=97,tag=!mas.player] -399.5 35 803.5 0 0
+tp @a[x=-1504,y=17,z=-83,dx=97,dy=49,dz=97,tag=!mas.player] -399.5 35 803.5 0 0
 
 #KILL FOREIGN ENTITIES
-kill @e[x=-1504,y=17,z=-83,dx=97,dy=97,dz=97,type=!minecraft:player,tag=!mas.entity]
+kill @e[x=-1504,y=17,z=-83,dx=97,dy=49,dz=97,type=!minecraft:player,tag=!mas.entity]
 
 #KILL ESCAPED MAS ENTITIES
-execute as @e[type=!minecraft:player,tag=mas.entity] unless entity @s[x=-1504,y=17,z=-83,dx=97,dy=97,dz=97] run kill @s
+execute as @e[type=!minecraft:player,tag=mas.entity] unless entity @s[x=-1504,y=17,z=-83,dx=97,dy=49,dz=97] run kill @s

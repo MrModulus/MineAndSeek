@@ -11,7 +11,7 @@
 #    @s represents the marker, @p represents the player.
 
 #WITHIN MAP RANGE
-tp @s @a[x=-1503,y=18,z=-82,dx=95,dy=95,dz=95,tag=mas.check,limit=1]
+tp @s @a[x=-1503,y=18,z=-82,dx=95,dy=47,dz=95,tag=mas.check,limit=1]
 
 #OUTSIDE MAP RANGE
-execute unless entity @a[x=-1503,y=18,z=-82,dx=95,dy=95,dz=95,tag=mas.check,limit=1] run tp @a[tag=mas.check,limit=1] @s
+execute unless entity @a[x=-1503,y=18,z=-82,dx=95,dy=47,dz=95,tag=mas.check,limit=1] run tp @a[tag=mas.check,limit=1] @s
