@@ -17,7 +17,7 @@ execute as @e[type=minecraft:marker,tag=mas.entity,scores={mas.ids=0..}] run fun
 function mas:game/logic/bound_effects
 
 #IDLING EFFECTS
-execute as @a[team=mas.survivor,scores={mas.counters=25..},tag=!mas.spectator] run function mas:game/logic/idle_effects
+execute as @a[team=mas.survivor,scores={mas.counters=400..},tag=!mas.spectator] run function mas:game/logic/idle_effects
 
 #DEATH CHECK
 execute as @a[team=!mas.hunter,scores={mas.death=1..}] at @s run function mas:game/logic/death

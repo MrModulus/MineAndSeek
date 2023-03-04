@@ -4,7 +4,7 @@
 #  End Effect:
 #    Triggers round end, displays text, plays win/loss sound effects, and summons fireworks.
 #  Called by:
-#    game/logic/tick_second
+#    game/logic/tick
 #  Additional notes:
 #    We use the !mas.hunter check instead of mas.survivor because Survivors leave their team upon death, so there
 #    are no players with team mas.survivor if Hunters win.

@@ -4,7 +4,7 @@
 #  End Effect:
 #    Player idling and map boundaries will be checked.
 #  Called by:
-#    game/logic/tick_second
+#    game/logic/tick
 #  Additional notes:
 #    @s represents the marker, @p represents the player.
 
