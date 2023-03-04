@@ -305,13 +305,7 @@ This is the in-progress list of features currently being implemented:
 
 ## Bugs
 
-Any bug fixes that are within our control can be found here:
-- [Investigate]  Sometimes hunter_spawn marker is placed at survivor spawn, might be getting teleported there
-- [Investigate]  Spectators can escape bounds via lower bound. Strange because x/z bounds while underground still work, until you pass the delete zone
-- [Inconsistent] Sometimes player gets mas.spectator tag when Hunters spawn, but stays on the Survivor team.... not sure what triggers this, maybe just a timing thing/tick lag? Likely caused by a previous game's round_end, since thats the only thing that sets spectator tag but not team
-- [Inconsistent] Sometimes spectators spawn at world spawn (lobby)
-- [Inconsistent] One corner of the farm map loaded when the mansion loaded??
-- [Tweak]        Maybe enforce bounds from pre_game, but ignore survivors (and then hunters) until they spawn respectively
+All bugs and feature requests can be found under the [Issues](https://github.com/LordKanelsnegle/MineAndSeek/issues) tab. Feel free to open one yourself!
 
 ## Balancing
 
