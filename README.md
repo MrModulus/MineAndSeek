@@ -299,9 +299,8 @@ This folder contains the tags used to group different things together, such as f
 The to-do's of this project are ever-changing, but this is a tentative list of what work there is to be done.
 
 ## Features
-This is the in-progress list of features currently being implemented:
-- Map selection
-- Adding non-WIP classes
+
+All features currently being worked on can be found [here](https://github.com/LordKanelsnegle/MineAndSeek/issues?q=is%3Aopen+is%3Aissue+label%3Afeature).
 
 ## Bugs
 
