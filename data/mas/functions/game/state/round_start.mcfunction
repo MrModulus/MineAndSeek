@@ -24,6 +24,10 @@ title @a[tag=mas.player] actionbar "MINUTES TILL ROUND END:"
 #HUNTER REGEN
 effect give @a[team=mas.hunter] minecraft:regeneration 9999 127 true
 
+#UPDATE HEALTH SCOREBOARD
+effect give @a[team=mas.survivor] minecraft:wither 1 1 false
+effect give @a[team=mas.survivor] minecraft:regeneration 1 100 false
+
 #SCHEDULES
 execute if predicate mas:map/is_small run schedule function mas:game/logic/halfway_msg 180s
 execute if predicate mas:map/is_medium run schedule function mas:game/logic/halfway_msg 240s

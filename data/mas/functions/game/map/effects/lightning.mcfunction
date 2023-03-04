@@ -17,7 +17,7 @@ execute unless entity @e[type=minecraft:marker,tag=mas.lightning,limit=1] at @e[
 execute at @e[type=minecraft:marker,tag=mas.lightning,limit=1] run summon lightning_bolt ~ ~ ~ {Tags:["mas.entity"]}
 
 #RANDOMIZE LOCATION
-spreadplayers 47.5 47.5 0 47 false @e[type=minecraft:marker,tag=mas.lightning,limit=1]
+spreadplayers -1455.5 -34.5 0 47 false @e[type=minecraft:marker,tag=mas.lightning,limit=1]
 
 #LOOP EVERY 30 SECONDS
 schedule function mas:game/map/effects/lightning 30s
