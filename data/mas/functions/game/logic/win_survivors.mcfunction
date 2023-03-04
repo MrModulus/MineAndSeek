@@ -4,7 +4,7 @@
 #  End Effect:
 #    Triggers round end, displays text, plays win/loss sound effects, and summons fireworks.
 #  Called by:
-#    game/logic/tick_second, game/logic/one_min_msg
+#    game/logic/tick, game/logic/one_min_msg
 #  Additional notes:
 #    None
 

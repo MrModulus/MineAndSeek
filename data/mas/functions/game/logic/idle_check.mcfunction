@@ -24,5 +24,5 @@ execute at @a[tag=mas.check,limit=1] unless entity @s[distance=..5] run scoreboa
 execute at @a[x=-1503,y=18,z=-82,dx=95,dy=95,dz=95,tag=mas.check,limit=1] unless entity @s[distance=..5] run tp @s @a[tag=mas.check,limit=1]
 
 #IDLE EFFECT PROCS
-tp @s @a[x=-1503,y=18,z=-82,dx=95,dy=95,dz=95,scores={mas.counters=25},tag=mas.check,limit=1]
-tp @s @a[x=-1503,y=18,z=-82,dx=95,dy=95,dz=95,scores={mas.counters=30},tag=mas.check,limit=1]
+tp @s @a[x=-1503,y=18,z=-82,dx=95,dy=95,dz=95,scores={mas.counters=500},tag=mas.check,limit=1]
+tp @s @a[x=-1503,y=18,z=-82,dx=95,dy=95,dz=95,scores={mas.counters=600},tag=mas.check,limit=1]

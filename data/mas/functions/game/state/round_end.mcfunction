@@ -6,7 +6,7 @@
 #  Called by:
 #    #mas:normal_end
 #  Additional notes:
-#    This function is called (indirectly) by tick_second, the highest priority scheduled function, so the round 
+#    This function is called (indirectly) by tick, the highest priority function, so the round 
 #    schedule clears should be guaranteed to work (in the case of a natural round end).
 
 #UPDATE GAME STATE

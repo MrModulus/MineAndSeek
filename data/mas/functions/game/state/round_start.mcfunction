@@ -7,7 +7,6 @@
 #  Called by:
 #    game/logic/spawn_hunters
 #  Additional notes:
-#    The tick_second function MUST be the first scheduled so that it takes priority.
 #    XP timer is set to 1 extra to account for the immediate removal of one level after pregame.
 
 #UPDATE GAME STATE
@@ -26,7 +25,6 @@ title @a[tag=mas.player] actionbar "MINUTES TILL ROUND END:"
 effect give @a[team=mas.hunter] minecraft:regeneration 9999 127 true
 
 #SCHEDULES
-schedule function mas:game/logic/tick_second 1s
 execute if predicate mas:map/is_small run schedule function mas:game/logic/halfway_msg 180s
 execute if predicate mas:map/is_medium run schedule function mas:game/logic/halfway_msg 240s
 execute if predicate mas:map/is_large run schedule function mas:game/logic/halfway_msg 300s

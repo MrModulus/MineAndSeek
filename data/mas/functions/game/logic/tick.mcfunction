@@ -2,7 +2,7 @@
 #  Purpose:
 #    Executes round-specific functionality that MUST be ran per tick.
 #  End Effect:
-#    Enforces game bounds and gamemodes. Additionally checks for deaths and win conditions.
+#    Enforces game bounds, markers, and gamemodes. Additionally checks for deaths and win conditions.
 #  Called by:
 #    scripts/main
 #  Additional notes:
@@ -10,11 +10,14 @@
 #    We check for !mas.hunter instead of mas.survivor so that people who join mid-game are 
 #    turned into spectators. We also force gamemodes tickwise.
 
+#MARKER CHECK
+execute as @e[type=minecraft:marker,tag=mas.entity,scores={mas.ids=0..}] run function mas:game/logic/marker_check
+
 #BOUND EFFECTS
 function mas:game/logic/bound_effects
 
-#MARKER CHECK
-execute as @e[type=minecraft:marker,tag=mas.entity,scores={mas.ids=0..}] run function mas:game/logic/marker_check
+#IDLING EFFECTS
+execute as @a[team=mas.survivor,scores={mas.counters=25..},tag=!mas.spectator] run function mas:game/logic/idle_effects
 
 #DEATH CHECK
 execute as @a[team=!mas.hunter,scores={mas.death=1..}] at @s run function mas:game/logic/death
