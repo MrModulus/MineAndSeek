@@ -11,9 +11,15 @@
 #    After map setup, its important to tp the markers to the survivor spawn, so that they aren't killed by
 #    the bounds checks.
 
+#CLEAR PREVIOUS MAP + ENTITIES
+function mas:game/map/blank
+
 #MAP-SPECIFIC SETUP
 execute if score #map mas.ids = #MANSION mas.enums run function mas:game/map/mansion
 execute if score #map mas.ids = #FARM mas.enums run function mas:game/map/farm
+
+#PROTECT MAP ENTITIES FROM DELETION
+tag @e[x=-1504,y=17,z=-83,dx=97,dy=49,dz=97,type=!minecraft:player,tag=!mas.entity] add mas.entity
 
 #TP MARKERS INTO BOUNDS
 tp @e[type=minecraft:marker,tag=mas.entity] @e[type=minecraft:marker,tag=mas.survivor_spawn,limit=1]
