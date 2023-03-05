@@ -12,9 +12,6 @@
 #    several times, which may be more efficient. Same goes for the selector checks in player setup.
 #    TODO (medium): Return to this.
 
-#UPDATE GAME STATE
-scoreboard players operation #game_state mas.counters = #PRE_GAME mas.enums
-
 #PLAYER SETUP
 execute if score #players mas.counters <= #ONE_HUNTER_LIMIT mas.enums run team join mas.hunter @a[tag=mas.player,sort=random,limit=1]
 execute if score #players mas.counters > #ONE_HUNTER_LIMIT mas.enums run team join mas.hunter @a[tag=mas.player,sort=random,limit=2]
@@ -42,6 +39,9 @@ xp set @a[team=mas.survivor] 30 levels
 xp set @a[team=mas.hunter] 45 levels
 schedule function mas:game/logic/xp_timer 1s
 title @a[tag=mas.player] actionbar "SECONDS TILL SPAWN:"
+
+#UPDATE GAME STATE
+scoreboard players operation #game_state mas.counters = #PRE_GAME mas.enums
 
 #SCHEDULE SURVIVOR SPAWN
 schedule function mas:game/logic/spawn_survivors 30s
