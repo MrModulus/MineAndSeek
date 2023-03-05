@@ -15,18 +15,12 @@
 #    all from the round start function using predicates. TODO (low): Return to this.
 
 #LOAD MAP
-setblock -1503 35 -36 structure_block[mode=load]{name:"mas:mansion1",posX:48,posY:-16,posZ:-46,sizeX:48,sizeY:48,sizeZ:48,rotation:"NONE",mirror:"NONE",mode:"LOAD",ignoreEntities:0b} destroy
-setblock -1503 35 -35 structure_block[mode=load]{name:"mas:mansion2",posX:48,posY:-16,posZ:1,sizeX:48,sizeY:48,sizeZ:48,rotation:"NONE",mirror:"NONE",mode:"LOAD",ignoreEntities:0b} destroy
-setblock -1503 35 -34 structure_block[mode=load]{name:"mas:mansion3",posX:0,posY:-16,posZ:-48,sizeX:48,sizeY:48,sizeZ:48,rotation:"NONE",mirror:"NONE",mode:"LOAD",ignoreEntities:0b} destroy
-setblock -1503 35 -33 structure_block[mode=load]{name:"mas:mansion4",posX:0,posY:-16,posZ:-1,sizeX:48,sizeY:48,sizeZ:48,rotation:"NONE",mirror:"NONE",mode:"LOAD",ignoreEntities:0b} destroy
-setblock -1503 34 -36 minecraft:redstone_block destroy
-setblock -1503 34 -35 minecraft:redstone_block destroy
-setblock -1503 34 -34 minecraft:redstone_block destroy
-setblock -1503 34 -33 minecraft:redstone_block destroy
-setblock -1503 35 -36 air destroy
-setblock -1503 35 -35 air destroy
-setblock -1503 35 -34 air destroy
-setblock -1503 35 -33 air destroy
+place template mas:mansion1 -1455 19 -82
+place template mas:mansion2 -1455 19 -34
+place template mas:mansion3 -1503 19 -82
+place template mas:mansion4 -1503 19 -34
+fill -1503 35 -36 -1503 35 -33 minecraft:air replace minecraft:structure_block
+fill -1503 34 -36 -1503 35 -33 minecraft:grass_block replace minecraft:dirt
 
 #SET SPAWNPOINTS
 summon minecraft:marker -1459.5 35.5 -64.5 {Tags:["mas.survivor_spawn","mas.entity"],Rotation:[0F,0F]}
