@@ -21,16 +21,12 @@ setblock -1503 35 -34 structure_block[mode=load]{name:"mas:farm3",posX:0,posY:-1
 setblock -1503 35 -33 structure_block[mode=load]{name:"mas:farm4",posX:0,posY:-16,posZ:-1,sizeX:48,sizeY:48,sizeZ:48,rotation:"NONE",mirror:"NONE",mode:"LOAD",ignoreEntities:0b} destroy
 setblock -1503 34 -36 minecraft:redstone_block destroy
 setblock -1503 34 -35 minecraft:redstone_block destroy
-setblock -1503 35 -34 minecraft:redstone_block destroy
-setblock -1503 35 -33 minecraft:redstone_block destroy
+setblock -1503 34 -34 minecraft:redstone_block destroy
+setblock -1503 34 -33 minecraft:redstone_block destroy
 setblock -1503 35 -36 air destroy
 setblock -1503 35 -35 air destroy
 setblock -1503 35 -34 air destroy
 setblock -1503 35 -33 air destroy
-setblock -1503 34 -36 minecraft:grass_block destroy
-setblock -1503 34 -35 minecraft:grass_block destroy
-setblock -1503 35 -34 minecraft:grass_block destroy
-setblock -1503 35 -33 minecraft:grass_block destroy
 
 #SET SPAWNPOINTS // TODO (high): Fix these later, once farm is finished
 summon minecraft:marker -1459.5 35.5 -64.5 {Tags:["mas.survivor_spawn","mas.entity"],Rotation:[0F,0F]}
