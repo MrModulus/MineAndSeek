@@ -29,3 +29,6 @@ execute as @a[team=!mas.survivor] run scoreboard players reset @s mas.health
 #PLAYER COUNT
 scoreboard players set #players mas.counters 0
 execute as @a[tag=mas.player] run scoreboard players add #players mas.counters 1
+
+#LOBBY EFFECTS
+effect give @a[x=-444,y=34,z=726,dx=100,dy=32,dz=100] instant_health 1 100 true
