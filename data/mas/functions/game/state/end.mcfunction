@@ -23,6 +23,9 @@ scoreboard players set #curr_id mas.counters 0
 #FORCE PLAYER LEAVE
 execute as @a[tag=mas.player] run function mas:game/state/leave
 
+#REMOVE GAME ENTITIES
+kill @e[tag=mas.entity]
+
 #CLEAR PREMATURE END SCHEDULES
 schedule clear mas:game/logic/spawn_survivors
 schedule clear mas:game/logic/spawn_hunters
