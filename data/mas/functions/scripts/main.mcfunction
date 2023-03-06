@@ -20,7 +20,7 @@ execute if score #game_state mas.counters = #PRE_GAME mas.enums run function mas
 execute if score #game_state mas.counters = #IN_GAME mas.enums run function mas:game/logic/tick
 
 #POST_GAME
-execute if score #game_state mas.counters = #POST_GAME mas.enums run function mas:game/logic/marker_check
+execute as @e[type=minecraft:marker,tag=mas.entity,scores={mas.ids=0..}] if score #game_state mas.counters = #POST_GAME mas.enums run function mas:game/logic/marker_check
 
 #CLEAR HEALTH DISPLAY
 execute as @a[team=!mas.survivor] run scoreboard players reset @s mas.health
