@@ -15,6 +15,7 @@
 
 #PRE_GAME
 execute if score #game_state mas.counters = #PRE_GAME mas.enums run function mas:game/logic/bound_effects
+execute if score #game_state mas.counters = #PRE_GAME mas.enums as @e[type=minecraft:marker,tag=mas.entity,scores={mas.ids=0..}] run function mas:game/logic/marker_check
 
 #IN_GAME
 execute if score #game_state mas.counters = #IN_GAME mas.enums run function mas:game/logic/tick
