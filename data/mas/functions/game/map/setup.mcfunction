@@ -18,11 +18,11 @@ function mas:game/map/blank
 execute if score #map mas.ids = #MANSION mas.enums run function mas:game/map/mansion
 execute if score #map mas.ids = #FARM mas.enums run function mas:game/map/farm
 
+#TP MARKERS INTO BOUNDS
+tp @e[type=minecraft:marker,tag=mas.entity] @e[type=minecraft:marker,tag=mas.survivor_spawn,limit=1]
+
 #PROTECT MAP ENTITIES FROM DELETION
 tag @e[x=-1504,y=17,z=-83,dx=97,dy=49,dz=97,type=!minecraft:player] add mas.entity
 
 #PROTECT MAP ENTITIES FROM PLAYER INTERACTION
 execute as @e[x=-1504,y=17,z=-83,dx=97,dy=49,dz=97,type=!minecraft:player] run data merge entity @s {Invulnerable:1b,Fixed:1b,Marker:1b}
-
-#TP MARKERS INTO BOUNDS
-tp @e[type=minecraft:marker,tag=mas.entity] @e[type=minecraft:marker,tag=mas.survivor_spawn,limit=1]
