@@ -35,6 +35,7 @@ execute as @a[tag=mas.player] run scoreboard players add #players mas.counters 1
 execute as @a[predicate=mas:locations/lobby_and_voting] unless entity @s[team=mas.lobby] run team join mas.lobby
 effect give @a[team=mas.lobby] minecraft:saturation 1 100 true
 effect give @a[team=mas.lobby] instant_health 1 100 true
+execute unless score #game_state mas.counters = #NO_GAME mas.enums run title @a[team=mas.lobby] actionbar {"text":"MATCH IN PROGRESS - JOIN TO SPECTATE"}
 execute as @a[team=mas.lobby] unless entity @s[predicate=mas:locations/lobby_and_voting] run team leave @s
 
 #VOTE CHECK
