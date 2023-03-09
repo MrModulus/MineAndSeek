@@ -1,13 +1,19 @@
 {
     "condition": "minecraft:location_check",
-    "offsetX": 20,
-    "offsetY": 20,
-    "offsetZ": 20,
     "predicate": {
         "position": {
-            "x": -425,
-            "y": 30,
-            "z": 820
+            "x": {
+                "min": -425,
+                "max": -405
+            },
+            "y": {
+                "min": 30,
+                "max": 50
+            },
+            "z": {
+                "min": 820,
+                "max": 840
+            }
         }
     }
 }
