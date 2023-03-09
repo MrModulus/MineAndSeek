@@ -17,13 +17,14 @@
 execute if score #game_state mas.counters = #PRE_GAME mas.enums run effect give @a[tag=mas.player] minecraft:regeneration 1 127 true
 execute if score #game_state mas.counters = #PRE_GAME mas.enums run function mas:game/logic/bound_effects
 execute if score #game_state mas.counters = #PRE_GAME mas.enums as @e[type=minecraft:marker,tag=mas.entity,scores={mas.ids=0..}] run function mas:game/logic/marker_check
+
 #IN_GAME
 execute if score #game_state mas.counters = #IN_GAME mas.enums run function mas:game/logic/tick
 
 #POST_GAME
 execute if score #game_state mas.counters = #POST_GAME mas.enums as @e[type=minecraft:marker,tag=mas.entity,scores={mas.ids=0..}] run function mas:game/logic/marker_check
 
-#CLEAR HEALTH DISPLAY
+#RESTRICT HEALTH DISPLAY TO SURVIVORS
 execute as @a[team=!mas.survivor] run scoreboard players reset @s mas.health
 
 #PLAYER COUNT
@@ -31,4 +32,10 @@ scoreboard players set #players mas.counters 0
 execute as @a[tag=mas.player] run scoreboard players add #players mas.counters 1
 
 #LOBBY EFFECTS
-effect give @a[x=-444,y=34,z=726,dx=120,dy=32,dz=150] instant_health 1 100 true
+execute as @a[predicate=mas:locations/lobby_and_voting] unless entity @s[team=mas.lobby] run team join mas.lobby
+effect give @a[team=mas.lobby] minecraft:saturation 1 100 true
+effect give @a[team=mas.lobby] instant_health 1 100 true
+execute as @a[team=mas.lobby] unless entity @s[predicate=mas:locations/lobby_and_voting] run team leave @s
+
+#VOTE CHECK
+execute if score #game_state mas.counters = #NO_GAME mas.enums run function mas:game/logic/vote_check

@@ -38,3 +38,6 @@ schedule clear mas:game/map/effects/lightning
 
 #CLEAR HEALTH DISPLAY
 scoreboard objectives setdisplay list
+
+#SHOW VOTE DISPLAY
+scoreboard objectives setdisplay sidebar.team.white mas.votes

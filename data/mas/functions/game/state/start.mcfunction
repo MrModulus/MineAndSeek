@@ -6,20 +6,19 @@
 #    TP's the players to the lockers, shows them messages, inits the pregame music and xp timers, then schedules 
 #    the function for spawning the Survivors into the map.
 #  Called by:
-#    players/start
+#    game/logic/assign_hunters
 #  Additional notes:
 #    The TP's and messages could be split into two team_init functions to avoid using the same selector
 #    several times, which may be more efficient. Same goes for the selector checks in player setup.
 #    TODO (medium): Return to this.
 
 #PLAYER SETUP
-execute if score #players mas.counters <= #ONE_HUNTER_LIMIT mas.enums run team join mas.hunter @a[tag=mas.player,sort=random,limit=1]
-execute if score #players mas.counters > #ONE_HUNTER_LIMIT mas.enums run team join mas.hunter @a[tag=mas.player,sort=random,limit=2]
-team join mas.survivor @a[tag=mas.player,team=!mas.hunter]
 execute as @a[tag=mas.player] run function mas:game/logic/cleanse
 scoreboard players reset @a[tag=mas.player] mas.death
 
 #MAP SETUP
+scoreboard players operation #max_votes mas.counters > @e[type=marker,tag=mas.vote] mas.counters
+execute as @e[type=marker,tag=mas.vote,sort=random] if score @s mas.counters = #max_votes mas.counters run function mas:game/map/map_select
 function mas:game/map/setup
 
 #INIT LOCKER PHASE
@@ -45,3 +44,6 @@ scoreboard players operation #game_state mas.counters = #LOCKER mas.enums
 
 #SCHEDULE SURVIVOR SPAWN
 schedule function mas:game/logic/spawn_survivors 30s
+
+#HIDE VOTE DISPLAY
+scoreboard objectives setdisplay sidebar.team.white

@@ -1,0 +1,13 @@
+{
+    "condition": "minecraft:location_check",
+    "offsetX": 95,
+    "offsetY": 47,
+    "offsetZ": 95,
+    "predicate": {
+        "position": {
+            "x": -1503,
+            "y": 18,
+            "z": -82
+        }
+    }
+}

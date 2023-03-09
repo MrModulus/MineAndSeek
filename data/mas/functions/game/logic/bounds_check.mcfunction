@@ -10,8 +10,8 @@
 #    and instead just TP the player back to their last in-bounds position.
 #    @s represents the marker, @p represents the player.
 
-#WITHIN MAP RANGE
-tp @s @a[x=-1503,y=18,z=-82,dx=95,dy=47,dz=95,tag=mas.check,limit=1]
+#WITHIN PLAYER BOUNDS
+tp @s @a[predicate=mas:locations/player_bounds,tag=mas.check,limit=1]
 
-#OUTSIDE MAP RANGE
-execute unless entity @a[x=-1503,y=18,z=-82,dx=95,dy=47,dz=95,tag=mas.check,limit=1] run tp @a[tag=mas.check,limit=1] @s
+#OUTSIDE PLAYER BOUNDS
+execute unless entity @a[predicate=mas:locations/player_bounds,tag=mas.check,limit=1] run tp @a[tag=mas.check,limit=1] @s

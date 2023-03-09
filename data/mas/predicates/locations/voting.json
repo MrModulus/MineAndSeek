@@ -1,0 +1,13 @@
+{
+    "condition": "minecraft:alternative",
+    "terms": [
+        {
+            "condition": "minecraft:reference",
+            "name": "mas:locations/vote_mansion"
+        },
+        {
+            "condition": "minecraft:reference",
+            "name": "mas:locations/vote_farm"
+        }
+    ]
+}

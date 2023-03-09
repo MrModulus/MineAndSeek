@@ -14,6 +14,9 @@
 #    bounds marker to be deleted by the bound effects, but we don't really care about the idle marker (since
 #    joining mid-game will set you to spectator anyway).
 
+#TP BACK TO LOBBY (UNLESS ALREADY IN LOBBY)
+execute unless entity @s[predicate=mas:locations/lobby_and_voting] run tp @s -399.5 35 803.5 0 0
+
 #ADD PLAYER TAG
 tag @s add mas.player
 

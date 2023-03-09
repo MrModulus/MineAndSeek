@@ -29,6 +29,8 @@ team modify mas.hunter nametagVisibility hideForOtherTeams
 team modify mas.hunter seeFriendlyInvisibles true
 team add mas.spectator
 team modify mas.spectator color dark_gray
+team add mas.lobby
+team modify mas.lobby color white
 
 #SCOREBOARD SETUP
 #mas.joined - used to check for player join (stat is updated on join, not leave)
@@ -39,14 +41,18 @@ scoreboard objectives add mas.death deathCount
 scoreboard objectives add mas.health health
 #mas.ids - used to track player/tether pairs and the selected map
 scoreboard objectives add mas.ids dummy
-#mas.counters - used for tracking game state, player count, survivor count, and idles
+#mas.counters - used for voting, tracking game state, player count, survivor count, and idles
 scoreboard objectives add mas.counters dummy
+#mas.votes - used for voting (player facing)
+scoreboard objectives add mas.votes dummy {"text":"Map Votes","color":"red"}
 #mas.bools - used for tracking datapack init and gamerules (created in init function)
 scoreboard players set #init mas.bools 0
 #mas.enums - used for storing constant integers
 scoreboard objectives add mas.enums dummy
 #  settings
-scoreboard players set #ONE_HUNTER_LIMIT mas.enums 6
+scoreboard players set #MIN_PLAYERS mas.enums 2
+scoreboard players set #MAX_PLAYERS mas.enums 20
+scoreboard players set #SURVIVORS_PER_HUNTER mas.enums 3
 #  states
 scoreboard players set #NO_GAME mas.enums 0
 scoreboard players set #LOCKER mas.enums 1
@@ -57,10 +63,15 @@ scoreboard players set #POST_GAME mas.enums 4
 scoreboard players set #FARM mas.enums 0
 scoreboard players set #MANSION mas.enums 10
 scoreboard players set #LODGE mas.enums 20
+# math constants
+scoreboard players set #TICKS_PER_SECOND mas.enums 20
 
 #SET DEFAULT MAP AND UPDATE GAME STATE
 scoreboard players operation #game_state mas.counters = #NO_GAME mas.enums
 scoreboard players set #map mas.ids 0
+
+#SHOW VOTE DISPLAY
+scoreboard objectives setdisplay sidebar.team.white mas.votes
 
 #INSTALL MESSAGE
 tellraw @a ["",{"text":"[","bold":true,"color":"gray"},{"text":"MineAndSeek","bold":true,"color":"blue"},{"text":"]","bold":true,"color":"gray"},{"text":" Installation Successful!","color":"green"}]
