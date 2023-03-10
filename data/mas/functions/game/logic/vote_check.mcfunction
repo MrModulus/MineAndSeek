@@ -8,9 +8,6 @@
 #  Additional notes:
 #    We need to use entities to count the votes to make finding the max and randomly tie breaking possible.
 
-#JOIN GAME IF VOTING
-execute as @a[tag=!mas.player,predicate=mas:locations/voting] run function mas:players/join
-
 #LEAVE GAME IF NOT VOTING
 execute as @a[tag=mas.player,predicate=!mas:locations/voting] run function mas:players/leave
 

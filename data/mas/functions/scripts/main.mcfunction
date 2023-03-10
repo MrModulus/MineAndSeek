@@ -38,5 +38,8 @@ effect give @a[team=mas.lobby] instant_health 1 100 true
 execute unless score #game_state mas.counters = #NO_GAME mas.enums run title @a[team=mas.lobby] actionbar {"text":"MATCH IN PROGRESS - JOIN TO SPECTATE"}
 execute as @a[team=mas.lobby] unless entity @s[predicate=mas:locations/lobby_and_voting] run team leave @s
 
+#ENTERING ROOM TO JOIN (NOT VOTING EXCLUSIVE)
+execute as @a[tag=!mas.player,predicate=mas:locations/voting] run function mas:players/join
+
 #VOTE CHECK
 execute if score #game_state mas.counters = #NO_GAME mas.enums run function mas:game/logic/vote_check

@@ -31,14 +31,8 @@ execute unless score #game_state mas.counters = #NO_GAME mas.enums at @e[type=mi
 scoreboard players operation @e[type=minecraft:marker,tag=mas.entity,tag=mas.unclaimed,limit=2] mas.ids = @s mas.ids
 tag @e[type=minecraft:marker,tag=mas.entity,tag=mas.unclaimed,limit=2] remove mas.unclaimed
 
-#JOINED LOCKER
-execute if score #game_state mas.counters = #LOCKER mas.enums run function mas:game/logic/spectate
-
-#JOINED PRE_GAME
-execute if score #game_state mas.counters = #PRE_GAME mas.enums run function mas:game/logic/spectate
-
-#JOINED DURING GAME
-execute if score #game_state mas.counters = #IN_GAME mas.enums run function mas:game/logic/spectate
+#JOINED DURING LOCKER, PREGAME, OR POSTGAME
+execute unless score #game_state mas.counters = #NO_GAME mas.enums run function mas:game/logic/spectate
 
 #MESSAGE
 tellraw @s ["",{"text":"[","bold":true,"color":"gray"},{"text":"MineAndSeek","bold":true,"color":"blue"},{"text":"]","bold":true,"color":"gray"},{"text":" You have joined the game.","color":"green"}]
