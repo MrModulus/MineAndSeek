@@ -20,7 +20,7 @@ gamemode spectator @s
 tag @s add mas.spectator
 
 #TP TO SPECTATOR SPAWN
-execute at @e[type=minecraft:marker,tag=mas.survivor_spawn,limit=1] run tp @s ~ ~30 ~ ~ 60
+tp @s @e[type=minecraft:marker,tag=mas.spectator_spawn,limit=1]
 
 #SHOW SPECTATOR MESSAGE
 title @s title ["",{"text":"SPECTATING","bold":true,"italic":true,"color":"white"}]

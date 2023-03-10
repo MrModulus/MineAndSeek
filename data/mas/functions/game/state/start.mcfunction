@@ -37,7 +37,7 @@ playsound music_disc.stal master @a[tag=mas.player] ~ 1000 ~ 100 0.8
 xp set @a[team=mas.survivor] 30 levels
 xp set @a[team=mas.hunter] 45 levels
 schedule function mas:game/logic/xp_timer 1s
-title @a[tag=mas.player] actionbar "SECONDS TILL SPAWN:"
+title @a[tag=mas.player,tag=!mas.spectator] actionbar "SECONDS TILL SPAWN:"
 
 #UPDATE GAME STATE
 scoreboard players operation #game_state mas.counters = #LOCKER mas.enums

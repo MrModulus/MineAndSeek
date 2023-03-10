@@ -19,7 +19,7 @@ scoreboard objectives setdisplay list mas.health
 execute if predicate mas:map/is_small run xp set @a[tag=mas.player] 7 levels
 execute if predicate mas:map/is_medium run xp set @a[tag=mas.player] 9 levels
 execute if predicate mas:map/is_large run xp set @a[tag=mas.player] 11 levels
-title @a[tag=mas.player] actionbar "MINUTES TILL ROUND END:"
+title @a[tag=mas.player,tag=!mas.spectator] actionbar "MINUTES TILL ROUND END:"
 
 #HUNTER REGEN
 effect give @a[team=mas.hunter] minecraft:regeneration 9999 127 true

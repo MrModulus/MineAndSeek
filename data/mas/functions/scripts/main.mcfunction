@@ -16,13 +16,12 @@
 #PRE_GAME
 execute if score #game_state mas.counters = #PRE_GAME mas.enums run effect give @a[tag=mas.player] minecraft:regeneration 1 127 true
 execute if score #game_state mas.counters = #PRE_GAME mas.enums run function mas:game/logic/bound_effects
-execute if score #game_state mas.counters = #PRE_GAME mas.enums as @e[type=minecraft:marker,tag=mas.entity,scores={mas.ids=0..}] run function mas:game/logic/marker_check
+
+#BOUNDARY CHECKING
+execute unless score #game_state mas.counters = #NO_GAME mas.enums as @e[type=minecraft:marker,tag=mas.entity,scores={mas.ids=0..}] run function mas:game/logic/marker_check
 
 #IN_GAME
 execute if score #game_state mas.counters = #IN_GAME mas.enums run function mas:game/logic/tick
-
-#POST_GAME
-execute if score #game_state mas.counters = #POST_GAME mas.enums as @e[type=minecraft:marker,tag=mas.entity,scores={mas.ids=0..}] run function mas:game/logic/marker_check
 
 #RESTRICT HEALTH DISPLAY TO SURVIVORS
 execute as @a[team=!mas.survivor] run scoreboard players reset @s mas.health
