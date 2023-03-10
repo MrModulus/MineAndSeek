@@ -16,7 +16,7 @@ function mas:game/map/blank
 
 #MAP-SPECIFIC SETUP
 execute if score #map mas.ids = #MANSION mas.enums run function mas:game/map/mansion
-execute if score #map mas.ids = #FARM mas.enums run function mas:game/map/farm
+execute if score #map mas.ids = #LODGE mas.enums run function mas:game/map/lodge
 
 #PROTECT MAP ENTITIES FROM DELETION
 tag @e[predicate=mas:locations/map_bounds,type=!minecraft:player] add mas.entity
