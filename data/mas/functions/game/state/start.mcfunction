@@ -17,8 +17,8 @@ execute as @a[tag=mas.player] run function mas:game/logic/cleanse
 scoreboard players reset @a[tag=mas.player] mas.death
 
 #MAP SETUP
+scoreboard players reset #max_votes mas.counters
 scoreboard players operation #max_votes mas.counters > @e[type=marker,tag=mas.vote] mas.counters
-execute as @e[type=marker,tag=mas.vote,sort=random] if score @s mas.counters = #max_votes mas.counters run say hi
 execute as @e[type=marker,tag=mas.vote,sort=random] if score @s mas.counters = #max_votes mas.counters run function mas:game/map/map_select
 function mas:game/map/setup
 
