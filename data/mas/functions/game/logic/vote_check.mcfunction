@@ -17,11 +17,11 @@ scoreboard players set @e[type=marker,tag=mas.vote_mansion,limit=1] mas.counters
 execute as @a[tag=mas.player,predicate=mas:locations/vote_mansion] run scoreboard players add @e[type=marker,tag=mas.vote_mansion,limit=1] mas.counters 1
 scoreboard players operation Mansion mas.votes = @e[type=marker,tag=mas.vote_mansion,limit=1] mas.counters
 
-#COUNT FARM VOTES
-execute unless entity @e[type=marker,tag=mas.vote_farm,limit=1] run summon minecraft:marker -399.5 35 803.5 {Tags:["mas.vote_farm","mas.vote","mas.entity"],Rotation:[0F,0F]}
-scoreboard players set @e[type=marker,tag=mas.vote_farm,limit=1] mas.counters 0
-execute as @a[tag=mas.player,predicate=mas:locations/vote_farm] run scoreboard players add @e[type=marker,tag=mas.vote_farm,limit=1] mas.counters 1
-scoreboard players operation Farm mas.votes = @e[type=marker,tag=mas.vote_farm,limit=1] mas.counters
+#COUNT LODGE VOTES
+execute unless entity @e[type=marker,tag=mas.vote_lodge,limit=1] run summon minecraft:marker -399.5 35 803.5 {Tags:["mas.vote_lodge","mas.vote","mas.entity"],Rotation:[0F,0F]}
+scoreboard players set @e[type=marker,tag=mas.vote_lodge,limit=1] mas.counters 0
+execute as @a[tag=mas.player,predicate=mas:locations/vote_lodge] run scoreboard players add @e[type=marker,tag=mas.vote_lodge,limit=1] mas.counters 1
+scoreboard players operation Lodge mas.votes = @e[type=marker,tag=mas.vote_lodge,limit=1] mas.counters
 
 #CALCULATE VOTING SECONDS
 execute if score #players mas.counters < #MIN_PLAYERS mas.enums if score #voting_timer mas.counters matches 0.. run scoreboard players set #voting_timer mas.counters -1

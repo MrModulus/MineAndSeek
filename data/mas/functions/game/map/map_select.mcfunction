@@ -10,4 +10,4 @@
 
 #SET MAP ID BASED ON TAG
 execute if entity @s[tag=mas.vote_mansion] run scoreboard players operation #map mas.ids = #MANSION mas.enums
-execute if entity @s[tag=mas.vote_farm] run scoreboard players operation #map mas.ids = #FARM mas.enums
+execute if entity @s[tag=mas.vote_lodge] run scoreboard players operation #map mas.ids = #LODGE mas.enums

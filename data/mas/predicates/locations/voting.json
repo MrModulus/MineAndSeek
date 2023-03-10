@@ -7,7 +7,7 @@
         },
         {
             "condition": "minecraft:reference",
-            "name": "mas:locations/vote_farm"
+            "name": "mas:locations/vote_lodge"
         }
     ]
 }
