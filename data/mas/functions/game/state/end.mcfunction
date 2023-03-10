@@ -34,6 +34,7 @@ schedule clear mas:game/state/end
 #CLEAR MAP SCHEDULES
 schedule clear mas:game/map/music/mansion
 schedule clear mas:game/map/music/farm
+schedule clear mas:game/map/music/lodge
 schedule clear mas:game/map/effects/lightning
 
 #CLEAR HEALTH DISPLAY
