@@ -14,14 +14,14 @@
 #    TODO (medium): Return to this.
 
 #PRE_GAME
-execute if score #game_state mas.counters = #PRE_GAME mas.enums run effect give @a[tag=mas.player] minecraft:regeneration 1 127 true
-execute if score #game_state mas.counters = #PRE_GAME mas.enums run function mas:game/logic/bound_effects
+execute if score #game_state mas.counters = #PRE_GAME mas.constants run effect give @a[tag=mas.player] minecraft:regeneration 1 127 true
+execute if score #game_state mas.counters = #PRE_GAME mas.constants run function mas:game/logic/bound_effects
 
 #BOUNDARY CHECKING
-execute unless score #game_state mas.counters = #NO_GAME mas.enums as @e[type=minecraft:marker,tag=mas.entity,scores={mas.ids=0..}] run function mas:game/logic/marker_check
+execute unless score #game_state mas.counters = #NO_GAME mas.constants as @e[type=minecraft:marker,tag=mas.entity,scores={mas.ids=0..}] run function mas:game/logic/marker_check
 
 #IN_GAME
-execute if score #game_state mas.counters = #IN_GAME mas.enums run function mas:game/logic/tick
+execute if score #game_state mas.counters = #IN_GAME mas.constants run function mas:game/logic/tick
 
 #RESTRICT HEALTH DISPLAY TO SURVIVORS
 execute as @a[team=!mas.survivor] run scoreboard players reset @s mas.health
@@ -34,11 +34,11 @@ execute as @a[tag=mas.player] run scoreboard players add #players mas.counters 1
 execute as @a[predicate=mas:locations/lobby_and_voting] unless entity @s[team=mas.lobby] run team join mas.lobby
 effect give @a[team=mas.lobby] minecraft:saturation 1 100 true
 effect give @a[team=mas.lobby] instant_health 1 100 true
-execute unless score #game_state mas.counters = #NO_GAME mas.enums run title @a[team=mas.lobby] actionbar {"text":"MATCH IN PROGRESS - JOIN TO SPECTATE"}
+execute unless score #game_state mas.counters = #NO_GAME mas.constants run title @a[team=mas.lobby] actionbar {"text":"MATCH IN PROGRESS - JOIN TO SPECTATE"}
 execute as @a[team=mas.lobby] unless entity @s[predicate=mas:locations/lobby_and_voting] run team leave @s
 
 #ENTERING ROOM TO JOIN (NOT VOTING EXCLUSIVE)
 execute as @a[tag=!mas.player,predicate=mas:locations/voting] run function mas:players/join
 
 #VOTE CHECK
-execute if score #game_state mas.counters = #NO_GAME mas.enums run function mas:game/logic/vote_check
+execute if score #game_state mas.counters = #NO_GAME mas.constants run function mas:game/logic/vote_check

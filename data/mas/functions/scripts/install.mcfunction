@@ -47,27 +47,46 @@ scoreboard objectives add mas.counters dummy
 scoreboard objectives add mas.votes dummy {"text":"Map Votes","color":"red"}
 #mas.bools - used for tracking datapack init and gamerules (created in init function)
 scoreboard players set #init mas.bools 0
-#mas.enums - used for storing constant integers
-scoreboard objectives add mas.enums dummy
+#mas.constants - used for storing constant integers
+scoreboard objectives add mas.constants dummy
+#mas.right_clicked - used to check for player right click (using caos)
+scoreboard objectives add mas.right_clicked minecraft.used:minecraft.carrot_on_a_stick
+#mas.passive_cd - used for tracking remaining passive cooldown
+scoreboard objectives add mas.passive_cd dummy
+#mas.passive_cd_max - used for tracking maximum passive cooldown
+scoreboard objectives add mas.passive_cd_max dummy
+#mas.active_cd - used for tracking remaining active cooldown
+scoreboard objectives add mas.active_cd dummy
+#mas.active_cd_max - used for tracking maximum active cooldown
+scoreboard objectives add mas.active_cd_max dummy
+#mas.ulted - used for tracking who has used their ultimate
+scoreboard objectives add mas.ulted dummy
+#mas.kit_ids - used for tracking kits
+scoreboard objectives add mas.kit_ids dummy
+#mas.spell_ids - used for tracking spells
+scoreboard objectives add mas.spell_ids dummy
 #  settings
-scoreboard players set #MIN_PLAYERS mas.enums 2
-scoreboard players set #MAX_PLAYERS mas.enums 20
-scoreboard players set #SURVIVORS_PER_HUNTER mas.enums 3
+scoreboard players set #MIN_PLAYERS mas.constants 2
+scoreboard players set #MAX_PLAYERS mas.constants 20
+scoreboard players set #SURVIVORS_PER_HUNTER mas.constants 3
 #  states
-scoreboard players set #NO_GAME mas.enums 0
-scoreboard players set #LOCKER mas.enums 1
-scoreboard players set #PRE_GAME mas.enums 2
-scoreboard players set #IN_GAME mas.enums 3
-scoreboard players set #POST_GAME mas.enums 4
+scoreboard players set #NO_GAME mas.constants 0
+scoreboard players set #LOCKER mas.constants 1
+scoreboard players set #PRE_GAME mas.constants 2
+scoreboard players set #IN_GAME mas.constants 3
+scoreboard players set #POST_GAME mas.constants 4
 #  maps
-scoreboard players set #FARM mas.enums 0
-scoreboard players set #MANSION mas.enums 10
-scoreboard players set #LODGE mas.enums 20
+scoreboard players set #FARM mas.constants 0
+scoreboard players set #MANSION mas.constants 10
+scoreboard players set #LODGE mas.constants 20
 # math constants
-scoreboard players set #TICKS_PER_SECOND mas.enums 20
+scoreboard players set #TICKS_PER_SECOND mas.constants 20
+#  kits
+function mas:game/kits/register_kits
+function mas:game/abilities/register_abilities
 
 #SET DEFAULT MAP AND UPDATE GAME STATE
-scoreboard players operation #game_state mas.counters = #NO_GAME mas.enums
+scoreboard players operation #game_state mas.counters = #NO_GAME mas.constants
 scoreboard players set #map mas.ids 0
 
 #SHOW VOTE DISPLAY

@@ -10,7 +10,7 @@
 #    XP timer is set to 1 extra to account for the immediate removal of one level after pregame.
 
 #UPDATE GAME STATE
-scoreboard players operation #game_state mas.counters = #IN_GAME mas.enums
+scoreboard players operation #game_state mas.counters = #IN_GAME mas.constants
 
 #SETDISPLAY FOR HEALTH
 scoreboard objectives setdisplay list mas.health

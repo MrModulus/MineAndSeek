@@ -24,16 +24,16 @@ execute as @a[tag=mas.player,predicate=mas:locations/vote_lodge] run scoreboard 
 scoreboard players operation Lodge mas.votes = @e[type=marker,tag=mas.vote_lodge,limit=1] mas.counters
 
 #CALCULATE VOTING SECONDS
-execute if score #players mas.counters < #MIN_PLAYERS mas.enums if score #voting_timer mas.counters matches 0.. run scoreboard players set #voting_timer mas.counters -1
-execute if score #players mas.counters >= #MIN_PLAYERS mas.enums if score #voting_timer mas.counters matches -1 run scoreboard players set #voting_timer mas.counters 400
+execute if score #players mas.counters < #MIN_PLAYERS mas.constants if score #voting_timer mas.counters matches 0.. run scoreboard players set #voting_timer mas.counters -1
+execute if score #players mas.counters >= #MIN_PLAYERS mas.constants if score #voting_timer mas.counters matches -1 run scoreboard players set #voting_timer mas.counters 400
 scoreboard players operation #voting_timer_sec mas.counters = #voting_timer mas.counters
-scoreboard players operation #voting_timer_sec mas.counters /= #TICKS_PER_SECOND mas.enums
+scoreboard players operation #voting_timer_sec mas.counters /= #TICKS_PER_SECOND mas.constants
 scoreboard players add #voting_timer_sec mas.counters 1
 
 #SHOW ACTION BAR
-execute if score #players mas.counters < #MIN_PLAYERS mas.enums run title @a[team=mas.lobby] actionbar ["",{"score":{"name":"#players","objective":"mas.counters"},"bold":true},{"text":"/","bold":true},{"score":{"name":"#MIN_PLAYERS","objective":"mas.enums"},"bold":true},{"text":" PLAYERS NEEDED TO INITIATE VOTING"}]
-execute if score #players mas.counters >= #MIN_PLAYERS mas.enums run title @a[team=mas.lobby] actionbar ["",{"text":"VOTING ENDS IN "},{"score":{"name":"#voting_timer_sec","objective":"mas.counters"},"bold":true},{"text":" SECONDS"}]
+execute if score #players mas.counters < #MIN_PLAYERS mas.constants run title @a[team=mas.lobby] actionbar ["",{"score":{"name":"#players","objective":"mas.counters"},"bold":true},{"text":"/","bold":true},{"score":{"name":"#MIN_PLAYERS","objective":"mas.constants"},"bold":true},{"text":" PLAYERS NEEDED TO INITIATE VOTING"}]
+execute if score #players mas.counters >= #MIN_PLAYERS mas.constants run title @a[team=mas.lobby] actionbar ["",{"text":"VOTING ENDS IN "},{"score":{"name":"#voting_timer_sec","objective":"mas.counters"},"bold":true},{"text":" SECONDS"}]
 
 #CHECK VOTING TIMER
-execute if score #players mas.counters >= #MIN_PLAYERS mas.enums unless score #voting_timer mas.counters matches 0 run scoreboard players remove #voting_timer mas.counters 1
+execute if score #players mas.counters >= #MIN_PLAYERS mas.constants unless score #voting_timer mas.counters matches 0 run scoreboard players remove #voting_timer mas.counters 1
 execute if score #voting_timer mas.counters matches 0 run function mas:players/start

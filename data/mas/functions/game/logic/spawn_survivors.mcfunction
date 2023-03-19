@@ -10,7 +10,7 @@
 #    None
 
 #UPDATE GAME STATE
-scoreboard players operation #game_state mas.counters = #PRE_GAME mas.enums
+scoreboard players operation #game_state mas.counters = #PRE_GAME mas.constants
 
 #TP TO SURVIVOR SPAWN
 tp @a[team=mas.survivor] @e[type=minecraft:marker,tag=mas.survivor_spawn,limit=1]

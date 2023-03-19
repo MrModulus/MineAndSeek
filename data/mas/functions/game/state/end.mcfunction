@@ -15,7 +15,7 @@
 #    hence map schedule clearing should be guaranteed too.
 
 #UPDATE GAME STATE
-scoreboard players operation #game_state mas.counters = #NO_GAME mas.enums
+scoreboard players operation #game_state mas.counters = #NO_GAME mas.constants
 
 #RESET ID COUNT
 scoreboard players set #curr_id mas.counters 0

@@ -20,7 +20,7 @@
 execute at @a[tag=!mas.spectator,tag=mas.check,limit=1] if entity @s[distance=..5] run scoreboard players add @a[tag=mas.check,limit=1] mas.counters 1
 
 #OUTSIDE TETHER RANGE
-execute at @a[tag=mas.check,limit=1] unless entity @s[distance=..5] run scoreboard players set @p mas.counters 0
+execute at @a[tag=mas.check,limit=1] unless entity @s[distance=..5] run scoreboard players set @a[tag=mas.check,limit=1] mas.counters 0
 execute at @a[predicate=mas:locations/player_bounds,tag=mas.check,limit=1] unless entity @s[distance=..5] run tp @s @a[tag=mas.check,limit=1]
 
 #IDLE EFFECT PROCS

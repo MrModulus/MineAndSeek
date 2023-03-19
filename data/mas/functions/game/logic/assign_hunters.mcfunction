@@ -22,5 +22,5 @@ scoreboard players operation #ratio mas.counters = #survivors mas.counters
 scoreboard players operation #ratio mas.counters /= #hunters mas.counters
 
 #DETERMINE HOW TO BRANCH
-execute if score #ratio mas.counters > #SURVIVORS_PER_HUNTER mas.enums run function mas:game/logic/assign_hunters
-execute if score #ratio mas.counters <= #SURVIVORS_PER_HUNTER mas.enums run function mas:game/state/start
+execute if score #ratio mas.counters > #SURVIVORS_PER_HUNTER mas.constants run function mas:game/logic/assign_hunters
+execute if score #ratio mas.counters <= #SURVIVORS_PER_HUNTER mas.constants run function mas:game/state/start

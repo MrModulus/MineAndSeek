@@ -326,7 +326,7 @@ There are some very important coding conventions that need to be adhered to, suc
 - All tag, scoreboard, and variable names should be prefixed with `mas.` to reduce the chance of conflict with other datapacks
 - Dummy variables in scoreboards should be prefixed with # to avoid accidentally setting values for players with the same name - even if players won't be added to that list
 - Use `_` to join multiple words in a variable name, e.g. `#round_timer` NOT `#round.timer`
-- Constant values should be set up as enums rather than being hardcoded, using the correct section of `mas.enums`, and must be CAPS_CASE to indicate that they are constants
+- Constant values should be set up as enums rather than being hardcoded, using the correct section of `mas.constants`, and must be CAPS_CASE to indicate that they are constants
 - Every file should have a comment describing it at the top and comments dividing the functionality into sections. Otherwise, comments are only needed when the code is not self-explanatory
 - If there's something that should be revisited in the future, add a `TODO (priority):` where `priority` is either `low`, `medium`, or `high`. Ideally this should only be used in the `Notes` section of a file
 - All entities spawned by the datapack MUST have the tag `mas.entity` for cleanup. VERY IMPORTANT!

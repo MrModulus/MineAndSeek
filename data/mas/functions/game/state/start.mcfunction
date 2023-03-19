@@ -41,7 +41,7 @@ schedule function mas:game/logic/xp_timer 1s
 title @a[tag=mas.player,tag=!mas.spectator] actionbar "SECONDS TILL SPAWN:"
 
 #UPDATE GAME STATE
-scoreboard players operation #game_state mas.counters = #LOCKER mas.enums
+scoreboard players operation #game_state mas.counters = #LOCKER mas.constants
 
 #SCHEDULE SURVIVOR SPAWN
 schedule function mas:game/logic/spawn_survivors 30s

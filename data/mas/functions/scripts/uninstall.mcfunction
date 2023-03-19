@@ -26,7 +26,13 @@ scoreboard objectives remove mas.health
 scoreboard objectives remove mas.ids
 scoreboard objectives remove mas.counters
 scoreboard objectives remove mas.votes
-scoreboard objectives remove mas.enums
+scoreboard objectives remove mas.constants
+scoreboard objectives remove mas.right_clicked
+scoreboard objectives remove mas.passive_cd
+scoreboard objectives remove mas.passive_cd_max
+scoreboard objectives remove mas.active_cd
+scoreboard objectives remove mas.active_cd_max
+scoreboard objectives remove mas.ulted
 
 #CLEAR SCHEDULES
 schedule clear mas:game/logic/dc_check

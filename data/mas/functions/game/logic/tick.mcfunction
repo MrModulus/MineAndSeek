@@ -22,6 +22,12 @@ execute as @a[team=mas.survivor,scores={mas.counters=400..},tag=!mas.spectator] 
 #DEATH CHECK
 execute as @a[team=!mas.hunter,scores={mas.death=1..}] at @s run function mas:game/logic/death
 
+#KIT EFFECTS
+execute as @a[tag=mas.player,tag=!mas.spectator] run function mas:game/kits/passive_effects
+execute as @a[tag=mas.player,tag=!mas.spectator,scores={mas.right_clicked=1},nbt={SelectedItemSlot:1}] run function mas:game/kits/active_effects
+execute as @a[tag=mas.player,tag=!mas.spectator,scores={mas.right_clicked=1},nbt={SelectedItemSlot:2}] run function mas:game/kits/ultimate_effects
+scoreboard players set @a[tag=mas.player] mas.right_clicked 0
+
 #SURVIVOR COUNT
 scoreboard players set #survivors mas.counters 0
 execute as @a[team=mas.survivor] run scoreboard players add #survivors mas.counters 1

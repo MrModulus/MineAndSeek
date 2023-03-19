@@ -10,7 +10,7 @@
 #    schedule clears should be guaranteed to work (in the case of a natural round end).
 
 #UPDATE GAME STATE
-scoreboard players operation #game_state mas.counters = #POST_GAME mas.enums
+scoreboard players operation #game_state mas.counters = #POST_GAME mas.constants
 
 #SET ALL TO SPECTATOR
 tag @a[tag=mas.player] add mas.spectator
