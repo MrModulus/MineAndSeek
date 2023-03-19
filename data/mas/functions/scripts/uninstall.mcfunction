@@ -33,6 +33,8 @@ scoreboard objectives remove mas.passive_cd_max
 scoreboard objectives remove mas.active_cd
 scoreboard objectives remove mas.active_cd_max
 scoreboard objectives remove mas.ulted
+scoreboard objectives remove mas.kit_ids
+scoreboard objectives remove mas.spell_ids
 
 #CLEAR SCHEDULES
 schedule clear mas:game/logic/dc_check
