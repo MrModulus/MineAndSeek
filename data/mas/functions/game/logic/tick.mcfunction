@@ -9,6 +9,7 @@
 #    Need to check death tickwise for death effects and spectator tp to work properly.
 #    We check for !mas.hunter instead of mas.survivor so that people who join mid-game are 
 #    turned into spectators. We also force gamemodes tickwise.
+#    Ability effects MUST be after kit effects, to avoid accidentally clearing ability weakness.
 
 #MARKER CHECK
 execute as @e[type=minecraft:marker,tag=mas.entity,scores={mas.ids=0..}] run function mas:game/logic/marker_check
@@ -27,6 +28,11 @@ execute as @a[tag=mas.player,tag=!mas.spectator] run function mas:game/kits/pass
 execute as @a[tag=mas.player,tag=!mas.spectator,scores={mas.right_clicked=1},nbt={SelectedItemSlot:1}] run function mas:game/kits/active_effects
 execute as @a[tag=mas.player,tag=!mas.spectator,scores={mas.right_clicked=1},nbt={SelectedItemSlot:2}] run function mas:game/kits/ultimate_effects
 scoreboard players set @a[tag=mas.player] mas.right_clicked 0
+effect give @a[tag=mas.player,tag=!mas.spectator,nbt=!{SelectedItemSlot:0}] weakness 1 0 true
+effect clear @a[tag=mas.player,tag=!mas.spectator,nbt={SelectedItemSlot:0}] weakness\
+
+#ABILITY EFFECTS
+
 
 #UPDATE COOLDOWNS
 scoreboard players remove @a[tag=mas.player,scores={mas.active_cd=1..}] mas.active_cd 1
