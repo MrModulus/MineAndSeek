@@ -19,6 +19,3 @@ scoreboard players operation #cd_sec mas.active_cd = @s mas.active_cd
 scoreboard players operation #cd_sec mas.active_cd /= #TICKS_PER_SECOND mas.constants
 scoreboard players add #cd_sec mas.active_cd 1
 title @s[scores={mas.active_cd=1..}] actionbar ["",{"text":"ACTIVE ON COOLDOWN: "},{"score":{"name":"#cd_sec","objective":"mas.active_cd"},"bold":true},{"text":" SECONDS"}]
-
-#UPDATE ACTIVE CD
-scoreboard players remove @s[scores={mas.active_cd=1..}] mas.active_cd 1

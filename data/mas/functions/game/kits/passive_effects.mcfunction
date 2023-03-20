@@ -12,7 +12,3 @@
 execute if score @s[scores={mas.passive_cd=0}] mas.kit_ids = #SAVAGE mas.kit_ids run function mas:game/kits/hunters/savage/passive
 
 #SURVIVORS
-
-
-#UPDATE PASSIVE CD
-scoreboard players remove @s[scores={mas.passive_cd=1..}] mas.passive_cd 1

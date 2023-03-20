@@ -12,7 +12,7 @@
                                 "entity": "this",
                                 "predicate": {
                                     "type": "minecraft:player",
-                                    "team": "mas.survivors"
+                                    "team": "mas.survivor"
                                 }
                             },
                             {
@@ -20,7 +20,7 @@
                                 "entity": "this",
                                 "predicate": {
                                     "type": "minecraft:player",
-                                    "team": "mas.hunters"
+                                    "team": "mas.hunter"
                                 }
                             }
                         ]

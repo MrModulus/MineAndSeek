@@ -17,7 +17,7 @@ execute as @e[type=minecraft:marker,tag=mas.entity,scores={mas.ids=0..}] run fun
 function mas:game/logic/bound_effects
 
 #IDLING EFFECTS
-execute as @a[team=mas.survivor,scores={mas.counters=400..},tag=!mas.spectator] run function mas:game/logic/idle_effects
+execute as @a[team=mas.survivor,tag=!mas.spectator,scores={mas.counters=400..}] run function mas:game/logic/idle_effects
 
 #DEATH CHECK
 execute as @a[team=!mas.hunter,scores={mas.death=1..}] at @s run function mas:game/logic/death
@@ -27,6 +27,10 @@ execute as @a[tag=mas.player,tag=!mas.spectator] run function mas:game/kits/pass
 execute as @a[tag=mas.player,tag=!mas.spectator,scores={mas.right_clicked=1},nbt={SelectedItemSlot:1}] run function mas:game/kits/active_effects
 execute as @a[tag=mas.player,tag=!mas.spectator,scores={mas.right_clicked=1},nbt={SelectedItemSlot:2}] run function mas:game/kits/ultimate_effects
 scoreboard players set @a[tag=mas.player] mas.right_clicked 0
+
+#UPDATE COOLDOWNS
+scoreboard players remove @a[tag=mas.player,scores={mas.active_cd=1..}] mas.active_cd 1
+scoreboard players remove @a[tag=mas.player,scores={mas.passive_cd=1..}] mas.passive_cd 1
 
 #SURVIVOR COUNT
 scoreboard players set #survivors mas.counters 0

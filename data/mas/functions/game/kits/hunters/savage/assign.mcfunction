@@ -7,12 +7,10 @@
 #    command blocks
 #  Additional notes:
 #    We need to set the non-max cooldowns too so that they have an initial value (for conditional checks elsewhere).
+#    MUST set inventory AFTER cooldowns since equip is dependent upon it.
 
 #SET SAVAGE KIT
 scoreboard players operation @s mas.kit_ids = #SAVAGE mas.kit_ids
-
-#SET INVENTORY
-function mas:game/kits/hunters/savage/equip
 
 #SET COOLDOWNS
 scoreboard players set @s mas.passive_cd 0
@@ -22,3 +20,6 @@ scoreboard players set @s mas.active_cd 0
 scoreboard players set @s mas.active_cd_max 40
 scoreboard players operation @s mas.active_cd_max *= #TICKS_PER_SECOND mas.constants
 scoreboard players set @s mas.ulted 0
+
+#SET INVENTORY
+function mas:game/kits/hunters/savage/equip
