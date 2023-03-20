@@ -6,7 +6,7 @@
 #  Called by:
 #    advancements/inventory_changed
 #  Additional notes:
-#    None
+#    Advancement MUST be revoked at the very end or else the equip functions will trigger it (causing a feedback loop)
 
 #HUNTERS
 execute if score @s mas.kit_ids = #SAVAGE mas.kit_ids run function mas:game/kits/hunters/savage/equip
