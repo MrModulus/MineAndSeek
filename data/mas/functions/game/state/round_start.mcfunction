@@ -22,7 +22,7 @@ execute if predicate mas:map/is_large run xp set @a[tag=mas.player] 11 levels
 title @a[tag=mas.player,tag=!mas.spectator] actionbar "MINUTES TILL ROUND END:"
 
 #HUNTER REGEN
-effect give @a[team=mas.hunter] minecraft:regeneration 9999 127 true
+effect give @a[team=mas.hunter] minecraft:regeneration infinite 127 true
 
 #UPDATE HEALTH SCOREBOARD
 effect give @a[team=mas.survivor] minecraft:wither 1 1 false
