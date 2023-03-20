@@ -29,7 +29,7 @@ execute as @a[tag=mas.player,tag=!mas.spectator,scores={mas.right_clicked=1},nbt
 execute as @a[tag=mas.player,tag=!mas.spectator,scores={mas.right_clicked=1},nbt={SelectedItemSlot:2}] run function mas:game/kits/ultimate_effects
 scoreboard players set @a[tag=mas.player] mas.right_clicked 0
 effect give @a[tag=mas.player,tag=!mas.spectator,nbt=!{SelectedItemSlot:0}] weakness 1 0 true
-effect clear @a[tag=mas.player,tag=!mas.spectator,nbt={SelectedItemSlot:0}] weakness\
+effect clear @a[tag=mas.player,tag=!mas.spectator,nbt={SelectedItemSlot:0}] weakness
 
 #ABILITY EFFECTS
 
