@@ -4,7 +4,7 @@
 #  End Effect:
 #    Map is loaded and all entities are killed.
 #  Called by:
-#    game/map/setup
+#    game/maps/setup
 #  Additional notes:
 #    None
 

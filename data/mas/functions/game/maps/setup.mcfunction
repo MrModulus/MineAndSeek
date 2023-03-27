@@ -10,13 +10,22 @@
 #    map directory, they've been placed into their own function.
 #    After map setup, its important to tp the markers to the survivor spawn, so that they aren't killed by
 #    the bounds checks.
+#    Lastly, the schedules use 45s here to align with the start of the round, so this should be updated
+#    if the time for Hunter spawn is updated too. Ideally we find a way to do music/effect stuff
+#    all from the round start function using predicates. TODO (low): Return to this.
 
 #CLEAR PREVIOUS MAP + ENTITIES
-function mas:game/map/blank
+function mas:game/maps/blank/setup
 
 #MAP-SPECIFIC SETUP
-execute if score #map mas.ids = #MANSION mas.constants run function mas:game/map/mansion
-execute if score #map mas.ids = #LODGE mas.constants run function mas:game/map/lodge
+execute if score #map mas.ids = #SWAN mas.constants run function mas:game/maps/swan/setup
+execute if score #map mas.ids = #LODGE mas.constants run function mas:game/maps/lodge/setup
+execute if score #map mas.ids = #MANSION mas.constants run function mas:game/maps/mansion/setup
+execute if score #map mas.ids = #FARM mas.constants run function mas:game/maps/farm/setup
+
+#MAP SCHEDULES
+schedule function mas:game/maps/music 45s
+schedule function mas:game/maps/effects 45s
 
 #PROTECT MAP ENTITIES FROM DELETION
 tag @e[predicate=mas:locations/map_bounds,type=!minecraft:player] add mas.entity

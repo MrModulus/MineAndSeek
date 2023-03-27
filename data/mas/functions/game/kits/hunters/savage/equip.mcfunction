@@ -1,4 +1,4 @@
-# SAVAGE - EQUIP
+# SAVAGE: EQUIP
 #  Purpose:
 #    Equips the Savage kit to a player.
 #  End Effect:

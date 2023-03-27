@@ -1,4 +1,4 @@
-# SAVAGE - ASSIGN
+# SAVAGE: ASSIGN
 #  Purpose:
 #    Assigns the Savage kit to a player.
 #  End Effect:
@@ -14,11 +14,7 @@ scoreboard players operation @s mas.kit_ids = #SAVAGE mas.kit_ids
 
 #SET COOLDOWNS
 scoreboard players set @s mas.passive_cd 0
-scoreboard players set @s mas.passive_cd_max 1
-scoreboard players operation @s mas.passive_cd_max *= #TICKS_PER_SECOND mas.constants
 scoreboard players set @s mas.active_cd 0
-scoreboard players set @s mas.active_cd_max 40
-scoreboard players operation @s mas.active_cd_max *= #TICKS_PER_SECOND mas.constants
 scoreboard players set @s mas.ulted 0
 
 #SET INVENTORY

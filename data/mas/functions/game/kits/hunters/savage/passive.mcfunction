@@ -1,6 +1,6 @@
-# SAVAGE - PASSIVE
+# SAVAGE: PASSIVE
 #  Purpose:
-#    Handles the passive effect for the Savage.
+#    Handles the passive trigger for the Savage.
 #  End Effect:
 #    Plays heartbeat sounds at nearby Survivors and provides a speed boost to the Savage if he's near.
 #  Called by:
@@ -17,5 +17,10 @@
 #SPEED BOOST
 # execute if entity @a[team=mas.survivor,distance=..5] run effect give @s speed 1 1 true
 
+#SET PASSIVE DURATION
+scoreboard players set @s mas.passive_dur 1
+scoreboard players operation @s mas.passive_dur *= #TICKS_PER_SECOND mas.constants
+
 #SET PASSIVE CD
-scoreboard players operation @s mas.passive_cd = @s mas.passive_cd_max
+scoreboard players set @s mas.passive_cd 1
+scoreboard players operation @s mas.passive_cd *= #TICKS_PER_SECOND mas.constants

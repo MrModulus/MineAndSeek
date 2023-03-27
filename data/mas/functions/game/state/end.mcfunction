@@ -32,10 +32,8 @@ schedule clear mas:game/logic/spawn_hunters
 schedule clear mas:game/state/end
 
 #CLEAR MAP SCHEDULES
-schedule clear mas:game/map/music/mansion
-schedule clear mas:game/map/music/farm
-schedule clear mas:game/map/music/lodge
-schedule clear mas:game/map/effects/lightning
+schedule clear mas:game/maps/music
+schedule clear mas:game/maps/effects
 
 #CLEAR HEALTH DISPLAY
 scoreboard objectives setdisplay list

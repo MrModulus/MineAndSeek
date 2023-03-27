@@ -1,0 +1,16 @@
+# SWAN: MUSIC
+#  Purpose:
+#    Plays and loops the music for the Swan map.
+#  End Effect:
+#    Plays music then waits for the right time to loop it.
+#  Called by:
+#    game/maps/music
+#  Additional notes:
+#    None
+
+#PLAY MUSIC
+stopsound @a[tag=mas.player]
+playsound minecraft:music_disc.pigstep master @a[tag=mas.player] ~ 1000 ~ 100 0.6 1
+
+#LOOP EVERY 230 SECONDS
+schedule function mas:game/maps/music 230s

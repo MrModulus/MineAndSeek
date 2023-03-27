@@ -8,6 +8,14 @@
         {
             "condition": "minecraft:reference",
             "name": "mas:locations/vote_lodge"
+        },
+        {
+            "condition": "minecraft:reference",
+            "name": "mas:locations/vote_swan"
+        },
+        {
+            "condition": "minecraft:reference",
+            "name": "mas:locations/vote_farm"
         }
     ]
 }

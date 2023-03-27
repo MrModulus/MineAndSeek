@@ -19,8 +19,8 @@ scoreboard players reset @a[tag=mas.player] mas.death
 #MAP SETUP
 scoreboard players reset #max_votes mas.counters
 scoreboard players operation #max_votes mas.counters > @e[type=marker,tag=mas.vote] mas.counters
-execute as @e[type=marker,tag=mas.vote,sort=random] if score @s mas.counters = #max_votes mas.counters run function mas:game/map/map_select
-function mas:game/map/setup
+execute as @e[type=marker,tag=mas.vote,sort=random] if score @s mas.counters = #max_votes mas.counters run function mas:game/maps/map_select
+function mas:game/maps/setup
 
 #INIT LOCKER PHASE
 tp @a[team=mas.survivor] -471.5 35 793.5 90 0

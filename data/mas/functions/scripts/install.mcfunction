@@ -53,14 +53,20 @@ scoreboard objectives add mas.constants dummy
 scoreboard objectives add mas.right_clicked minecraft.used:minecraft.carrot_on_a_stick
 #mas.passive_cd - used for tracking remaining passive cooldown
 scoreboard objectives add mas.passive_cd dummy
-#mas.passive_cd_max - used for tracking maximum passive cooldown
-scoreboard objectives add mas.passive_cd_max dummy
+#mas.passive_dur - used for tracking remaining passive duration
+scoreboard objectives add mas.passive_dur dummy
 #mas.active_cd - used for tracking remaining active cooldown
 scoreboard objectives add mas.active_cd dummy
-#mas.active_cd_max - used for tracking maximum active cooldown
-scoreboard objectives add mas.active_cd_max dummy
+#mas.active_dur - used for tracking remaining active duration
+scoreboard objectives add mas.active_dur dummy
 #mas.ulted - used for tracking who has used their ultimate
 scoreboard objectives add mas.ulted dummy
+#mas.ult_dur - used for tracking remaining ult duration
+scoreboard objectives add mas.ult_dur dummy
+#mas.immune_dur - used for tracking remaining debuff immunity duration
+scoreboard objectives add mas.immune_dur dummy
+#mas.lock_dur - used for tracking remaining ability lock duration
+scoreboard objectives add mas.lock_dur dummy
 #mas.kit_ids - used for tracking kits
 scoreboard objectives add mas.kit_ids dummy
 #mas.spell_ids - used for tracking spells
@@ -76,18 +82,15 @@ scoreboard players set #PRE_GAME mas.constants 2
 scoreboard players set #IN_GAME mas.constants 3
 scoreboard players set #POST_GAME mas.constants 4
 #  maps
-scoreboard players set #FARM mas.constants 0
-scoreboard players set #MANSION mas.constants 10
-scoreboard players set #LODGE mas.constants 20
+function mas:game/maps/register_maps
 # math constants
 scoreboard players set #TICKS_PER_SECOND mas.constants 20
 #  kits
 function mas:game/kits/register_kits
 function mas:game/abilities/register_abilities
 
-#SET DEFAULT MAP AND UPDATE GAME STATE
+#SET GAME STATE
 scoreboard players operation #game_state mas.counters = #NO_GAME mas.constants
-scoreboard players set #map mas.ids 0
 
 #SHOW VOTE DISPLAY
 scoreboard objectives setdisplay sidebar.team.white mas.votes

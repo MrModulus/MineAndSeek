@@ -29,10 +29,13 @@ scoreboard objectives remove mas.votes
 scoreboard objectives remove mas.constants
 scoreboard objectives remove mas.right_clicked
 scoreboard objectives remove mas.passive_cd
-scoreboard objectives remove mas.passive_cd_max
+scoreboard objectives remove mas.passive_dur
 scoreboard objectives remove mas.active_cd
-scoreboard objectives remove mas.active_cd_max
+scoreboard objectives remove mas.active_dur
 scoreboard objectives remove mas.ulted
+scoreboard objectives remove mas.ult_dur
+scoreboard objectives remove mas.immune_dur
+scoreboard objectives remove mas.lock_dur
 scoreboard objectives remove mas.kit_ids
 scoreboard objectives remove mas.spell_ids
 
