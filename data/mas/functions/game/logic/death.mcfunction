@@ -13,7 +13,7 @@ particle minecraft:block minecraft:red_mushroom_block ~ ~1 ~ 0 0 0 1 50
 
 #SOUND EFFECTS
 playsound minecraft:entity.player.attack.crit master @a[team=mas.hunter] ~ ~1 ~ 2 0.7
-playsound minecraft:block.end_gateway.spawn master @a[tag=mas.player] ~ 1000 ~ 100 1.4
+playsound minecraft:block.end_gateway.spawn master @a[tag=mas.player] -1455.0 1000 -34.0 100 1.4
 execute at @a[team=mas.hunter] run playsound minecraft:entity.ravager.celebrate master @a[tag=mas.player] ~ ~1 ~ 0.2 1.3
 
 #BECOME SPECTATOR
