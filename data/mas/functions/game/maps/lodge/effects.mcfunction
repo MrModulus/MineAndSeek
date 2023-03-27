@@ -1,4 +1,4 @@
-# EFFECTS: LODGE
+# LODGE: EFFECTS
 #  Purpose:
 #    Summons lightning periodically, at random positions around the map, throughout the round.
 #  End Effect:
