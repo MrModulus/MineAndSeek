@@ -31,6 +31,10 @@ effect give @a[team=mas.survivor] minecraft:regeneration 1 100 false
 #CLEAR RIGHT CLICKS
 scoreboard players set @a[tag=mas.player] mas.right_clicked 0
 
+#MAP MUSIC AND EFFECTS
+function mas:game/maps/music
+function mas:game/maps/effects
+
 #SCHEDULES
 execute if predicate mas:map/is_small run schedule function mas:game/logic/halfway_msg 180s
 execute if predicate mas:map/is_medium run schedule function mas:game/logic/halfway_msg 240s
