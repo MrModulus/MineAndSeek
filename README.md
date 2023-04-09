@@ -20,15 +20,15 @@ The premise of the game offers a dangerously fun spin on hide and seek, with pla
   <br>High Damage Axe (Iron)
   
   > **Passive - Bloodlust**
-  <br>Can hear the heartbeat of nearby Survivors and gains a 20% speed boost when close. 
+  <br>Can hear the heartbeat of nearby Survivors and gains a 20% speed boost (Speed 1) when close. 
   <br>*“Your heart is stricken. My footsteps quicken.”*
   
   > **Active - Unrelenting**
-  <br>Enter a state of rage which gives you 20% speed, apply bleeding damage, and makes you temporarily immune to debuffs for 8s. (CD: 40s) 
+  <br>Enter a state of rage which gives you 20% speed (Speed 1), apply witcher damage with all attacks(1 heart), and become temporarily immune to debuffs (not including ultimate abilities) for 8s. (CD: 40s) 
   <br>*“Death couldn’t stop me. Did you think you could?”*
   
   > **Ultimate - Scream for Me**
-  <br>Spread a nightmare-inducing Paranoia effect to all Survivors, blinding them and scrambling their senses for 8 seconds. 
+  <br>Spread a nightmare-inducing Paranoia effect to all Survivors, scrambling their senses (nausea and blindness) for 8 seconds. 
   <br>*“Squeal for me, piggies!”*
 </details>
 
@@ -41,15 +41,15 @@ The premise of the game offers a dangerously fun spin on hide and seek, with pla
   <br>Medium Damage Bow, Low Damage Sword (Wooden)
   
   > **Passive - Eagle's Eye**
-  <br>All arrows reveal targets and prevent healing for 1 second.
+  <br>All arrows reveal targets and prevents them form healing for 1 second.
   <br>*“Justice is blind, but I am not.”*
   
   > **Active - Ensared**
-  <br>Plant a trap at your position and enter stealth for a brief period. Trap placement is permanent until detonated or until the skill is used again, and stealth lasts 5 seconds. Traps root and reveal victims within range for 2 seconds. (CD: 30s).
+  <br>Plant a trap at your position and enter stealth for a brief period. Trap placement is permanent and disappears if triggered (3 block XZ radius) or if ability is used again, and stealth (invisibility) lasts 5 seconds. Traps root and reveal victims within range for 2 seconds. (CD: 30s).
   <br>*“Don’t scream too much.”*
   
   > **Ultimate - You Can't Hide**
-  <br>Fire a global, wide, wall-piercing shot that deals tremendous damage to all unfortunate enough to be caught in its path.
+  <br>Fire a global, wide (5 block radius), wall-piercing shot that deals tremendous damage (8 hearts) to all unfortunate enough to be caught in its path. You will hear a scream if any Survivors are hit.
   <br>*“You don’t deserve to live.”*
 </details>
 
@@ -62,7 +62,7 @@ The premise of the game offers a dangerously fun spin on hide and seek, with pla
   <br>Low Damage Hoe (Netherite)
   
   > **Passive - Eerie Presence**
-  <br>The game starts with zombies scattered around the map. Summon a Zombie at your position every 30 seconds. Your zombies are revealed to you and will attack Survivors. 
+  <br>The game starts with zombies scattered around the map. Summon a Zombie at your position every 30 seconds. Your zombies are revealed to you and will attack only Survivors. 
   <br>*“If only I were you, so that I too could serve such a beautiful queen.”*
   
   > **Active - Soul Release**
@@ -70,16 +70,16 @@ The premise of the game offers a dangerously fun spin on hide and seek, with pla
   <br>*“You are dismissed.”*
   
   > **Ultimate - For the Queen!**
-  <br> Spawn a bloodthirsty creeper directly behind every Survivor. These minions have increased speed and will explode to deal high damage. They last for 10 seconds. 
+  <br> Spawn a bloodthirsty creeper directly behind every Survivor. These minions have increased speed and will explode to deal damage. Their maximum lifetime before exploding is 8s. 
   <br>*“Seek and destroy.”*
 </details>
 
 <details>
-  <summary>Troy: The Drowned</summary>
+  <summary>{WIP} Hunter // Troy: The Drowned</summary>
   
   > A man of the sea, he assumed her tides could protect him from The Corruption. He gathered all of his loved ones onto his boat and sailed off, safe at last - only to find that he was gravely mistaken. His command of the waves was all that remained.
   
-  > **Weapon - The Kraken**
+  > **Weapon - The Kraken** 
   <br>Low Damage Trident
   
   > **Passive - Downpour**
@@ -95,13 +95,14 @@ The premise of the game offers a dangerously fun spin on hide and seek, with pla
   <br>*“Wash them away.”*
 </details>
 
+
 ## Survivors (Experimental)
 Survivors are designed with roles, as opposed to Hunters.
 
 <details>
   <summary>Tina Nelson Tucker: The TNT [Controller]</summary>
   
-  > Science gave mankind the power to reach for the stars, but also to inevitably crash and burn. Too bad Tina forgot the first part. The tools she made as a nuclear engineer for the government failed to stop Aurora, but what better way to make up for it than destroying everything the Corruption brought with it?
+  > ~~Science gave mankind the power to reach for the stars, but also to inevitably crash and burn. Too bad Tina forgot the first part. The tools she made as a nuclear engineer for the government failed to stop Aurora, but what better way to make up for it than destroying everything the Corruption brought with it?~~
   
   > **Weapon - Sparky**
   <br>Flint and Steel
@@ -111,11 +112,11 @@ Survivors are designed with roles, as opposed to Hunters.
   <br>*“I dunno who Geneva is but she better get her convention up on outta here.”*
   
   > **Active - Bubbly Boys**
-  <br>Throw a mysterious concoction that slows Hunters by 50% and reduces their damage by 50% for 5s; also deals damage to enemy deployables. Can hold up to 3. 
+  <br>Throw a mysterious concoction that slows Hunters by 45% (Slowness 3) and reduces their damage (Weakness 1) for 5s; also deals damage to enemy deployables. Can hold up to 3. 
   <br>*“How z’at taste?”*
   
   > **Ultimate - Fat Man**
-  <br>Drop a hazardous bomb, causing all afflicted Hunters to become dizzy and eventually black out. They awake 3 seconds later, back at their spawnpoint. 
+  <br>Drop a hazardous bomb, causing all afflicted Hunters to become dizzy (Nether Transport Effect) and eventually black out. They awake 3 seconds later, back at at the Survivor spawn point. 
   <br>*“Smell that? Me neither! My nose don’t work.”*
  
 </details>
@@ -129,11 +130,11 @@ Survivors are designed with roles, as opposed to Hunters.
   <br>Stick
   
   > **Passive - Undying Patience**
-  <br>Grant self and nearby allies 20% armor. If a hunter deals 5 hearts of your health worth of damage to you, they are stunned for 1s. 
+  <br>Grant self and nearby allies (within 10 blocks) 20% damage reduction (Protection 1). If a hunter deals 5 hearts of your health worth of damage to you, they are stunned for 1s. 
   <br>*“The seed of protection has been planted, and I will watch it grow.”*
   
   > **Active - Wind Dance**
-  <br>Heal yourself and nearby allies in a large range for 3 hearts. They gain 50% additional damage reduction. (CD: 40). 
+  <br>Heal yourself and nearby allies in a large range (10 block radius, upon casting) for 3 hearts. They gain 40% additional damage reduction (Protection 2). (CD: 40). 
   <br>*“I shall protect the harvest.”*
   
   > **Ultimate - One For All**
@@ -143,7 +144,7 @@ Survivors are designed with roles, as opposed to Hunters.
 </details>
 
 <details>
-  <summary>Ava: The Seer [Trickster]</summary>
+  <summary>Ava: The Seer [Scout]</summary>
   
   > Blinded and cast out as a child, she roamed the forest until she knew every nook of every tree. The animals and spirits were merciful to her when her life wasn’t, becoming her new family. Once she became 18, she decided she was strong enough to seek her brother who unbeknown to her had become a Hunter. Perhaps it’s a blessing that she cannot see how her world was corrupted.
   
@@ -155,11 +156,11 @@ Survivors are designed with roles, as opposed to Hunters.
   <br>*“I may have lost sight, but I still have vision.”*
   
   > **Active - Guide Me**
-  <br>Spawn a sentry Hawk in your location, capped at two Hawks. Hawks reveal nearby Hunters until destroyed, then heal all Survivors for 2 hearts. (CD: 30s). 
+  <br>Spawn a sentry Hawk in your location,. Up to 2 can exist at a time, placing a third will remove the first, etc. Hawks reveal nearby Hunters within 8 blocks. then heal all Survivors for 2 hearts. (CD: 30s). 
   <br>*“Please, be my eyes.”*
   
   > **Ultimate - The Overseer**
-  <br>Spawn an sentry Bear behind a random Hunter. The Bear has high health and prevents Hunters from using their abilities until killed or after 20 seconds.
+  <br>Spawn an Bear behind a random Hunter. The Bear has high health (20 hearts) and prevents Hunters from using their abilities until killed or until it despawns after 15s.
   <br>*“Guardian, stall them!”*
  
 </details>
@@ -173,21 +174,21 @@ Survivors are designed with roles, as opposed to Hunters.
   <br>Snowballs
   
   > **Passive - Permafrost**
-  <br>Your snowballs knockback and slow Hunters by 25% for 1 second. 
+  <br>Your snowballs knockback and slow Hunters by 15% (Slowness 1) for 1 second. 
   <br>*“You’ve bathed the world in red, now I will bathe it in white.”*
   
   > **Active - Loyal Subjects**
-  <br>Summon a loyal snowman who runs up to nearby Hunters and explodes, freezing them for 2 seconds. (CD: 40). 
+  <br>Summon a loyal snowman who runs up to nearby Hunters and explode, freezing (ensnare with snow effect) them for 2 seconds. (CD: 40). 
   <br>*“Freeze them in time.”*
   
   > **Ultimate - White Blood**
-  <br>Call upon your winter powers to summon a blizzard that follows Hunters, slowing them and obscuring their vision for 10 seconds. 
+  <br>Call upon your winter powers to summon a blizzard that follows all Hunters, slowing them (Slowness 6) and obscuring their vision (powdered snow effect) for 10 seconds. 
   <br>*“Your hearts are frozen.”*
  
 </details>
 
 <details>
-  <summary>Jasone: The Kid [Trickster]</summary>
+  <summary>Jasone: The Kid [Scout]</summary>
   
   > A kid from a poor family with nothing but the clothes on his back and lightning running through his veins. He grew up aspiring to become an athlete and becoming famous enough to pull his family out of the gutter; now the corruption may have taken his family, but not his energy. They say lightning doesn’t strike in the same place twice, but that’s because they haven’t seen Jasone.
   
@@ -195,15 +196,15 @@ Survivors are designed with roles, as opposed to Hunters.
   <br>Blaze Rod
   
   > **Passive - Adrenaline Rush**
-  <br>Gain a speed boost when hit and reveal the Hunter who attacked you for 2 seconds.
+  <br>Gain a speed boost (Speed 1) when hit and reveal the Hunter who attacked you for 2 seconds.
   <br>*“Adrenaline is the only performance drug I need.”*
   
   > **Active - Spark Mark**
-  <br>Plant a Mark at your position and gain movement speed for 6 seconds. Reactivating the skill within this duration returns you to your Mark. (CD: 40s)
+  <br>Plant a Mark at your position and gain movement speed (Speed 1) for 6 seconds. Reactivating the skill within this duration returns you to your Mark. (CD: 40s)
   <br>*“On your marks... get set... go!”*
   
   > **Ultimate - Flash**
-  <br>Channel the vengeance of your ancestors to strike all Hunters on the map with searing Lightning, stunning them for 1 second, and increasing your speed for each Hunter hit for 8 seconds.
+  <br>Channel the vengeance of your ancestors to strike all Hunters on the map with searing Lightning, stunning them for 1 second (Lightning effect), and increasing your speed (Speed 2) for each Hunter hit for 8 seconds.
   <br>*“Say cheese!”*
  
 </details>
@@ -228,7 +229,7 @@ Survivors are designed with roles, as opposed to Hunters.
 </details>
 
 <details>
-  <summary>{WIP} // Zane: The Gambler [Trickster]</summary>
+  <summary>{WIP} // Zane: The Gambler [Scout]</summary>
   
   > WIP
   
@@ -264,7 +265,6 @@ Survivors are designed with roles, as opposed to Hunters.
   <br>Summon a spirit of Fin over the shoulders of you and your allies. He protects them by healing them for 1 heart every second, attacking nearby deployables and Hunters with water projectiles, and grants Haste for 8 seconds.
  
 </details>
-
 
 # Folders
 
